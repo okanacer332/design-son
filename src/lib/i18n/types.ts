@@ -29,6 +29,14 @@ export type FocusAreaItem = {
   highlights: string[];
 };
 
+export type TestimonialItem = {
+  name: string;
+  role: string;
+  company: string;
+  text: string;
+  rating: number;
+};
+
 // --- Ana Sözlük Tipi ---
 
 export type Dictionary = {
@@ -86,12 +94,47 @@ export type Dictionary = {
     designServices: ServiceItem[];
     codeServices: ServiceItem[];
   };
-  // YENİ EKLENEN KISIM:
   focusAreas: {
     tag: string;
     titleDesign: string;
     titleCode: string;
     designFocus: FocusAreaItem[];
     codeFocus: FocusAreaItem[];
+  };
+  // YENİ EKLENENLER:
+  testimonials: {
+    tag: string;
+    title: string;
+    descriptionDesign: string;
+    descriptionCode: string;
+    designTestimonials: TestimonialItem[];
+    codeTestimonials: TestimonialItem[];
+  };
+  cta: {
+    titleDesign: string;
+    titleCode: string;
+    descDesign: string;
+    descCode: string;
+    btnPrimary: string;
+    btnSecondary: string;
+    statProjects: string;
+    statSystems: string;
+    statSuccess: string;
+    statSupportDesign: string;
+    statSupportCode: string;
+  };
+  footer: {
+    brandDescDesign: string;
+    brandDescCode: string;
+    colServices: string;
+    colCompany: string;
+    colContact: string;
+    designServices: string[];
+    codeServices: string[];
+    companyLinks: string[];
+    copyright: string;
+    privacy: string;
+    terms: string;
+    cookie: string;
   };
 };

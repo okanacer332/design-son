@@ -299,5 +299,84 @@ export const en: Dictionary = {
         highlights: ['Industry Expertise', 'Custom Features', 'Compliance Ready', 'Integration Support']
       }
     ]
+  },
+  testimonials: {
+    tag: "Client Success",
+    title: "What Clients Say",
+    descriptionDesign: "Trusted by leading brands to deliver exceptional design experiences.",
+    descriptionCode: "Powering businesses with enterprise-grade software solutions.",
+    designTestimonials: [
+      {
+        name: 'Sarah Mitchell',
+        role: 'CEO, RetailTech',
+        company: 'E-Commerce',
+        text: 'The customer journey mapping transformed our entire user experience. Conversion rates increased by 45% within three months.',
+        rating: 5
+      },
+      {
+        name: 'David Chen',
+        role: 'Product Director',
+        company: 'FinanceApp',
+        text: 'Their UX consulting helped us identify blind spots we never knew existed. The product design work was exceptional.',
+        rating: 5
+      },
+      {
+        name: 'Emma Rodriguez',
+        role: 'Marketing Head',
+        company: 'HealthCare Plus',
+        text: 'Outstanding work on our CRM marketing strategy. The design team truly understands modern user behavior.',
+        rating: 5
+      }
+    ],
+    codeTestimonials: [
+      {
+        name: 'Michael Anderson',
+        role: 'CTO, Manufacturing Co',
+        company: 'Industrial Sector',
+        text: 'The ERP system they built revolutionized our operations. Seamless integration across all departments.',
+        rating: 5
+      },
+      {
+        name: 'Lisa Thompson',
+        role: 'VP Technology',
+        company: 'B2B Solutions',
+        text: 'Exceptional B2B platform development. The team delivered a scalable solution that handles our growing demands perfectly.',
+        rating: 5
+      },
+      {
+        name: 'James Wilson',
+        role: 'Founder',
+        company: 'SaaS Startup',
+        text: 'From concept to deployment, they built our entire SaaS platform. The code quality and architecture are top-notch.',
+        rating: 5
+      }
+    ]
+  },
+  cta: {
+    titleDesign: "Ready to Hire a Designer?",
+    titleCode: "Ready to Hire a Developer?",
+    descDesign: "Let's work together to create exceptional designs that transform your digital presence and drive real results.",
+    descCode: "Partner with an experienced developer to build enterprise-grade software that scales with your business.",
+    btnPrimary: "Hire Me Now",
+    btnSecondary: "View Availability",
+    statProjects: "Projects Completed",
+    statSystems: "Systems Built",
+    statSuccess: "Client Success Rate",
+    statSupportDesign: "Available Support",
+    statSupportCode: "Development Support"
+  },
+  footer: {
+    brandDescDesign: "Creating exceptional user experiences through innovative design.",
+    brandDescCode: "Building enterprise-grade software solutions for modern businesses.",
+    colServices: "Services",
+    colCompany: "Company",
+    colContact: "Contact",
+    designServices: ['UX Consultant', 'Product Design', 'Business Development', 'Journey Mapping', 'CRM Marketing'],
+    codeServices: ['ERP Systems', 'B2B Platforms', 'SaaS Development', 'Custom Software', 'API Integration'],
+    companyLinks: ['About Us', 'Design Process', 'Case Studies', 'Careers', 'Blog'],
+    copyright: "All rights reserved.",
+    privacy: "Privacy Policy",
+    terms: "Terms of Service",
+    cookie: "Cookie Policy"
   }
 };

@@ -1,45 +1,16 @@
+"use client";
+
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Instagram } from 'lucide-react';
+import { useLanguage } from '@/src/lib/i18n/LanguageContext';
 
 interface FooterProps {
   mode: 'design' | 'code';
 }
 
 export function Footer({ mode }: FooterProps) {
-  const designLinks = {
-    services: [
-      'UX Consultant',
-      'Product Design',
-      'Business Development',
-      'Journey Mapping',
-      'CRM Marketing'
-    ],
-    company: [
-      'About Us',
-      'Design Process',
-      'Case Studies',
-      'Careers',
-      'Blog'
-    ]
-  };
+  const { t } = useLanguage();
 
-  const codeLinks = {
-    services: [
-      'ERP Systems',
-      'B2B Platforms',
-      'SaaS Development',
-      'Custom Software',
-      'API Integration'
-    ],
-    company: [
-      'About Us',
-      'Tech Stack',
-      'Solutions',
-      'Careers',
-      'Documentation'
-    ]
-  };
-
-  const links = mode === 'design' ? designLinks : codeLinks;
+  const servicesLinks = mode === 'design' ? t.footer.designServices : t.footer.codeServices;
 
   return (
     <footer className="bg-slate-950 border-t border-white/5">
@@ -48,19 +19,17 @@ export function Footer({ mode }: FooterProps) {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br ${
+              <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br transition-colors duration-700 ${
                 mode === 'design'
                   ? 'from-purple-500 to-fuchsia-500'
                   : 'from-blue-500 to-cyan-500'
               }`}></div>
-              <span className="text-white text-lg sm:text-xl">
-                {mode === 'design' ? 'Design Studio' : 'Code Lab'}
+              <span className="text-white text-lg sm:text-xl font-bold">
+                {mode === 'design' ? 'ACR Design' : 'ACR Tech'}
               </span>
             </div>
             <p className="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6">
-              {mode === 'design' 
-                ? 'Creating exceptional user experiences through innovative design.'
-                : 'Building enterprise-grade software solutions for modern businesses.'}
+              {mode === 'design' ? t.footer.brandDescDesign : t.footer.brandDescCode}
             </p>
             {/* Social Links */}
             <div className="flex gap-2 sm:gap-3">
@@ -90,13 +59,13 @@ export function Footer({ mode }: FooterProps) {
 
           {/* Services */}
           <div>
-            <h4 className={`text-sm sm:text-base mb-4 sm:mb-6 ${
+            <h4 className={`text-sm sm:text-base mb-4 sm:mb-6 font-medium transition-colors duration-500 ${
               mode === 'design' ? 'text-purple-300' : 'text-blue-300'
             }`}>
-              Services
+              {t.footer.colServices}
             </h4>
             <ul className="space-y-2 sm:space-y-3">
-              {links.services.map((service, index) => (
+              {servicesLinks.map((service, index) => (
                 <li key={index}>
                   <a href="#" className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors">
                     {service}
@@ -108,13 +77,13 @@ export function Footer({ mode }: FooterProps) {
 
           {/* Company */}
           <div>
-            <h4 className={`text-sm sm:text-base mb-4 sm:mb-6 ${
+            <h4 className={`text-sm sm:text-base mb-4 sm:mb-6 font-medium transition-colors duration-500 ${
               mode === 'design' ? 'text-purple-300' : 'text-blue-300'
             }`}>
-              Company
+              {t.footer.colCompany}
             </h4>
             <ul className="space-y-2 sm:space-y-3">
-              {links.company.map((item, index) => (
+              {t.footer.companyLinks.map((item, index) => (
                 <li key={index}>
                   <a href="#" className="text-sm sm:text-base text-gray-400 hover:text-white transition-colors">
                     {item}
@@ -126,23 +95,23 @@ export function Footer({ mode }: FooterProps) {
 
           {/* Contact */}
           <div>
-            <h4 className={`text-sm sm:text-base mb-4 sm:mb-6 ${
+            <h4 className={`text-sm sm:text-base mb-4 sm:mb-6 font-medium transition-colors duration-500 ${
               mode === 'design' ? 'text-purple-300' : 'text-blue-300'
             }`}>
-              Contact
+              {t.footer.colContact}
             </h4>
             <ul className="space-y-3 sm:space-y-4">
               <li className="flex items-start gap-2 sm:gap-3 text-sm sm:text-base text-gray-400">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 flex-shrink-0" />
-                <span>hello@agency.com</span>
+                <span>hello@acrtech.com</span>
               </li>
               <li className="flex items-start gap-2 sm:gap-3 text-sm sm:text-base text-gray-400">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+90 (555) 123-4567</span>
               </li>
               <li className="flex items-start gap-2 sm:gap-3 text-sm sm:text-base text-gray-400">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 flex-shrink-0" />
-                <span>123 Business St, Suite 100<br />New York, NY 10001</span>
+                <span>Teknopark, İstanbul<br />Türkiye</span>
               </li>
             </ul>
           </div>
@@ -151,17 +120,17 @@ export function Footer({ mode }: FooterProps) {
         {/* Bottom Bar */}
         <div className="pt-6 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
           <p className="text-gray-500 text-xs sm:text-sm text-center sm:text-left">
-            © 2024 {mode === 'design' ? 'Design Studio' : 'Code Lab'}. All rights reserved.
+            © 2024 ACRTECH. {t.footer.copyright}
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
             <a href="#" className="text-gray-500 hover:text-white transition-colors">
-              Privacy Policy
+              {t.footer.privacy}
             </a>
             <a href="#" className="text-gray-500 hover:text-white transition-colors">
-              Terms of Service
+              {t.footer.terms}
             </a>
             <a href="#" className="text-gray-500 hover:text-white transition-colors">
-              Cookie Policy
+              {t.footer.cookie}
             </a>
           </div>
         </div>

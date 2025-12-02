@@ -298,5 +298,84 @@ export const tr: Dictionary = {
         highlights: ['Sektör Uzmanlığı', 'Özel Özellikler', 'Uyumluluk Hazır', 'Entegrasyon Desteği']
       }
     ]
+  },
+  testimonials: {
+    tag: "Müşteri Başarısı",
+    title: "Müşterilerimiz Ne Diyor?",
+    descriptionDesign: "Olağanüstü tasarım deneyimleri sunmak için önde gelen markalar tarafından güveniliyoruz.",
+    descriptionCode: "İşletmeleri kurumsal düzeyde yazılım çözümleriyle güçlendiriyoruz.",
+    designTestimonials: [
+      {
+        name: 'Sarah Mitchell',
+        role: 'CEO, RetailTech',
+        company: 'E-Ticaret',
+        text: 'Müşteri yolculuğu haritalaması tüm kullanıcı deneyimimizi dönüştürdü. Dönüşüm oranları üç ay içinde %45 arttı.',
+        rating: 5
+      },
+      {
+        name: 'David Chen',
+        role: 'Ürün Direktörü',
+        company: 'FinanceApp',
+        text: 'UX danışmanlığı, varlığından bile haberdar olmadığımız kör noktaları belirlememize yardımcı oldu. Ürün tasarımı çalışması olağanüstüydü.',
+        rating: 5
+      },
+      {
+        name: 'Emma Rodriguez',
+        role: 'Pazarlama Müdürü',
+        company: 'HealthCare Plus',
+        text: 'CRM pazarlama stratejimiz üzerinde harika bir çalışma. Tasarım ekibi modern kullanıcı davranışını gerçekten anlıyor.',
+        rating: 5
+      }
+    ],
+    codeTestimonials: [
+      {
+        name: 'Michael Anderson',
+        role: 'CTO, Manufacturing Co',
+        company: 'Endüstriyel Sektör',
+        text: 'İnşa ettikleri ERP sistemi operasyonlarımızda devrim yarattı. Tüm departmanlar arasında sorunsuz entegrasyon sağlandı.',
+        rating: 5
+      },
+      {
+        name: 'Lisa Thompson',
+        role: 'VP Teknoloji',
+        company: 'B2B Çözümleri',
+        text: 'Olağanüstü B2B platform geliştirme. Ekip, artan taleplerimizi mükemmel şekilde karşılayan ölçeklenebilir bir çözüm sundu.',
+        rating: 5
+      },
+      {
+        name: 'James Wilson',
+        role: 'Kurucu',
+        company: 'SaaS Girişimi',
+        text: 'Konseptten dağıtıma kadar tüm SaaS platformumuzu inşa ettiler. Kod kalitesi ve mimari üst düzeyde.',
+        rating: 5
+      }
+    ]
+  },
+  cta: {
+    titleDesign: "Bir Tasarımcı Kiralamaya Hazır Mısın?",
+    titleCode: "Bir Geliştirici Kiralamaya Hazır Mısın?",
+    descDesign: "Dijital varlığınızı dönüştüren ve gerçek sonuçlar sağlayan olağanüstü tasarımlar yaratmak için birlikte çalışalım.",
+    descCode: "İşletmenizle ölçeklenen kurumsal düzeyde yazılımlar oluşturmak için deneyimli bir geliştiriciyle ortak olun.",
+    btnPrimary: "Beni Hemen Kiralayın",
+    btnSecondary: "Müsaitliği Gör",
+    statProjects: "Tamamlanan Proje",
+    statSystems: "Kurulan Sistem",
+    statSuccess: "Müşteri Başarı Oranı",
+    statSupportDesign: "Mevcut Destek",
+    statSupportCode: "Geliştirme Desteği"
+  },
+  footer: {
+    brandDescDesign: "Yenilikçi tasarım yoluyla olağanüstü kullanıcı deneyimleri yaratıyoruz.",
+    brandDescCode: "Modern işletmeler için kurumsal düzeyde yazılım çözümleri inşa ediyoruz.",
+    colServices: "Hizmetler",
+    colCompany: "Şirket",
+    colContact: "İletişim",
+    designServices: ['UX Danışmanı', 'Ürün Tasarımı', 'İş Geliştirme', 'Yolculuk Haritalama', 'CRM Pazarlaması'],
+    codeServices: ['ERP Sistemleri', 'B2B Platformları', 'SaaS Geliştirme', 'Özel Yazılım', 'API Entegrasyonu'],
+    companyLinks: ['Hakkımızda', 'Süreçlerimiz', 'Vaka Çalışmaları', 'Kariyer', 'Blog'],
+    copyright: "Tüm hakları saklıdır.",
+    privacy: "Gizlilik Politikası",
+    terms: "Hizmet Şartları",
+    cookie: "Çerez Politikası"
   }
 };
