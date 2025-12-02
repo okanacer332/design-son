@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 
 interface CTAProps {
-  mode: 'tasarla' | 'code';
+  mode: 'design' | 'code'; // BURASI DUZELTILDI: 'tasarla' -> 'design'
 }
 
 export function CTA({ mode }: CTAProps) {
