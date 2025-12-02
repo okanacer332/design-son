@@ -14,7 +14,8 @@ interface LanguageSelectorProps {
   mode: 'design' | 'code';
 }
 
-// --- Bayrak Bileşenleri ---
+// --- ÖZEL SVG BAYRAK İKONLARI (Minimalist & Yuvarlak) ---
+
 const FlagTR = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 32 32" className={className}>
     <circle cx="16" cy="16" r="16" fill="#E30A17" />
@@ -26,29 +27,90 @@ const FlagTR = ({ className }: { className?: string }) => (
 const FlagEN = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 32 32" className={className}>
     <circle cx="16" cy="16" r="16" fill="#012169" />
-    <path fill="white" d="M0,0 L32,32 M32,0 L0,32" strokeWidth="4" />
+    <path fill="none" stroke="white" strokeWidth="4" d="M0,0 L32,32 M32,0 L0,32" />
     <path fill="none" stroke="#C8102E" strokeWidth="2" d="M0,0 L32,32 M32,0 L0,32" />
-    <path fill="white" d="M16,0 V32 M0,16 H32" strokeWidth="6" />
+    <path fill="none" stroke="white" strokeWidth="6" d="M16,0 V32 M0,16 H32" />
     <path fill="none" stroke="#C8102E" strokeWidth="4" d="M16,0 V32 M0,16 H32" />
   </svg>
 );
 
-// Yeni dil eklendiğinde sadece buraya bayrağını eklemen yeterli
+const FlagDE = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 32 32" className={className}>
+    <mask id="mask-de">
+      <circle cx="16" cy="16" r="16" fill="white" />
+    </mask>
+    <g mask="url(#mask-de)">
+      <path fill="#FFCE00" d="M0 0h32v32H0z" />
+      <path fill="#000000" d="M0 0h32v10.6H0z" />
+      <path fill="#DD0000" d="M0 10.6h32v10.6H0z" />
+    </g>
+  </svg>
+);
+
+const FlagES = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 32 32" className={className}>
+    <mask id="mask-es">
+      <circle cx="16" cy="16" r="16" fill="white" />
+    </mask>
+    <g mask="url(#mask-es)">
+      <path fill="#AA151B" d="M0 0h32v32H0z" />
+      <path fill="#F1BF00" d="M0 8h32v16H0z" />
+    </g>
+  </svg>
+);
+
+const FlagRU = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 32 32" className={className}>
+    <mask id="mask-ru">
+      <circle cx="16" cy="16" r="16" fill="white" />
+    </mask>
+    <g mask="url(#mask-ru)">
+      <path fill="#D52B1E" d="M0 0h32v32H0z" />
+      <path fill="#0039A6" d="M0 0h32v21.3H0z" />
+      <path fill="#FFFFFF" d="M0 0h32v10.6H0z" />
+    </g>
+  </svg>
+);
+
+const FlagFR = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 32 32" className={className}>
+    <mask id="mask-fr">
+      <circle cx="16" cy="16" r="16" fill="white" />
+    </mask>
+    <g mask="url(#mask-fr)">
+      <path fill="#ED2939" d="M0 0h32v32H0z" />
+      <path fill="#FFFFFF" d="M0 0h21.3v32H0z" />
+      <path fill="#002395" d="M0 0h10.6v32H0z" />
+    </g>
+  </svg>
+);
+
+// --- KONFIGÜRASYON ---
+
 const FlagMap: Record<string, React.ElementType> = {
   TR: FlagTR,
   EN: FlagEN,
-  // DE: FlagDE (Yarın eklediğinde buraya koyacağız)
+  DE: FlagDE,
+  ES: FlagES,
+  RU: FlagRU,
+  FR: FlagFR,
 };
 
 const LanguageNames: Record<string, string> = {
-  TR: "Turkish",
+  TR: "Türkçe",
   EN: "English",
-  // DE: "Deutsch"
+  DE: "Deutsch",
+  ES: "Español",
+  RU: "Русский",
+  FR: "Français",
 };
+
+// --- BİLEŞEN ---
 
 export function LanguageSelector({ mode }: LanguageSelectorProps) {
   const { language, setLanguage, availableLanguages } = useLanguage();
 
+  // Tasarım moduna göre renkler
   const activeColorClass = mode === 'design' 
     ? 'hover:text-purple-300 focus:text-purple-300' 
     : 'hover:text-blue-300 focus:text-blue-300';
@@ -71,11 +133,10 @@ export function LanguageSelector({ mode }: LanguageSelectorProps) {
       <DropdownMenuContent 
         align="end" 
         sideOffset={8}
-        className={`bg-slate-900/95 backdrop-blur-xl border ${dropdownBorderClass} text-white min-w-[140px] p-1.5 rounded-xl shadow-xl`}
+        className={`bg-slate-900/95 backdrop-blur-xl border ${dropdownBorderClass} text-white min-w-[150px] p-1.5 rounded-xl shadow-xl max-h-[400px] overflow-y-auto scrollbar-hide`}
       >
-        {/* Dinamik Liste Döngüsü */}
         {availableLanguages.map((langCode) => {
-          const FlagComponent = FlagMap[langCode] || FlagEN; // Bayrak yoksa default EN göster
+          const FlagComponent = FlagMap[langCode] || FlagEN;
           const langName = LanguageNames[langCode] || langCode;
           const isActive = language === langCode;
 
@@ -85,7 +146,7 @@ export function LanguageSelector({ mode }: LanguageSelectorProps) {
               onClick={() => setLanguage(langCode)}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-sm font-medium transition-all focus:bg-white/5 focus:text-white ${isActive ? activeItemBg : 'text-gray-400 hover:text-white'}`}
             >
-              <FlagComponent className="w-5 h-5 shadow-sm rounded-full" />
+              <FlagComponent className="w-5 h-5 shadow-sm rounded-full flex-shrink-0" />
               <span>{langName}</span>
               {isActive && (
                 <span className="ml-auto w-1.5 h-1.5 rounded-full bg-current shadow-[0_0_8px_currentColor]"></span>

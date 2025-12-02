@@ -1,0 +1,382 @@
+import { Dictionary } from '../types';
+
+export const fr: Dictionary = {
+  header: {
+    menu: "Menu",
+    portfolio: "Portfolio",
+    services: "Services",
+    about: "À Propos",
+    contact: "Contact",
+    readyText: "Prêt à commencer votre prochain projet ?",
+    getInTouch: "Contactez-nous"
+  },
+  hero: {
+    designTag: "✨ Agence de Design Mondiale",
+    designTitle: ["Solutions", "de Design", "Modernes"],
+    designDesc: "Nous créons des expériences utilisateur exceptionnelles grâce à la cartographie du parcours client et au design UI de produit.",
+    designBtnPrimary: "Démarrer le Projet",
+    designBtnSecondary: "Voir Nos Travaux",
+    codeTag: "💻 Solutions Logicielles d'Entreprise",
+    codeTitle: ["Technologie", "Innovation", "Code"],
+    codeDesc: "Nous construisons des plateformes ERP et SaaS de niveau entreprise personnalisées pour chaque secteur industriel.",
+    codeBtnPrimary: "Démarrer le Développement",
+    codeBtnSecondary: "Voir les Solutions"
+  },
+  portfolio: {
+    tag: "Nos Projets",
+    title: "Projets en Vedette",
+    description: "Explorez nos projets de design réussis qui ont transformé les expériences utilisateur.",
+    descriptionCode: "Découvrez les solutions d'entreprise que nous avons conçues pour des entreprises de divers secteurs.",
+    viewAll: "Voir Tous les Projets",
+    designProjects: [
+      {
+        title: 'Plateforme E-Commerce',
+        category: 'Design Produit',
+        description: 'Refonte UX complète augmentant la conversion de 45%'
+      },
+      {
+        title: 'Application Bancaire',
+        category: 'Parcours Client',
+        description: '12 points de contact utilisateur clés cartographiés et optimisés'
+      },
+      {
+        title: 'Tableau de Bord SaaS',
+        category: 'Design UI',
+        description: 'Interface moderne avec système de design complet'
+      },
+      {
+        title: 'Portail Santé',
+        category: 'Conseil UX',
+        description: 'Expérience patient et accessibilité améliorées'
+      }
+    ],
+    codeProjects: [
+      {
+        title: 'ERP Industriel',
+        category: 'Système ERP',
+        description: 'ERP à grande échelle gérant 500+ utilisateurs sur 12 sites'
+      },
+      {
+        title: 'Marketplace B2B',
+        category: 'Plateforme B2B',
+        description: 'Plateforme multi-vendeurs traitant 10K+ transactions quotidiennes'
+      },
+      {
+        title: 'Gestion de Projet SaaS',
+        category: 'Dév. SaaS',
+        description: 'Outil basé sur le cloud servant 50K+ utilisateurs actifs'
+      },
+      {
+        title: 'Logiciel Logistique',
+        category: 'Solution Sur Mesure',
+        description: 'Système de suivi en temps réel pour la logistique d\'entreprise'
+      }
+    ]
+  },
+  pricing: {
+    tag: "Travaillez Avec Moi",
+    title: "Choisissez Votre Plan",
+    description: "Forfaits de design flexibles adaptés aux besoins de votre projet et à votre budget.",
+    descriptionCode: "Solutions logicielles évolutives conçues pour grandir avec votre entreprise.",
+    viewDetails: "Voir Détails",
+    learnMore: "En savoir plus sur ce plan →",
+    customSolution: "Besoin d'une solution personnalisée ?",
+    contactUs: "Contactez-nous",
+    forQuote: "pour un devis sur mesure.",
+    designPlans: [
+      {
+        name: 'Starter',
+        price: '2 500 €',
+        period: '/projet',
+        label: 'Pour Petits Projets',
+        description: 'Parfait pour les startups et petites entreprises cherchant à établir leur base de design.',
+        features: [
+          'Conseil Design UI/UX',
+          'Wireframing & Prototypage',
+          'Jusqu\'à 5 Pages de Design',
+          'Guide de Marque Basique',
+          '2 Tours de Révision',
+          'Support Email'
+        ],
+        cta: 'Choisir Plan Starter',
+        link: '#contact',
+        highlighted: false
+      },
+      {
+        name: 'Professionnel',
+        price: '5 000 €',
+        period: '/projet',
+        label: 'Le Plus Populaire',
+        description: 'Idéal pour les entreprises en croissance ayant besoin de solutions de design complètes.',
+        features: [
+          'Tout du Pack Starter',
+          'Cartographie Parcours Client',
+          'Jusqu\'à 15 Pages de Design',
+          'Système de Design Complet',
+          'Prototypes Interactifs',
+          'Révisions Illimitées',
+          'Support Prioritaire',
+          'Session Tests Utilisateurs'
+        ],
+        cta: 'Choisir Plan Professionnel',
+        link: '#contact',
+        highlighted: true
+      },
+      {
+        name: 'Entreprise',
+        price: '10 000 €+',
+        period: '/projet',
+        label: 'Pour Grandes Équipes',
+        description: 'Partenariat de design complet pour entreprises établies et projets complexes.',
+        features: [
+          'Tout du Pack Professionnel',
+          'Design Produit Complet',
+          'Pages Illimitées',
+          'Stratégie Marketing CRM',
+          'Développement Commercial',
+          'Formation Équipe Design',
+          'Designer Dédié',
+          'Support Prioritaire 24/7',
+          'Maintenance Continue'
+        ],
+        cta: 'Choisir Plan Entreprise',
+        link: '#contact',
+        highlighted: false
+      }
+    ],
+    codePlans: [
+      {
+        name: 'Basique',
+        price: '5 000 €',
+        period: '/projet',
+        label: 'Idéal pour MVP',
+        description: 'Parfait pour les startups construisant leur premier produit logiciel ou MVP.',
+        features: [
+          'Application Web Sur Mesure',
+          'Design Responsive',
+          'Intégration API Basique',
+          'Configuration Base de Données',
+          '3 Mois de Support',
+          'Documentation'
+        ],
+        cta: 'Choisir Plan Basique',
+        link: '#contact',
+        highlighted: false
+      },
+      {
+        name: 'Business',
+        price: '15 000 €',
+        period: '/projet',
+        label: 'Le Plus Populaire',
+        description: 'Solution complète pour les entreprises nécessitant des systèmes logiciels robustes.',
+        features: [
+          'Tout du Pack Basique',
+          'Plateforme ERP/B2B',
+          'Dév. API Avancé',
+          'Système Multi-utilisateurs',
+          'Tableau de Bord Admin',
+          'Intégration Paiement',
+          '6 Mois de Support',
+          'Audit de Sécurité',
+          'Optimisation Performance'
+        ],
+        cta: 'Choisir Plan Business',
+        link: '#contact',
+        highlighted: true
+      },
+      {
+        name: 'Corporatif',
+        price: '30 000 €+',
+        period: '/projet',
+        label: 'Niveau Entreprise',
+        description: 'Développement logiciel d\'entreprise à grande échelle avec support d\'équipe dédié.',
+        features: [
+          'Tout du Pack Business',
+          'Plateforme SaaS Sur Mesure',
+          'Fonctionnalités Spécifiques',
+          'Sécurité Avancée',
+          'Architecture Microservices',
+          'Pipeline CI/CD',
+          'Équilibrage de Charge',
+          'Équipe Dév. Dédiée',
+          '12 Mois de Support',
+          'Formation & Intégration'
+        ],
+        cta: 'Choisir Plan Corporatif',
+        link: '#contact',
+        highlighted: false
+      }
+    ]
+  },
+  services: {
+    tag: "Nos Services",
+    titleDesign: "Expertise en Design",
+    titleCode: "Solutions Logicielles",
+    descriptionDesign: "Services complets de design UX-UI axés sur la création d'expériences utilisateur exceptionnelles et l'atteinte de résultats commerciaux.",
+    descriptionCode: "Services de développement de logiciels d'entreprise offrant des solutions robustes et évolutives pour les entreprises modernes.",
+    loadMore: "Charger Plus",
+    showLess: "Voir Moins",
+    designServices: [
+      {
+        title: 'Conseil UX',
+        description: 'Guidance stratégique UX pour optimiser les expériences utilisateur et stimuler la croissance grâce à des insights basés sur les données.'
+      },
+      {
+        title: 'Design de Produit',
+        description: 'Design de produit de bout en bout, du concept au lancement, créant des interfaces intuitives que les utilisateurs adorent.'
+      },
+      {
+        title: 'Développement Commercial',
+        description: 'Design thinking stratégique pour identifier les opportunités et créer des produits numériques convaincants pour la croissance.'
+      },
+      {
+        title: 'Cartographie Parcours Client',
+        description: 'Visualisez et optimisez chaque point de contact dans le parcours de votre client pour un engagement maximal.'
+      },
+      {
+        title: 'Marketing CRM',
+        description: 'Conception de stratégies de relation client qui augmentent la rétention et créent une fidélité à la marque durable.'
+      }
+    ],
+    codeServices: [
+      {
+        title: 'Systèmes ERP',
+        description: 'Solutions complètes de planification des ressources d\'entreprise qui rationalisent les opérations dans toute votre organisation.'
+      },
+      {
+        title: 'Plateformes B2B',
+        description: 'Plateformes web et mobiles B2B évolutives qui connectent les entreprises et stimulent le commerce efficacement.'
+      },
+      {
+        title: 'Développement SaaS',
+        description: 'Solutions logicielles en tant que service basées sur le cloud, conçues pour l\'échelle, la sécurité et des expériences utilisateur fluides.'
+      },
+      {
+        title: 'Logiciel Corporatif',
+        description: 'Développement logiciel spécialisé adapté à votre secteur industriel et à vos exigences commerciales.'
+      },
+      {
+        title: 'Solutions Sur Mesure',
+        description: 'Applications d\'entreprise sur mesure conçues pour résoudre vos défis commerciaux uniques et vos flux de travail.'
+      }
+    ]
+  },
+  focusAreas: {
+    tag: "Notre Focus",
+    titleDesign: "Philosophie de Design",
+    titleCode: "Stack Technologique",
+    designFocus: [
+      {
+        title: 'Cartographie Parcours Client',
+        description: 'Nous visualisons chaque point de contact dans l\'expérience de votre client, identifiant les points de friction et les opportunités d\'amélioration.',
+        highlights: ['Recherche Utilisateur', 'Visualisation Parcours', 'Analyse Points Contact', 'Optimisation Expérience']
+      },
+      {
+        title: 'Design UI Produit',
+        description: 'Création d\'interfaces belles et intuitives qui s\'alignent avec votre marque et ravissent les utilisateurs à chaque interaction.',
+        highlights: ['Design Interface', 'Systèmes de Design', 'Prototypage', 'Design Visuel']
+      },
+      {
+        title: 'Expérience Utilisateur (UX)',
+        description: 'Stratégie UX complète combinant recherche, tests et itération pour créer des expériences utilisateur fluides.',
+        highlights: ['Recherche UX', 'Tests Utilisabilité', 'Architecture Information', 'Design Interaction']
+      }
+    ],
+    codeFocus: [
+      {
+        title: 'Solutions ERP',
+        description: 'Systèmes de planification des ressources d\'entreprise intégrant tous les aspects de vos opérations commerciales dans une plateforme unifiée.',
+        highlights: ['Automatisation Processus', 'Analytique Temps Réel', 'Intégration Multi-module', 'Architecture Évolutive']
+      },
+      {
+        title: 'Plateformes B2B & SaaS',
+        description: 'Construction de plateformes web et mobiles robustes conçues pour les interactions B2B et la livraison SaaS.',
+        highlights: ['Architecture Multi-locataire', 'Dév. API', 'Infra. Cloud', 'Sécurité d\'Abord']
+      },
+      {
+        title: 'Logiciel Sectoriel',
+        description: 'Logiciel corporatif personnalisé adapté aux défis uniques, aux exigences de conformité et aux flux de travail de votre industrie.',
+        highlights: ['Expertise Industrie', 'Fonctions Sur Mesure', 'Conformité Prête', 'Support Intégration']
+      }
+    ]
+  },
+  testimonials: {
+    tag: "Succès Client",
+    title: "Ce Que Disent Les Clients",
+    descriptionDesign: "Confiance des grandes marques pour offrir des expériences de design exceptionnelles.",
+    descriptionCode: "Propulser les entreprises avec des solutions logicielles de niveau entreprise.",
+    designTestimonials: [
+      {
+        name: 'Sarah Mitchell',
+        role: 'PDG, RetailTech',
+        company: 'E-Commerce',
+        text: 'La cartographie du parcours client a transformé toute notre expérience utilisateur. Les taux de conversion ont augmenté de 45% en trois mois.',
+        rating: 5
+      },
+      {
+        name: 'David Chen',
+        role: 'Directeur Produit',
+        company: 'FinanceApp',
+        text: 'Leur conseil UX nous a aidés à identifier des angles morts que nous ignorions. Le travail de design produit était exceptionnel.',
+        rating: 5
+      },
+      {
+        name: 'Emma Rodriguez',
+        role: 'Directrice Marketing',
+        company: 'HealthCare Plus',
+        text: 'Travail remarquable sur notre stratégie marketing CRM. L\'équipe de design comprend vraiment le comportement de l\'utilisateur moderne.',
+        rating: 5
+      }
+    ],
+    codeTestimonials: [
+      {
+        name: 'Michael Anderson',
+        role: 'CTO, Manufacturing Co',
+        company: 'Secteur Industriel',
+        text: 'Le système ERP qu\'ils ont construit a révolutionné nos opérations. Intégration transparente entre tous les départements.',
+        rating: 5
+      },
+      {
+        name: 'Lisa Thompson',
+        role: 'VP Technologie',
+        company: 'Solutions B2B',
+        text: 'Développement de plateforme B2B exceptionnel. L\'équipe a livré une solution évolutive qui répond parfaitement à nos demandes croissantes.',
+        rating: 5
+      },
+      {
+        name: 'James Wilson',
+        role: 'Fondateur',
+        company: 'Startup SaaS',
+        text: 'Du concept au déploiement, ils ont construit toute notre plateforme SaaS. La qualité du code et l\'architecture sont de premier ordre.',
+        rating: 5
+      }
+    ]
+  },
+  cta: {
+    titleDesign: "Prêt à Embaucher un Designer ?",
+    titleCode: "Prêt à Embaucher un Développeur ?",
+    descDesign: "Travaillons ensemble pour créer des designs exceptionnels qui transforment votre présence numérique et génèrent des résultats réels.",
+    descCode: "Associez-vous à un développeur expérimenté pour construire un logiciel d'entreprise qui évolue avec votre business.",
+    btnPrimary: "M'embaucher Maintenant",
+    btnSecondary: "Voir Disponibilité",
+    statProjects: "Projets Terminés",
+    statSystems: "Systèmes Construits",
+    statSuccess: "Taux de Succès Client",
+    statSupportDesign: "Support Disponible",
+    statSupportCode: "Support Dév."
+  },
+  footer: {
+    brandDescDesign: "Créer des expériences utilisateur exceptionnelles grâce à un design innovant.",
+    brandDescCode: "Construire des solutions logicielles d'entreprise pour les entreprises modernes.",
+    colServices: "Services",
+    colCompany: "Entreprise",
+    colContact: "Contact",
+    designServices: ['Conseil UX', 'Design Produit', 'Dév. Affaires', 'Cartographie Parcours', 'Marketing CRM'],
+    codeServices: ['Systèmes ERP', 'Plateformes B2B', 'Dév. SaaS', 'Logiciel Sur Mesure', 'Intégration API'],
+    companyLinks: ['À Propos', 'Processus Design', 'Études de Cas', 'Carrières', 'Blog'],
+    copyright: "Tous droits réservés.",
+    privacy: "Politique de Confidentialité",
+    terms: "Conditions de Service",
+    cookie: "Politique de Cookies"
+  }
+};
