@@ -207,5 +207,96 @@ export const tr: Dictionary = {
         highlighted: false
       }
     ]
+  },
+  services: {
+    tag: "Hizmetlerimiz",
+    titleDesign: "Tasarım Uzmanlığı",
+    titleCode: "Yazılım Çözümleri",
+    descriptionDesign: "İş sonuçlarını yönlendiren ve olağanüstü kullanıcı deneyimleri yaratmaya odaklanan kapsamlı UX-UI tasarım hizmetleri.",
+    descriptionCode: "Modern işletmeler için sağlam, ölçeklenebilir çözümler sunan kurumsal düzeyde yazılım geliştirme hizmetleri.",
+    loadMore: "Daha Fazla Göster",
+    showLess: "Daha Az Göster",
+    designServices: [
+      {
+        title: 'UX Danışmanlığı',
+        description: 'Veriye dayalı içgörülerle kullanıcı deneyimlerini optimize etmek ve iş büyümesini sağlamak için stratejik UX rehberliği.'
+      },
+      {
+        title: 'Ürün Tasarımı',
+        description: 'Konseptten lansmana kadar, kullanıcıların sevdiği sezgisel arayüzler yaratan uçtan uca ürün tasarımı.'
+      },
+      {
+        title: 'Yeni İş Geliştirme',
+        description: 'Büyüme fırsatlarını belirlemek ve ilgi çekici dijital ürünler oluşturmak için stratejik tasarım düşüncesi.'
+      },
+      {
+        title: 'Müşteri Yolculuğu Haritalama',
+        description: 'Maksimum etkileşim için müşterinizin yolculuğundaki her temas noktasını görselleştirin ve optimize edin.'
+      },
+      {
+        title: 'CRM Pazarlaması',
+        description: 'Sadakati artıran ve kalıcı marka bağlılığı oluşturan müşteri ilişkileri stratejileri tasarlayın.'
+      }
+    ],
+    codeServices: [
+      {
+        title: 'ERP Sistemleri',
+        description: 'Organizasyonunuz genelinde operasyonları düzenleyen kapsamlı kurumsal kaynak planlama çözümleri.'
+      },
+      {
+        title: 'B2B Platformları',
+        description: 'İşletmeleri birbirine bağlayan ve ticareti verimli bir şekilde yürüten ölçeklenebilir B2B web ve mobil platformları.'
+      },
+      {
+        title: 'SaaS Geliştirme',
+        description: 'Ölçek, güvenlik ve sorunsuz kullanıcı deneyimleri için inşa edilmiş bulut tabanlı hizmet olarak yazılım çözümleri.'
+      },
+      {
+        title: 'Kurumsal Yazılım',
+        description: 'Sektörünüze ve iş gereksinimlerinize özel olarak uyarlanmış özelleştirilmiş yazılım geliştirme.'
+      },
+      {
+        title: 'Özel Çözümler',
+        description: 'Benzersiz iş zorluklarınızı ve iş akışlarınızı çözmek için tasarlanmış özel kurumsal uygulamalar.'
+      }
+    ]
+  },focusAreas: {
+    tag: "Odaklandığımız Konular",
+    titleDesign: "Tasarım Felsefemiz",
+    titleCode: "Teknoloji Yığınımız",
+    designFocus: [
+      {
+        title: 'Müşteri Yolculuğu Haritalama',
+        description: 'Müşterinizin deneyimindeki her temas noktasını görselleştiriyor, sorunlu noktaları ve iyileştirme fırsatlarını belirliyoruz.',
+        highlights: ['Kullanıcı Araştırması', 'Yolculuk Görselleştirme', 'Temas Noktası Analizi', 'Deneyim Optimizasyonu']
+      },
+      {
+        title: 'Ürün UI Tasarımı',
+        description: 'Markanızla uyumlu, güzel ve sezgisel arayüzler yaratarak kullanıcıları her etkileşimde memnun ediyoruz.',
+        highlights: ['Arayüz Tasarımı', 'Tasarım Sistemleri', 'Prototipleme', 'Görsel Tasarım']
+      },
+      {
+        title: 'Kullanıcı Deneyimi (UX)',
+        description: 'Sorunsuz kullanıcı deneyimleri yaratmak için araştırma, test ve iterasyonu birleştiren kapsamlı UX stratejisi.',
+        highlights: ['UX Araştırması', 'Kullanılabilirlik Testi', 'Bilgi Mimarisi', 'Etkileşim Tasarımı']
+      }
+    ],
+    codeFocus: [
+      {
+        title: 'ERP Çözümleri',
+        description: 'İş operasyonlarınızın tüm yönlerini tek bir birleşik platformda entegre eden kurumsal kaynak planlama sistemleri.',
+        highlights: ['Süreç Otomasyonu', 'Gerçek Zamanlı Analitik', 'Çoklu Modül Entegrasyonu', 'Ölçeklenebilir Mimari']
+      },
+      {
+        title: 'B2B & SaaS Platformları',
+        description: 'İşletmeler arası etkileşimler ve hizmet olarak yazılım teslimatı için tasarlanmış sağlam web ve mobil platformlar.',
+        highlights: ['Çok Kiracılı Mimari', 'API Geliştirme', 'Bulut Altyapısı', 'Önce Güvenlik']
+      },
+      {
+        title: 'Sektöre Özel Yazılım',
+        description: 'Sektörünüzün benzersiz zorluklarına, uyumluluk gereksinimlerine ve iş akışlarına göre uyarlanmış özel kurumsal yazılımlar.',
+        highlights: ['Sektör Uzmanlığı', 'Özel Özellikler', 'Uyumluluk Hazır', 'Entegrasyon Desteği']
+      }
+    ]
   }
 };

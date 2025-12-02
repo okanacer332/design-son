@@ -1,21 +1,35 @@
+// --- Alt Tipler ---
+
 export type ProjectItem = {
   title: string;
   category: string;
   description: string;
 };
 
-// YENİ: Plan Tipi
 export type PricingPlan = {
   name: string;
   price: string;
   period: string;
-  label?: string; // Opsiyonel, her planda olmayabilir
+  label?: string;
   description: string;
   features: string[];
   cta: string;
-  link: string; // Genelde sabit ama çeviride değişebilir (örn: /tr/iletisim)
-  highlighted: boolean; // Stil mantığı için gerekli
+  link: string;
+  highlighted: boolean;
 };
+
+export type ServiceItem = {
+  title: string;
+  description: string;
+};
+
+export type FocusAreaItem = {
+  title: string;
+  description: string;
+  highlights: string[];
+};
+
+// --- Ana Sözlük Tipi ---
 
 export type Dictionary = {
   header: {
@@ -48,18 +62,36 @@ export type Dictionary = {
     designProjects: ProjectItem[];
     codeProjects: ProjectItem[];
   };
-  // YENİ EKLENEN KISIM:
   pricing: {
     tag: string;
     title: string;
-    description: string; // Design modu
-    descriptionCode: string; // Code modu
-    viewDetails: string; // "View Details" butonu için ortak metin
-    learnMore: string; // "Learn more about this plan" metni
-    customSolution: string; // "Need a custom solution?" metni
-    contactUs: string; // "Contact us" link metni
-    forQuote: string; // "for a tailored quote." metni
+    description: string;
+    descriptionCode: string;
+    viewDetails: string;
+    learnMore: string;
+    customSolution: string;
+    contactUs: string;
+    forQuote: string;
     designPlans: PricingPlan[];
     codePlans: PricingPlan[];
+  };
+  services: {
+    tag: string;
+    titleDesign: string;
+    titleCode: string;
+    descriptionDesign: string;
+    descriptionCode: string;
+    loadMore: string;
+    showLess: string;
+    designServices: ServiceItem[];
+    codeServices: ServiceItem[];
+  };
+  // YENİ EKLENEN KISIM:
+  focusAreas: {
+    tag: string;
+    titleDesign: string;
+    titleCode: string;
+    designFocus: FocusAreaItem[];
+    codeFocus: FocusAreaItem[];
   };
 };

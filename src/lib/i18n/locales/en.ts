@@ -207,5 +207,97 @@ export const en: Dictionary = {
         highlighted: false
       }
     ]
+  },
+  services: {
+    tag: "Our Services",
+    titleDesign: "Design Expertise",
+    titleCode: "Development Solutions",
+    descriptionDesign: "Comprehensive UX-UI design services focused on creating exceptional user experiences and driving business results.",
+    descriptionCode: "Enterprise-grade software development services delivering robust, scalable solutions for modern businesses.",
+    loadMore: "Load More Services",
+    showLess: "Show Less",
+    designServices: [
+      {
+        title: 'UX Consultant',
+        description: 'Strategic UX guidance to optimize user experiences and drive business growth through data-driven insights.'
+      },
+      {
+        title: 'Product Design',
+        description: 'End-to-end product design from concept to launch, creating intuitive interfaces that users love.'
+      },
+      {
+        title: 'New Business Development',
+        description: 'Strategic design thinking to identify opportunities and create compelling digital products for growth.'
+      },
+      {
+        title: 'Customer Journey Mapping',
+        description: 'Visualize and optimize every touchpoint in your customer\'s journey for maximum engagement.'
+      },
+      {
+        title: 'CRM Marketing',
+        description: 'Design customer relationship strategies that boost retention and create lasting brand loyalty.'
+      }
+    ],
+    codeServices: [
+      {
+        title: 'ERP Systems',
+        description: 'Comprehensive enterprise resource planning solutions that streamline operations across your organization.'
+      },
+      {
+        title: 'B2B Platforms',
+        description: 'Scalable B2B web and mobile platforms that connect businesses and drive commerce efficiently.'
+      },
+      {
+        title: 'SaaS Development',
+        description: 'Cloud-based software as a service solutions built for scale, security, and seamless user experiences.'
+      },
+      {
+        title: 'Corporate Software',
+        description: 'Specialized software development tailored to your industry sector and business requirements.'
+      },
+      {
+        title: 'Custom Solutions',
+        description: 'Bespoke enterprise applications designed to solve your unique business challenges and workflows.'
+      }
+    ]
+  },
+  focusAreas: {
+    tag: "What We Focus On",
+    titleDesign: "Our Design Philosophy",
+    titleCode: "Our Tech Stack",
+    designFocus: [
+      {
+        title: 'Customer Journey Mapping',
+        description: 'We visualize every touchpoint in your customer\'s experience, identifying pain points and opportunities for improvement.',
+        highlights: ['User Research', 'Journey Visualization', 'Touchpoint Analysis', 'Experience Optimization']
+      },
+      {
+        title: 'Product UI Design',
+        description: 'Creating beautiful, intuitive interfaces that align with your brand and delight users at every interaction.',
+        highlights: ['Interface Design', 'Design Systems', 'Prototyping', 'Visual Design']
+      },
+      {
+        title: 'User Experience',
+        description: 'Comprehensive UX strategy that combines research, testing, and iteration to create seamless user experiences.',
+        highlights: ['UX Research', 'Usability Testing', 'Information Architecture', 'Interaction Design']
+      }
+    ],
+    codeFocus: [
+      {
+        title: 'ERP Solutions',
+        description: 'Enterprise resource planning systems that integrate all aspects of your business operations into one unified platform.',
+        highlights: ['Process Automation', 'Real-time Analytics', 'Multi-module Integration', 'Scalable Architecture']
+      },
+      {
+        title: 'B2B & SaaS Platforms',
+        description: 'Build robust web and mobile platforms designed for business-to-business interactions and software-as-a-service delivery.',
+        highlights: ['Multi-tenant Architecture', 'API Development', 'Cloud Infrastructure', 'Security First']
+      },
+      {
+        title: 'Sector-Specific Software',
+        description: 'Custom corporate software tailored to your industry\'s unique challenges, compliance requirements, and workflows.',
+        highlights: ['Industry Expertise', 'Custom Features', 'Compliance Ready', 'Integration Support']
+      }
+    ]
   }
 };
