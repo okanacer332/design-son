@@ -1,4 +1,3 @@
-// src/components/ui/TransitionWrapper.tsx
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -6,7 +5,7 @@ import { ReactNode } from "react";
 
 interface TransitionWrapperProps {
   children: ReactNode;
-  modeKey: string; // Bu key değiştiğinde animasyon tetiklenir (örn: 'design' veya 'code')
+  modeKey: string;
   className?: string;
 }
 
