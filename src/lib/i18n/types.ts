@@ -4,6 +4,19 @@ export type ProjectItem = {
   description: string;
 };
 
+// YENİ: Plan Tipi
+export type PricingPlan = {
+  name: string;
+  price: string;
+  period: string;
+  label?: string; // Opsiyonel, her planda olmayabilir
+  description: string;
+  features: string[];
+  cta: string;
+  link: string; // Genelde sabit ama çeviride değişebilir (örn: /tr/iletisim)
+  highlighted: boolean; // Stil mantığı için gerekli
+};
+
 export type Dictionary = {
   header: {
     menu: string;
@@ -29,10 +42,24 @@ export type Dictionary = {
   portfolio: {
     tag: string;
     title: string;
-    description: string; // "Design" modu için açıklama
-    descriptionCode: string; // "Code" modu için açıklama
+    description: string;
+    descriptionCode: string;
     viewAll: string;
-    designProjects: ProjectItem[]; // Design proje listesi
-    codeProjects: ProjectItem[];   // Code proje listesi
+    designProjects: ProjectItem[];
+    codeProjects: ProjectItem[];
+  };
+  // YENİ EKLENEN KISIM:
+  pricing: {
+    tag: string;
+    title: string;
+    description: string; // Design modu
+    descriptionCode: string; // Code modu
+    viewDetails: string; // "View Details" butonu için ortak metin
+    learnMore: string; // "Learn more about this plan" metni
+    customSolution: string; // "Need a custom solution?" metni
+    contactUs: string; // "Contact us" link metni
+    forQuote: string; // "for a tailored quote." metni
+    designPlans: PricingPlan[];
+    codePlans: PricingPlan[];
   };
 };
