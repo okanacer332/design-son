@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { dictionaries, LanguageCode } from './locales';
 import { Dictionary } from './types';
 
@@ -8,23 +8,27 @@ interface LanguageContextType {
   language: LanguageCode;
   setLanguage: (lang: LanguageCode) => void;
   t: Dictionary;
-  availableLanguages: LanguageCode[]; // UI'da listelemek için dilleri de veriyoruz
+  availableLanguages: LanguageCode[];
+  isRTL: boolean; // UI'da RTL'e göre stil vermek gerekirse diye
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  // Varsayılan dili TR yaptık
   const [language, setLanguage] = useState<LanguageCode>('TR');
 
-  // Seçili dilin sözlüğünü otomatik çekiyoruz
   const t = dictionaries[language];
-  
-  // Mevcut dillerin listesini (['TR', 'EN']) alıyoruz
   const availableLanguages = Object.keys(dictionaries) as LanguageCode[];
+  const isRTL = language === 'AR';
+
+  // Dil değiştiğinde HTML tag'ine dir attribute'unu bas
+  useEffect(() => {
+    document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+    document.documentElement.lang = language.toLowerCase();
+  }, [language, isRTL]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, availableLanguages }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, availableLanguages, isRTL }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -85,6 +85,16 @@ const FlagFR = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const FlagAR = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 32 32" className={className}>
+    <circle cx="16" cy="16" r="16" fill="#006C35" />
+    <path fill="#FFFFFF" d="M10,8 h12 v4 h-12 z" transform="translate(0, 4)" /> 
+    <path fill="#FFFFFF" d="M10,12 h2 v8 h-2 z" transform="translate(0, 4)" />
+    {/* Minimalist kılıç temsili */}
+    <path fill="#FFFFFF" d="M8,22 h16 v2 h-16 z" />
+  </svg>
+);
+
 // --- KONFIGÜRASYON ---
 
 const FlagMap: Record<string, React.ElementType> = {
@@ -94,6 +104,7 @@ const FlagMap: Record<string, React.ElementType> = {
   ES: FlagES,
   RU: FlagRU,
   FR: FlagFR,
+  AR: FlagAR,
 };
 
 const LanguageNames: Record<string, string> = {
@@ -103,6 +114,7 @@ const LanguageNames: Record<string, string> = {
   ES: "Español",
   RU: "Русский",
   FR: "Français",
+  AR: "العربية",
 };
 
 // --- BİLEŞEN ---
