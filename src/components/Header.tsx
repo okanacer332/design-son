@@ -83,15 +83,7 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
         <nav className={`lg:hidden flex items-center gap-4 sm:gap-6 justify-center ${
           isScrolled ? 'mt-3' : 'mt-4'
         }`}>
-          {menuItems.slice(0, 3).map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-white/80 hover:text-white transition-colors text-xs sm:text-sm"
-            >
-              {item.label}
-            </a>
-          ))}
+          
         </nav>
       </div>
     </header>
