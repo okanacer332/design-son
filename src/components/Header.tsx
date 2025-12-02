@@ -28,7 +28,6 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
   ];
 
   // Mod'a göre tema renkleri
-  const themeColor = mode === 'design' ? 'purple' : 'blue';
   const gradientText = mode === 'design' 
     ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300' 
     : 'bg-gradient-to-r from-blue-200 to-cyan-300';
@@ -50,12 +49,31 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
           
           {/* --- SOL: LOGO (ACR / ACRTECH) --- */}
           <div className="flex items-center gap-2 sm:gap-3 cursor-pointer group">
-            <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br transition-all duration-700 shadow-lg ${
+            
+            {/* LOGOMARK: Renkli kutu + SVG Sembol */}
+            <div className={`relative flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br transition-all duration-700 shadow-lg group-hover:scale-105 ${
               mode === 'design'
                 ? 'from-purple-500 to-fuchsia-500 group-hover:shadow-purple-500/30'
                 : 'from-blue-500 to-cyan-500 group-hover:shadow-blue-500/30'
-            }`}></div>
-            <span className="text-white text-lg sm:text-xl font-bold tracking-tight">
+            }`}>
+              {/* Soyut "A" Sembolü */}
+              <svg 
+                className="w-4 h-4 sm:w-5 sm:h-5 text-white drop-shadow-md" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                {/* Modern, teknolojik "A" harfi stilizasyonu */}
+                <path d="M12 2L2 22h20" />
+                <path d="M5 12h14" />
+                <path d="M12 2v20" className="opacity-50" />
+              </svg>
+            </div>
+
+            <span className="text-white text-lg sm:text-xl font-bold tracking-tight group-hover:opacity-90 transition-opacity">
               {/* Mobilde Sadece ACR */}
               <span className="md:hidden">ACR</span>
               {/* Desktopta ACRTECH */}
@@ -66,7 +84,7 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
           {/* --- SAĞ: KONTROL BLOĞU (Switch | Dil | Menü) --- */}
           <div className="flex items-center gap-3 sm:gap-5">
             
-            {/* 1. Switch (Design/Code) - Her zaman görünür, hafif scale */}
+            {/* 1. Switch (Design/Code) */}
             <div className="transform scale-90 sm:scale-100 origin-right">
               <Switch mode={mode} onToggle={onToggle} />
             </div>
