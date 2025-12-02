@@ -1,3 +1,4 @@
+// app/page.tsx
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -12,7 +13,6 @@ import { CTA } from '@/src/components/CTA';
 import { Footer } from '@/src/components/Footer';
 
 export default function Home() {
-  // App.tsx'den birebir state yönetimi
   const [mode, setMode] = useState<'design' | 'code'>('design');
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -26,36 +26,24 @@ export default function Home() {
   }, []);
 
   return (
-      <div className={`min-h-screen transition-colors duration-700 ${
+      // duration-1000 (1 saniye) ekleyerek arka plan geçişini çok yumuşattık
+      <div className={`min-h-screen transition-colors duration-1000 ease-in-out ${
         mode === 'design' 
-          ? 'bg-slate-900' 
-          : 'bg-slate-900'
+          ? 'bg-slate-950' // Sabit koyu tema, sadece nüanslar değişecek
+          : 'bg-slate-950'
       }`}>
-        {/* Sticky Header */}
         <Header mode={mode} onToggle={setMode} isScrolled={isScrolled} />
         
-        {/* Hero Section */}
-        <Hero mode={mode} />
+        <main>
+          <Hero mode={mode} />
+          <Portfolio mode={mode} />
+          <PricingPlans mode={mode} />
+          <Services mode={mode} />
+          <FocusAreas mode={mode} />
+          <Testimonials mode={mode} />
+          <CTA mode={mode} />
+        </main>
         
-        {/* Portfolio Section */}
-        <Portfolio mode={mode} />
-        
-        {/* Pricing Plans Section */}
-        <PricingPlans mode={mode} />
-        
-        {/* Services Section */}
-        <Services mode={mode} />
-        
-        {/* Focus Areas Section */}
-        <FocusAreas mode={mode} />
-        
-        {/* Testimonials Section */}
-        <Testimonials mode={mode} />
-        
-        {/* CTA Section */}
-        <CTA mode={mode} />
-        
-        {/* Footer */}
         <Footer mode={mode} />
       </div>
     );
