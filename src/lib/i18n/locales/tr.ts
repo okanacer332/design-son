@@ -14,8 +14,8 @@ export const tr: Dictionary = {
     designTag: "✨ Global Tasarım Ajansı",
     designTitle: ["Modern", "Tasarım", "Çözümleri"],
     designDesc: "Müşteri yolculuğu haritalama ve UI tasarımı ile olağanüstü deneyimler yaratıyoruz.",
-    designBtnPrimary: "Projeye Başla",
-    designBtnSecondary: "İşlerimizi Gör",
+    designBtnPrimary: "Projenizi Dinleyelim",
+    designBtnSecondary: "İşlerimiz",
     codeTag: "💻 Kurumsal Yazılım Çözümleri",
     codeTitle: ["Teknoloji", "İnovasyon", "Kod"],
     codeDesc: "Her sektör için özelleştirilmiş, kurumsal düzeyde ERP ve SaaS platformları inşa ediyoruz.",
@@ -26,28 +26,28 @@ export const tr: Dictionary = {
     tag: "Projelerimiz",
     title: "Öne Çıkan İşler",
     description: "Kullanıcı deneyimlerini dönüştüren başarılı tasarım projelerimizi keşfedin.",
-    descriptionCode: "Farklı sektörlerdeki işletmeler için geliştirdiğimiz kurumsal çözümleri inceleyin.",
+    descriptionCode: "Farklı sektörlerdeki işletmeler için geliştirdiğimiz kurumsal tasarım çözümleri inceleyin.",
     viewAll: "Tüm Projeleri Gör",
     designProjects: [
       {
-        title: 'E-Ticaret Platformu',
+        title: 'Lojistik Platformu',
         category: 'Ürün Tasarımı',
         description: 'Dönüşüm oranını %45 artıran komple UX yenilemesi'
       },
       {
-        title: 'Bankacılık Uygulaması',
-        category: 'Müşteri Yolculuğu',
-        description: '12 temel kullanıcı temas noktası haritalandı ve optimize edildi'
+        title: 'Eġitim Platformu',
+        category: 'B2C Yolculuġu',
+        description: 'Ürün ve Servis Tasarımlarına odaklanarak optimize edildi'
       },
       {
-        title: 'SaaS Paneli',
+        title: 'Bulut Platformu',
         category: 'UI Tasarımı',
         description: 'Kapsamlı tasarım sistemine sahip modern arayüz'
       },
       {
-        title: 'Sağlık Portalı',
+        title: 'Otel & Rezervasyon Platformu',
         category: 'UX Danışmanlığı',
-        description: 'Hasta deneyimi ve erişilebilirlik iyileştirildi'
+        description: 'Müşterinin keşfetme ve satın alma deneyimi iyileştirildi'
       }
     ],
     codeProjects: [
@@ -74,8 +74,8 @@ export const tr: Dictionary = {
     ]
   },
   pricing: {
-    tag: "Benimle Çalış",
-    title: "Planını Seç",
+    tag: "Nasıl Başlayabiliriz",
+    title: "Planınızı Seçelim",
     description: "Proje ihtiyaçlarınıza ve bütçenize uygun esnek tasarım paketleri.",
     descriptionCode: "İşletmenizle birlikte büyüyecek ölçeklenebilir yazılım çözümleri.",
     viewDetails: "Detayları Gör",
@@ -88,11 +88,11 @@ export const tr: Dictionary = {
         name: 'Başlangıç',
         price: '₺75.000',
         period: '/proje',
-        label: 'Küçük Projeler İçin',
-        description: 'Tasarım temelini oluşturmak isteyen girişimler ve küçük işletmeler için mükemmel.',
+        label: 'Tek Seferlik Projeler İçin',
+        description: 'Giris2imciler ve Küçük işletmeler için mükemmel.',
         features: [
           'UI/UX Tasarım Danışmanlığı',
-          'Tel Çerçeve (Wireframe) & Prototip',
+          'Web Tasarım & Reklam Bannerı',
           '5 Sayfaya Kadar Tasarım',
           'Temel Marka Kılavuzu',
           '2 Revizyon Hakkı',
@@ -114,9 +114,9 @@ export const tr: Dictionary = {
           '15 Sayfaya Kadar Tasarım',
           'Kapsamlı Tasarım Sistemi',
           'İnteraktif Prototipler',
-          'Sınırsız Revizyon',
+          '5 Revizyon',
           'Öncelikli Destek',
-          'Kullanıcı Testi Oturumu'
+          'SEO ve Mobile Uyumlu'
         ],
         cta: 'Profesyonel Planı Seç',
         link: '#contact',
@@ -130,11 +130,11 @@ export const tr: Dictionary = {
         description: 'Köklü şirketler ve karmaşık projeler için kapsamlı tasarım ortaklığı.',
         features: [
           'Profesyonel Paketindeki Her Şey',
-          'Tam Ürün Tasarımı',
-          'Sınırsız Sayfa Tasarımı',
-          'CRM Pazarlama Stratejisi',
-          'Yeni İş Geliştirme',
-          'Tasarım Ekibi Eğitimi',
+          'Ućtan uca Ürün Tasarımı',
+          '30+ Sayfa ve Menü Tasarımı',
+          'Pazarlama Tavsiyeleri',
+          'İş Geliştirme Danışmanlığı',
+          'Ekip Eğitimi',
           'Atanmış Tasarımcı',
           '7/24 Öncelikli Destek',
           'Sürekli Bakım'
@@ -211,8 +211,8 @@ export const tr: Dictionary = {
   services: {
     tag: "Hizmetlerimiz",
     titleDesign: "Tasarım Uzmanlığı",
-    titleCode: "Yazılım Çözümleri",
-    descriptionDesign: "İş sonuçlarını yönlendiren ve olağanüstü kullanıcı deneyimleri yaratmaya odaklanan kapsamlı UX-UI tasarım hizmetleri.",
+    titleCode: "Ürün Çözümleri",
+    descriptionDesign: "Kullanılabilirlik, akış optimizasyonu ve ürün stratejisine odaklanan kapsamlı UX/UI tasarım hizmetleri.",
     descriptionCode: "Modern işletmeler için sağlam, ölçeklenebilir çözümler sunan kurumsal düzeyde yazılım geliştirme hizmetleri.",
     loadMore: "Daha Fazla Göster",
     showLess: "Daha Az Göster",
@@ -222,12 +222,12 @@ export const tr: Dictionary = {
         description: 'Veriye dayalı içgörülerle kullanıcı deneyimlerini optimize etmek ve iş büyümesini sağlamak için stratejik UX rehberliği.'
       },
       {
-        title: 'Ürün Tasarımı',
-        description: 'Konseptten lansmana kadar, kullanıcıların sevdiği sezgisel arayüzler yaratan uçtan uca ürün tasarımı.'
+        title: 'Ürün Doktorluğu',
+        description: 'Mevcut ürününüzün konsept ve satış stratejisinin, kullanıcıların sevdiği sezgisel arayüzlerle uçtan uca yeniden tasarımı.'
       },
       {
         title: 'Yeni İş Geliştirme',
-        description: 'Büyüme fırsatlarını belirlemek ve ilgi çekici dijital ürünler oluşturmak için stratejik tasarım düşüncesi.'
+        description: 'Fikrinizin Büyüme fırsatlarını belirlemek ve ilgi çekici dijital ürünler oluşturmak için uçtan uca destek'
       },
       {
         title: 'Müşteri Yolculuğu Haritalama',
@@ -268,12 +268,12 @@ export const tr: Dictionary = {
       {
         title: 'Müşteri Yolculuğu Haritalama',
         description: 'Müşterinizin deneyimindeki her temas noktasını görselleştiriyor, sorunlu noktaları ve iyileştirme fırsatlarını belirliyoruz.',
-        highlights: ['Kullanıcı Araştırması', 'Yolculuk Görselleştirme', 'Temas Noktası Analizi', 'Deneyim Optimizasyonu']
+        highlights: ['Kullanıcı Araştırması', 'Yolculuk Görselleştirme', 'Temas Noktası Analizi', 'Ölçümleme']
       },
       {
-        title: 'Ürün UI Tasarımı',
+        title: 'Yeni Ürün Tasarımı',
         description: 'Markanızla uyumlu, güzel ve sezgisel arayüzler yaratarak kullanıcıları her etkileşimde memnun ediyoruz.',
-        highlights: ['Arayüz Tasarımı', 'Tasarım Sistemleri', 'Prototipleme', 'Görsel Tasarım']
+        highlights: ['Arayüz Tasarımı', 'Tasarım Kütuphanesi', 'Prototipleme', 'Reklam Görseli']
       },
       {
         title: 'Kullanıcı Deneyimi (UX)',
@@ -352,12 +352,12 @@ export const tr: Dictionary = {
     ]
   },
   cta: {
-    titleDesign: "Bir Tasarımcı Kiralamaya Hazır Mısın?",
-    titleCode: "Bir Geliştirici Kiralamaya Hazır Mısın?",
-    descDesign: "Dijital varlığınızı dönüştüren ve gerçek sonuçlar sağlayan olağanüstü tasarımlar yaratmak için birlikte çalışalım.",
-    descCode: "İşletmenizle ölçeklenen kurumsal düzeyde yazılımlar oluşturmak için deneyimli bir geliştiriciyle ortak olun.",
-    btnPrimary: "Beni Hemen Kiralayın",
-    btnSecondary: "Müsaitliği Gör",
+    titleDesign: "Bizimle Çalışmaya Hazır Mısınız?",
+    titleCode: "Bizimle Çalışmaya Hazır Mısınız?",
+    descDesign: "Dijital varlığınızı dönüştüren ve gerçek sonuçlar sağlayan tasarımlar yaratmak için bugün çalışmaya başlayalım.",
+    descCode: "İşletmenize kurumsal düzeyde yazılımlar oluşturmak için bugün çalışmaya başlayalım",
+    btnPrimary: "Başlayalım",
+    btnSecondary: "Ön Görüşme",
     statProjects: "Tamamlanan Proje",
     statSystems: "Kurulan Sistem",
     statSuccess: "Müşteri Başarı Oranı",
