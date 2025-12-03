@@ -7,47 +7,47 @@ export const es: Dictionary = {
     services: "Servicios",
     about: "Nosotros",
     contact: "Contacto",
-    readyText: "¿Estás listo para comenzar tu proyecto?",
+    readyText: "¿Listo para comenzar tu nuevo proyecto?",
     getInTouch: "Contáctanos"
   },
   hero: {
     designTag: "✨ Agencia de Diseño Global",
     designTitle: ["Soluciones", "de Diseño", "Modernas"],
-    designDesc: "Creamos experiencias de usuario excepcionales a través del mapeo del viaje del cliente y diseño de UI de productos.",
-    designBtnPrimary: "Iniciar Proyecto",
-    designBtnSecondary: "Ver Trabajos",
+    designDesc: "Creamos experiencias excepcionales a través del mapeo del viaje del cliente y el diseño UI.",
+    designBtnPrimary: "Cuéntanos tu Proyecto",
+    designBtnSecondary: "Nuestros Trabajos",
     codeTag: "💻 Soluciones de Software Empresarial",
     codeTitle: ["Tecnología", "Innovación", "Código"],
-    codeDesc: "Construimos plataformas ERP y SaaS de nivel empresarial personalizadas para cada sector industrial.",
+    codeDesc: "Construimos plataformas ERP y SaaS de nivel empresarial personalizadas para cada sector.",
     codeBtnPrimary: "Iniciar Desarrollo",
     codeBtnSecondary: "Ver Soluciones"
   },
   portfolio: {
     tag: "Nuestros Proyectos",
-    title: "Proyectos Destacados",
-    description: "Explora nuestros exitosos proyectos de diseño que transformaron experiencias de usuario.",
-    descriptionCode: "Descubre las soluciones empresariales que hemos desarrollado para empresas de diversos sectores.",
-    viewAll: "Ver Todos",
+    title: "Trabajos Destacados",
+    description: "Descubre nuestros exitosos proyectos de diseño que transforman las experiencias de usuario.",
+    descriptionCode: "Examina las soluciones de diseño empresarial que hemos desarrollado para empresas de diversos sectores.",
+    viewAll: "Ver Todos los Proyectos",
     designProjects: [
       {
-        title: 'Plataforma E-Commerce',
+        title: 'Plataforma Logística',
         category: 'Diseño de Producto',
-        description: 'Rediseño completo de UX aumentando la conversión en un 45%'
+        description: 'Renovación completa de UX aumentando la tasa de conversión en un 45%'
       },
       {
-        title: 'App Bancaria',
-        category: 'Viaje del Cliente',
-        description: '12 puntos de contacto clave del usuario mapeados y optimizados'
+        title: 'Plataforma Educativa',
+        category: 'Viaje B2C',
+        description: 'Optimizado con un enfoque en Diseño de Producto y Servicio'
       },
       {
-        title: 'Panel SaaS',
+        title: 'Plataforma en la Nube',
         category: 'Diseño UI',
-        description: 'Interfaz moderna con sistema de diseño integral'
+        description: 'Interfaz moderna con un sistema de diseño integral'
       },
       {
-        title: 'Portal de Salud',
+        title: 'Plataforma de Hoteles y Reservas',
         category: 'Consultoría UX',
-        description: 'Experiencia del paciente y accesibilidad mejoradas'
+        description: 'Mejora de la experiencia de descubrimiento y compra del cliente'
       }
     ],
     codeProjects: [
@@ -62,7 +62,7 @@ export const es: Dictionary = {
         description: 'Plataforma multi-vendedor procesando 10K+ transacciones diarias'
       },
       {
-        title: 'SaaS Gestión de Proyectos',
+        title: 'SaaS de Gestión de Proyectos',
         category: 'Desarrollo SaaS',
         description: 'Herramienta basada en la nube sirviendo a 50K+ usuarios activos'
       },
@@ -74,26 +74,26 @@ export const es: Dictionary = {
     ]
   },
   pricing: {
-    tag: "Trabaja Conmigo",
-    title: "Elige tu Plan",
-    description: "Paquetes de diseño flexibles adaptados a las necesidades y presupuesto de tu proyecto.",
-    descriptionCode: "Soluciones de software escalables diseñadas para crecer con tu negocio.",
+    tag: "Cómo Podemos Empezar",
+    title: "Elija Su Plan",
+    description: "Paquetes de diseño flexibles adaptados a las necesidades y presupuesto de su proyecto.",
+    descriptionCode: "Soluciones de software escalables que crecen con su negocio.",
     viewDetails: "Ver Detalles",
     learnMore: "Más información sobre este plan →",
-    customSolution: "¿Necesitas una solución personalizada?",
-    contactUs: "Contáctanos",
-    forQuote: "para una cotización a medida.",
+    customSolution: "¿Necesita una solución personalizada?",
+    contactUs: "Contáctenos",
+    forQuote: "y obtenga una cotización a medida.",
     designPlans: [
       {
         name: 'Starter',
         price: '$2,500',
         period: '/proyecto',
-        label: 'Para Pequeños Proyectos',
-        description: 'Perfecto para startups y pequeñas empresas que buscan establecer su base de diseño.',
+        label: 'Para Proyectos Puntuales',
+        description: 'Perfecto para Emprendedores y Pequeñas Empresas.',
         features: [
           'Consultoría de Diseño UI/UX',
-          'Wireframing y Prototipado',
-          'Hasta 5 Páginas de Diseño',
+          'Diseño Web y Banners Publicitarios',
+          'Diseño de hasta 5 Páginas',
           'Guía de Marca Básica',
           '2 Rondas de Revisión',
           'Soporte por Email'
@@ -111,12 +111,12 @@ export const es: Dictionary = {
         features: [
           'Todo en el Paquete Starter',
           'Mapeo del Viaje del Cliente',
-          'Hasta 15 Páginas de Diseño',
+          'Diseño de hasta 15 Páginas',
           'Sistema de Diseño Completo',
           'Prototipos Interactivos',
-          'Revisiones Ilimitadas',
+          '5 Revisiones',
           'Soporte Prioritario',
-          'Sesión de Pruebas de Usuario'
+          'Compatible con SEO y Móvil'
         ],
         cta: 'Elegir Plan Profesional',
         link: '#contact',
@@ -130,11 +130,11 @@ export const es: Dictionary = {
         description: 'Asociación de diseño integral para empresas establecidas y proyectos complejos.',
         features: [
           'Todo en el Paquete Profesional',
-          'Diseño de Producto Completo',
-          'Páginas Ilimitadas',
-          'Estrategia de Marketing CRM',
-          'Desarrollo de Nuevos Negocios',
-          'Capacitación del Equipo de Diseño',
+          'Diseño de Producto de Extremo a Extremo',
+          'Diseño de 30+ Páginas y Menús',
+          'Asesoramiento de Marketing',
+          'Consultoría de Desarrollo de Negocio',
+          'Capacitación de Equipo',
           'Diseñador Dedicado',
           'Soporte Prioritario 24/7',
           'Mantenimiento Continuo'
@@ -149,11 +149,11 @@ export const es: Dictionary = {
         name: 'Básico',
         price: '$5,000',
         period: '/proyecto',
-        label: 'Mejor para MVPs',
+        label: 'Mejor para MVP',
         description: 'Perfecto para startups construyendo su primer producto de software o MVP.',
         features: [
           'Aplicación Web Personalizada',
-          'Diseño Responsivo',
+          'Diseño Compatible con Móviles',
           'Integración de API Básica',
           'Configuración de Base de Datos',
           '3 Meses de Soporte',
@@ -175,7 +175,7 @@ export const es: Dictionary = {
           'Desarrollo de API Avanzada',
           'Sistema Multi-usuario',
           'Panel de Administración',
-          'Integración de Pagos',
+          'Integración de Sistema de Pagos',
           '6 Meses de Soporte',
           'Auditoría de Seguridad',
           'Optimización de Rendimiento'
@@ -196,9 +196,9 @@ export const es: Dictionary = {
           'Funciones Específicas del Sector',
           'Seguridad Avanzada',
           'Arquitectura de Microservicios',
-          'Canal CI/CD',
+          'Procesos CI/CD',
           'Balanceo de Carga',
-          'Equipo de Desarrollo Dedicado',
+          'Equipo de Software Dedicado',
           '12 Meses de Soporte',
           'Capacitación e Incorporación'
         ],
@@ -211,10 +211,10 @@ export const es: Dictionary = {
   services: {
     tag: "Nuestros Servicios",
     titleDesign: "Experiencia en Diseño",
-    titleCode: "Soluciones de Software",
-    descriptionDesign: "Servicios integrales de diseño UX-UI enfocados en crear experiencias de usuario excepcionales e impulsar resultados comerciales.",
+    titleCode: "Soluciones de Producto",
+    descriptionDesign: "Servicios integrales de diseño UX/UI centrados en la usabilidad, la optimización del flujo y la estrategia de producto.",
     descriptionCode: "Servicios de desarrollo de software de nivel empresarial que ofrecen soluciones robustas y escalables para empresas modernas.",
-    loadMore: "Cargar Más",
+    loadMore: "Mostrar Más",
     showLess: "Mostrar Menos",
     designServices: [
       {
@@ -222,12 +222,12 @@ export const es: Dictionary = {
         description: 'Orientación estratégica de UX para optimizar experiencias de usuario e impulsar el crecimiento empresarial a través de insights basados en datos.'
       },
       {
-        title: 'Diseño de Producto',
-        description: 'Diseño de producto de extremo a extremo, desde el concepto hasta el lanzamiento, creando interfaces intuitivas que los usuarios aman.'
+        title: 'Diagnóstico de Producto',
+        description: 'Rediseño de extremo a extremo de su concepto de producto y estrategia de ventas existente con interfaces intuitivas que los usuarios aman.'
       },
       {
         title: 'Desarrollo de Nuevos Negocios',
-        description: 'Design thinking estratégico para identificar oportunidades y crear productos digitales atractivos para el crecimiento.'
+        description: 'Soporte integral para identificar oportunidades de crecimiento para su idea y crear productos digitales atractivos.'
       },
       {
         title: 'Mapeo del Viaje del Cliente',
@@ -249,7 +249,7 @@ export const es: Dictionary = {
       },
       {
         title: 'Desarrollo SaaS',
-        description: 'Soluciones de software como servicio basadas en la nube construidas para escala, seguridad y experiencias de usuario fluidas.'
+        description: 'Soluciones de software basadas en la nube construidas para escala, seguridad y experiencias de usuario fluidas.'
       },
       {
         title: 'Software Corporativo',
@@ -262,19 +262,19 @@ export const es: Dictionary = {
     ]
   },
   focusAreas: {
-    tag: "Nuestro Enfoque",
-    titleDesign: "Filosofía de Diseño",
-    titleCode: "Stack Tecnológico",
+    tag: "Temas en los que nos Enfocamos",
+    titleDesign: "Nuestra Filosofía de Diseño",
+    titleCode: "Nuestro Stack Tecnológico",
     designFocus: [
       {
         title: 'Mapeo del Viaje del Cliente',
         description: 'Visualizamos cada punto de contacto en la experiencia de su cliente, identificando puntos débiles y oportunidades de mejora.',
-        highlights: ['Investigación de Usuarios', 'Visualización del Viaje', 'Análisis de Puntos de Contacto', 'Optimización de Experiencia']
+        highlights: ['Investigación de Usuarios', 'Visualización del Viaje', 'Análisis de Puntos de Contacto', 'Medición']
       },
       {
-        title: 'Diseño UI de Producto',
+        title: 'Diseño de Nuevo Producto',
         description: 'Creación de interfaces hermosas e intuitivas que se alinean con su marca y deleitan a los usuarios en cada interacción.',
-        highlights: ['Diseño de Interfaz', 'Sistemas de Diseño', 'Prototipado', 'Diseño Visual']
+        highlights: ['Diseño de Interfaz', 'Biblioteca de Diseño', 'Prototipado', 'Visuales Publicitarios']
       },
       {
         title: 'Experiencia de Usuario (UX)',
@@ -290,7 +290,7 @@ export const es: Dictionary = {
       },
       {
         title: 'Plataformas B2B y SaaS',
-        description: 'Construcción de plataformas web y móviles robustas diseñadas para interacciones B2B y entrega de software como servicio.',
+        description: 'Construcción de plataformas web y móviles robustas diseñadas para interacciones B2B y entrega de SaaS.',
         highlights: ['Arquitectura Multi-inquilino', 'Desarrollo de API', 'Infraestructura en la Nube', 'Seguridad Primero']
       },
       {
@@ -302,7 +302,7 @@ export const es: Dictionary = {
   },
   testimonials: {
     tag: "Éxito del Cliente",
-    title: "Lo Que Dicen los Clientes",
+    title: "Lo Que Dicen Nuestros Clientes",
     descriptionDesign: "Marcas líderes confían en nosotros para ofrecer experiencias de diseño excepcionales.",
     descriptionCode: "Potenciando empresas con soluciones de software de nivel empresarial.",
     designTestimonials: [
@@ -317,14 +317,14 @@ export const es: Dictionary = {
         name: 'David Chen',
         role: 'Director de Producto',
         company: 'FinanceApp',
-        text: 'Su consultoría UX nos ayudó a identificar puntos ciegos que ni siquiera sabíamos que existían. El trabajo de diseño de producto fue excepcional.',
+        text: 'La consultoría UX nos ayudó a identificar puntos ciegos que no sabíamos que existían. El trabajo de diseño de producto fue excepcional.',
         rating: 5
       },
       {
         name: 'Emma Rodriguez',
-        role: 'Jefa de Marketing',
+        role: 'Gerente de Marketing',
         company: 'HealthCare Plus',
-        text: 'Trabajo sobresaliente en nuestra estrategia de marketing CRM. El equipo de diseño realmente entiende el comportamiento del usuario moderno.',
+        text: 'Gran trabajo en nuestra estrategia de marketing CRM. El equipo de diseño realmente entiende el comportamiento del usuario moderno.',
         rating: 5
       }
     ],
@@ -340,7 +340,7 @@ export const es: Dictionary = {
         name: 'Lisa Thompson',
         role: 'VP de Tecnología',
         company: 'Soluciones B2B',
-        text: 'Desarrollo excepcional de plataforma B2B. El equipo entregó una solución escalable que maneja perfectamente nuestras demandas crecientes.',
+        text: 'Desarrollo excepcional de plataforma B2B. El equipo entregó una solución escalable que satisface perfectamente nuestras demandas crecientes.',
         rating: 5
       },
       {
@@ -353,12 +353,12 @@ export const es: Dictionary = {
     ]
   },
   cta: {
-    titleDesign: "¿Listo para Contratar un Diseñador?",
-    titleCode: "¿Listo para Contratar un Desarrollador?",
-    descDesign: "Trabajemos juntos para crear diseños excepcionales que transformen su presencia digital e impulsen resultados reales.",
-    descCode: "Asóciese con un desarrollador experimentado para construir software de nivel empresarial que escale con su negocio.",
-    btnPrimary: "Contrátame Ahora",
-    btnSecondary: "Ver Disponibilidad",
+    titleDesign: "¿Está Listo para Trabajar con Nosotros?",
+    titleCode: "¿Está Listo para Trabajar con Nosotros?",
+    descDesign: "Comencemos a trabajar hoy para crear diseños que transformen su presencia digital y brinden resultados reales.",
+    descCode: "Comencemos a trabajar hoy para construir software de nivel empresarial para su negocio.",
+    btnPrimary: "Empecemos",
+    btnSecondary: "Agendar Llamada",
     statProjects: "Proyectos Completados",
     statSystems: "Sistemas Construidos",
     statSuccess: "Tasa de Éxito del Cliente",
@@ -366,14 +366,14 @@ export const es: Dictionary = {
     statSupportCode: "Soporte de Desarrollo"
   },
   footer: {
-    brandDescDesign: "Creando experiencias de usuario excepcionales a través de un diseño innovador.",
-    brandDescCode: "Construyendo soluciones de software empresarial para empresas modernas.",
+    brandDescDesign: "Creamos experiencias de usuario excepcionales a través de un diseño innovador.",
+    brandDescCode: "Construimos soluciones de software empresarial para empresas modernas.",
     colServices: "Servicios",
     colCompany: "Empresa",
     colContact: "Contacto",
     designServices: ['Consultor UX', 'Diseño de Producto', 'Desarrollo de Negocios', 'Mapeo de Viaje', 'Marketing CRM'],
     codeServices: ['Sistemas ERP', 'Plataformas B2B', 'Desarrollo SaaS', 'Software Personalizado', 'Integración de API'],
-    companyLinks: ['Sobre Nosotros', 'Procesos de Diseño', 'Casos de Estudio', 'Carreras', 'Blog'],
+    companyLinks: ['Acerca de', 'Procesos', 'Casos de Estudio', 'Carreras', 'Blog'],
     copyright: "Todos los derechos reservados.",
     privacy: "Política de Privacidad",
     terms: "Términos de Servicio",

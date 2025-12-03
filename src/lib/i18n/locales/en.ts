@@ -7,47 +7,47 @@ export const en: Dictionary = {
     services: "Services",
     about: "About",
     contact: "Contact",
-    readyText: "Ready to start your next project?",
+    readyText: "Ready to start your new project?",
     getInTouch: "Get in Touch"
   },
   hero: {
     designTag: "✨ Global Design Agency",
     designTitle: ["Modern", "Design", "Solutions"],
-    designDesc: "We craft exceptional user experiences through customer journey mapping and UI design.",
-    designBtnPrimary: "Start Your Project",
-    designBtnSecondary: "View Our Work",
+    designDesc: "We create exceptional experiences through customer journey mapping and UI design.",
+    designBtnPrimary: "Let's Discuss Your Project",
+    designBtnSecondary: "Our Work",
     codeTag: "💻 Enterprise Software Solutions",
-    codeTitle: ["Tech", "Innovation", "Code"],
-    codeDesc: "We build enterprise-grade ERP and SaaS platforms customized for every industry sector.",
+    codeTitle: ["Technology", "Innovation", "Code"],
+    codeDesc: "We build customized, enterprise-grade ERP and SaaS platforms for every sector.",
     codeBtnPrimary: "Start Development",
     codeBtnSecondary: "View Solutions"
   },
   portfolio: {
-    tag: "Our Work",
-    title: "Featured Projects",
-    description: "Explore our portfolio of successful design projects that transformed user experiences.",
-    descriptionCode: "Discover enterprise solutions we've built for businesses across various industries.",
+    tag: "Our Projects",
+    title: "Featured Works",
+    description: "Discover our successful design projects that transform user experiences.",
+    descriptionCode: "Examine the enterprise design solutions we developed for businesses in different sectors.",
     viewAll: "View All Projects",
     designProjects: [
       {
-        title: 'E-Commerce Platform',
+        title: 'Logistics Platform',
         category: 'Product Design',
-        description: 'Complete UX redesign increasing conversion by 45%'
+        description: 'Complete UX renewal increasing conversion rate by 45%'
       },
       {
-        title: 'Banking App',
-        category: 'Customer Journey',
-        description: 'Mapped and optimized 12 key user touchpoints'
+        title: 'Education Platform',
+        category: 'B2C Journey',
+        description: 'Optimized with a focus on Product and Service Design'
       },
       {
-        title: 'SaaS Dashboard',
+        title: 'Cloud Platform',
         category: 'UI Design',
-        description: 'Modern interface with comprehensive design system'
+        description: 'Modern interface with a comprehensive design system'
       },
       {
-        title: 'Healthcare Portal',
+        title: 'Hotel & Booking Platform',
         category: 'UX Consulting',
-        description: 'Streamlined patient experience and accessibility'
+        description: 'Customer discovery and purchasing experience improved'
       }
     ],
     codeProjects: [
@@ -64,7 +64,7 @@ export const en: Dictionary = {
       {
         title: 'Project Management SaaS',
         category: 'SaaS Development',
-        description: 'Cloud-based PM tool serving 50K+ active users'
+        description: 'Cloud-based tool serving 50K+ active users'
       },
       {
         title: 'Logistics Software',
@@ -74,31 +74,31 @@ export const en: Dictionary = {
     ]
   },
   pricing: {
-    tag: "Hire Me",
-    title: "Choose Your Plan",
-    description: "Flexible design packages tailored to your project needs and budget.",
-    descriptionCode: "Scalable development solutions designed to grow with your business.",
+    tag: "How Can We Start",
+    title: "Let's Choose Your Plan",
+    description: "Flexible design packages suited to your project needs and budget.",
+    descriptionCode: "Scalable software solutions that grow with your business.",
     viewDetails: "View Details",
-    learnMore: "Learn more about this plan →",
+    learnMore: "More info about this plan →",
     customSolution: "Need a custom solution?",
     contactUs: "Contact us",
-    forQuote: "for a tailored quote.",
+    forQuote: "and get a custom quote.",
     designPlans: [
       {
         name: 'Starter',
         price: '$2,500',
         period: '/project',
-        label: 'Best for Small Projects',
-        description: 'Perfect for startups and small businesses looking to establish their design foundation.',
+        label: 'For One-off Projects',
+        description: 'Perfect for Entrepreneurs and Small Businesses.',
         features: [
           'UI/UX Design Consultation',
-          'Wireframing & Prototyping',
-          'Up to 5 Page Designs',
+          'Web Design & Ad Banner',
+          'Up to 5 Pages Design',
           'Basic Brand Guidelines',
-          '2 Revision Rounds',
+          '2 Revisions',
           'Email Support'
         ],
-        cta: 'Hire for Starter',
+        cta: 'Choose Starter Plan',
         link: '#contact',
         highlighted: false
       },
@@ -107,18 +107,18 @@ export const en: Dictionary = {
         price: '$5,000',
         period: '/project',
         label: 'Most Popular',
-        description: 'Ideal for growing businesses that need comprehensive design solutions.',
+        description: 'Ideal for growing businesses needing comprehensive design solutions.',
         features: [
           'Everything in Starter',
           'Customer Journey Mapping',
-          'Up to 15 Page Designs',
-          'Complete Design System',
+          'Up to 15 Pages Design',
+          'Comprehensive Design System',
           'Interactive Prototypes',
-          'Unlimited Revisions',
+          '5 Revisions',
           'Priority Support',
-          'User Testing Session'
+          'SEO and Mobile Friendly'
         ],
-        cta: 'Hire for Professional',
+        cta: 'Choose Professional Plan',
         link: '#contact',
         highlighted: true
       },
@@ -130,16 +130,16 @@ export const en: Dictionary = {
         description: 'Comprehensive design partnership for established companies and complex projects.',
         features: [
           'Everything in Professional',
-          'Full Product Design',
-          'Unlimited Page Designs',
-          'CRM Marketing Strategy',
-          'New Business Development',
-          'Design Team Training',
+          'End-to-end Product Design',
+          '30+ Pages and Menu Design',
+          'Marketing Advice',
+          'Business Development Consulting',
+          'Team Training',
           'Dedicated Designer',
           '24/7 Priority Support',
-          'Ongoing Maintenance'
+          'Continuous Maintenance'
         ],
-        cta: 'Hire for Enterprise',
+        cta: 'Choose Enterprise Plan',
         link: '#contact',
         highlighted: false
       }
@@ -149,17 +149,17 @@ export const en: Dictionary = {
         name: 'Basic',
         price: '$5,000',
         period: '/project',
-        label: 'Best for MVPs',
+        label: 'Best for MVP',
         description: 'Perfect for startups building their first software product or MVP.',
         features: [
           'Custom Web Application',
-          'Responsive Design',
+          'Mobile Compatible Design',
           'Basic API Integration',
           'Database Setup',
           '3 Months Support',
           'Documentation'
         ],
-        cta: 'Hire for Basic',
+        cta: 'Choose Basic Plan',
         link: '#contact',
         highlighted: false
       },
@@ -174,21 +174,21 @@ export const en: Dictionary = {
           'ERP/B2B Platform',
           'Advanced API Development',
           'Multi-user System',
-          'Admin Dashboard',
-          'Payment Integration',
+          'Admin Panel (Dashboard)',
+          'Payment System Integration',
           '6 Months Support',
           'Security Audit',
           'Performance Optimization'
         ],
-        cta: 'Hire for Business',
+        cta: 'Choose Business Plan',
         link: '#contact',
         highlighted: true
       },
       {
-        name: 'Corporate',
+        name: 'Enterprise',
         price: '$30,000+',
         period: '/project',
-        label: 'Enterprise Grade',
+        label: 'Enterprise Level',
         description: 'Full-scale enterprise software development with dedicated team support.',
         features: [
           'Everything in Business',
@@ -196,13 +196,13 @@ export const en: Dictionary = {
           'Sector-Specific Features',
           'Advanced Security',
           'Microservices Architecture',
-          'CI/CD Pipeline',
+          'CI/CD Processes',
           'Load Balancing',
-          'Dedicated Dev Team',
+          'Dedicated Software Team',
           '12 Months Support',
           'Training & Onboarding'
         ],
-        cta: 'Hire for Corporate',
+        cta: 'Choose Enterprise Plan',
         link: '#contact',
         highlighted: false
       }
@@ -211,23 +211,23 @@ export const en: Dictionary = {
   services: {
     tag: "Our Services",
     titleDesign: "Design Expertise",
-    titleCode: "Development Solutions",
-    descriptionDesign: "Comprehensive UX-UI design services focused on creating exceptional user experiences and driving business results.",
-    descriptionCode: "Enterprise-grade software development services delivering robust, scalable solutions for modern businesses.",
-    loadMore: "Load More Services",
+    titleCode: "Product Solutions",
+    descriptionDesign: "Comprehensive UX/UI design services focusing on usability, flow optimization, and product strategy.",
+    descriptionCode: "Enterprise-grade software development services offering robust, scalable solutions for modern businesses.",
+    loadMore: "Show More",
     showLess: "Show Less",
     designServices: [
       {
-        title: 'UX Consultant',
+        title: 'UX Consulting',
         description: 'Strategic UX guidance to optimize user experiences and drive business growth through data-driven insights.'
       },
       {
-        title: 'Product Design',
-        description: 'End-to-end product design from concept to launch, creating intuitive interfaces that users love.'
+        title: 'Product Doctoring',
+        description: 'End-to-end redesign of your existing product concept and sales strategy with intuitive interfaces users love.'
       },
       {
         title: 'New Business Development',
-        description: 'Strategic design thinking to identify opportunities and create compelling digital products for growth.'
+        description: 'End-to-end support to identify growth opportunities for your idea and create compelling digital products.'
       },
       {
         title: 'Customer Journey Mapping',
@@ -249,7 +249,7 @@ export const en: Dictionary = {
       },
       {
         title: 'SaaS Development',
-        description: 'Cloud-based software as a service solutions built for scale, security, and seamless user experiences.'
+        description: 'Cloud-based software solutions built for scale, security, and seamless user experiences.'
       },
       {
         title: 'Corporate Software',
@@ -262,35 +262,35 @@ export const en: Dictionary = {
     ]
   },
   focusAreas: {
-    tag: "What We Focus On",
+    tag: "Topics We Focus On",
     titleDesign: "Our Design Philosophy",
     titleCode: "Our Tech Stack",
     designFocus: [
       {
         title: 'Customer Journey Mapping',
         description: 'We visualize every touchpoint in your customer\'s experience, identifying pain points and opportunities for improvement.',
-        highlights: ['User Research', 'Journey Visualization', 'Touchpoint Analysis', 'Experience Optimization']
+        highlights: ['User Research', 'Journey Visualization', 'Touchpoint Analysis', 'Measurement']
       },
       {
-        title: 'Product UI Design',
+        title: 'New Product Design',
         description: 'Creating beautiful, intuitive interfaces that align with your brand and delight users at every interaction.',
-        highlights: ['Interface Design', 'Design Systems', 'Prototyping', 'Visual Design']
+        highlights: ['Interface Design', 'Design Library', 'Prototyping', 'Ad Visuals']
       },
       {
-        title: 'User Experience',
-        description: 'Comprehensive UX strategy that combines research, testing, and iteration to create seamless user experiences.',
+        title: 'User Experience (UX)',
+        description: 'Comprehensive UX strategy combining research, testing, and iteration to create seamless user experiences.',
         highlights: ['UX Research', 'Usability Testing', 'Information Architecture', 'Interaction Design']
       }
     ],
     codeFocus: [
       {
         title: 'ERP Solutions',
-        description: 'Enterprise resource planning systems that integrate all aspects of your business operations into one unified platform.',
+        description: 'Enterprise resource planning systems integrating all aspects of your business operations into a unified platform.',
         highlights: ['Process Automation', 'Real-time Analytics', 'Multi-module Integration', 'Scalable Architecture']
       },
       {
         title: 'B2B & SaaS Platforms',
-        description: 'Build robust web and mobile platforms designed for business-to-business interactions and software-as-a-service delivery.',
+        description: 'Building robust web and mobile platforms designed for B2B interactions and SaaS delivery.',
         highlights: ['Multi-tenant Architecture', 'API Development', 'Cloud Infrastructure', 'Security First']
       },
       {
@@ -302,29 +302,29 @@ export const en: Dictionary = {
   },
   testimonials: {
     tag: "Client Success",
-    title: "What Clients Say",
-    descriptionDesign: "Trusted by leading brands to deliver exceptional design experiences.",
-    descriptionCode: "Powering businesses with enterprise-grade software solutions.",
+    title: "What Our Clients Say",
+    descriptionDesign: "Trusted by leading brands for exceptional design experiences.",
+    descriptionCode: "Empowering businesses with enterprise-grade software solutions.",
     designTestimonials: [
       {
         name: 'Sarah Mitchell',
         role: 'CEO, RetailTech',
         company: 'E-Commerce',
-        text: 'The customer journey mapping transformed our entire user experience. Conversion rates increased by 45% within three months.',
+        text: 'Customer journey mapping transformed our entire user experience. Conversion rates increased by 45% within three months.',
         rating: 5
       },
       {
         name: 'David Chen',
         role: 'Product Director',
         company: 'FinanceApp',
-        text: 'Their UX consulting helped us identify blind spots we never knew existed. The product design work was exceptional.',
+        text: 'UX consulting helped us identify blind spots we didn\'t know existed. The product design work was exceptional.',
         rating: 5
       },
       {
         name: 'Emma Rodriguez',
-        role: 'Marketing Head',
+        role: 'Marketing Manager',
         company: 'HealthCare Plus',
-        text: 'Outstanding work on our CRM marketing strategy. The design team truly understands modern user behavior.',
+        text: 'Great work on our CRM marketing strategy. The design team truly understands modern user behavior.',
         rating: 5
       }
     ],
@@ -340,25 +340,25 @@ export const en: Dictionary = {
         name: 'Lisa Thompson',
         role: 'VP Technology',
         company: 'B2B Solutions',
-        text: 'Exceptional B2B platform development. The team delivered a scalable solution that handles our growing demands perfectly.',
+        text: 'Exceptional B2B platform development. The team delivered a scalable solution that perfectly meets our growing demands.',
         rating: 5
       },
       {
         name: 'James Wilson',
         role: 'Founder',
         company: 'SaaS Startup',
-        text: 'From concept to deployment, they built our entire SaaS platform. The code quality and architecture are top-notch.',
+        text: 'From concept to deployment, they built our entire SaaS platform. Code quality and architecture are top-notch.',
         rating: 5
       }
     ]
   },
   cta: {
-    titleDesign: "Ready to Hire a Designer?",
-    titleCode: "Ready to Hire a Developer?",
-    descDesign: "Let's work together to create exceptional designs that transform your digital presence and drive real results.",
-    descCode: "Partner with an experienced developer to build enterprise-grade software that scales with your business.",
-    btnPrimary: "Hire Me Now",
-    btnSecondary: "View Availability",
+    titleDesign: "Are You Ready to Work With Us?",
+    titleCode: "Are You Ready to Work With Us?",
+    descDesign: "Let's start working today to create designs that transform your digital presence and provide real results.",
+    descCode: "Let's start working today to build enterprise-grade software for your business.",
+    btnPrimary: "Let's Start",
+    btnSecondary: "Book a Call",
     statProjects: "Projects Completed",
     statSystems: "Systems Built",
     statSuccess: "Client Success Rate",
@@ -366,14 +366,14 @@ export const en: Dictionary = {
     statSupportCode: "Development Support"
   },
   footer: {
-    brandDescDesign: "Creating exceptional user experiences through innovative design.",
-    brandDescCode: "Building enterprise-grade software solutions for modern businesses.",
+    brandDescDesign: "We create exceptional user experiences through innovative design.",
+    brandDescCode: "We build enterprise-grade software solutions for modern businesses.",
     colServices: "Services",
     colCompany: "Company",
     colContact: "Contact",
     designServices: ['UX Consultant', 'Product Design', 'Business Development', 'Journey Mapping', 'CRM Marketing'],
     codeServices: ['ERP Systems', 'B2B Platforms', 'SaaS Development', 'Custom Software', 'API Integration'],
-    companyLinks: ['About Us', 'Design Process', 'Case Studies', 'Careers', 'Blog'],
+    companyLinks: ['About', 'Processes', 'Case Studies', 'Careers', 'Blog'],
     copyright: "All rights reserved.",
     privacy: "Privacy Policy",
     terms: "Terms of Service",

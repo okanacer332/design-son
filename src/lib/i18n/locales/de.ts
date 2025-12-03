@@ -7,98 +7,98 @@ export const de: Dictionary = {
     services: "Dienstleistungen",
     about: "Über uns",
     contact: "Kontakt",
-    readyText: "Bereit für Ihr nächstes Projekt?",
+    readyText: "Bereit für Ihr neues Projekt?",
     getInTouch: "Kontaktieren Sie uns"
   },
   hero: {
     designTag: "✨ Globale Designagentur",
     designTitle: ["Moderne", "Design", "Lösungen"],
-    designDesc: "Wir schaffen außergewöhnliche Benutzererlebnisse durch Customer Journey Mapping und UI-Design.",
-    designBtnPrimary: "Projekt Starten",
-    designBtnSecondary: "Unsere Arbeit",
+    designDesc: "Wir schaffen außergewöhnliche Erlebnisse durch Customer Journey Mapping und UI-Design.",
+    designBtnPrimary: "Lassen Sie uns sprechen",
+    designBtnSecondary: "Unsere Arbeiten",
     codeTag: "💻 Enterprise Softwarelösungen",
-    codeTitle: ["Tech", "Innovation", "Code"],
-    codeDesc: "Wir entwickeln ERP- und SaaS-Plattformen auf Unternehmensebene, maßgeschneidert für jede Branche.",
-    codeBtnPrimary: "Entwicklung Starten",
-    codeBtnSecondary: "Lösungen Ansehen"
+    codeTitle: ["Technologie", "Innovation", "Code"],
+    codeDesc: "Wir entwickeln maßgeschneiderte ERP- und SaaS-Plattformen auf Unternehmensebene für jede Branche.",
+    codeBtnPrimary: "Entwicklung starten",
+    codeBtnSecondary: "Lösungen ansehen"
   },
   portfolio: {
-    tag: "Unsere Arbeit",
-    title: "Ausgewählte Projekte",
+    tag: "Unsere Projekte",
+    title: "Ausgewählte Arbeiten",
     description: "Entdecken Sie unsere erfolgreichen Designprojekte, die Benutzererlebnisse transformieren.",
-    descriptionCode: "Entdecken Sie unsere Unternehmenslösungen, die wir für verschiedene Branchen entwickelt haben.",
-    viewAll: "Alle Projekte",
+    descriptionCode: "Untersuchen Sie die Unternehmens-Designlösungen, die wir für Unternehmen in verschiedenen Sektoren entwickelt haben.",
+    viewAll: "Alle Projekte ansehen",
     designProjects: [
       {
-        title: 'E-Commerce Plattform',
+        title: 'Logistik-Plattform',
         category: 'Produktdesign',
-        description: 'Kompletter UX-Relaunch mit 45% Steigerung der Konversionsrate'
+        description: 'Komplette UX-Erneuerung mit 45% Steigerung der Konversionsrate'
       },
       {
-        title: 'Banking App',
-        category: 'Customer Journey',
-        description: '12 wichtige Benutzer-Touchpoints kartiert und optimiert'
+        title: 'Bildungsplattform',
+        category: 'B2C Journey',
+        description: 'Optimiert mit Fokus auf Produkt- und Service-Design'
       },
       {
-        title: 'SaaS Dashboard',
-        category: 'UI Design',
+        title: 'Cloud-Plattform',
+        category: 'UI-Design',
         description: 'Modernes Interface mit umfassendem Designsystem'
       },
       {
-        title: 'Gesundheitsportal',
-        category: 'UX Beratung',
-        description: 'Patientenerlebnis und Barrierefreiheit verbessert'
+        title: 'Hotel & Buchungsplattform',
+        category: 'UX-Beratung',
+        description: 'Kundenentdeckung und Kauferlebnis verbessert'
       }
     ],
     codeProjects: [
       {
         title: 'Produktions-ERP',
-        category: 'ERP System',
-        description: 'Vollständiges ERP für 500+ Benutzer in 12 Werken'
+        category: 'ERP-System',
+        description: 'Vollständiges ERP zur Verwaltung von 500+ Benutzern in 12 Werken'
       },
       {
-        title: 'B2B Marktplatz',
-        category: 'B2B Plattform',
+        title: 'B2B-Marktplatz',
+        category: 'B2B-Plattform',
         description: 'Multi-Vendor-Plattform mit 10K+ täglichen Transaktionen'
       },
       {
         title: 'Projektmanagement SaaS',
-        category: 'SaaS Entwicklung',
+        category: 'SaaS-Entwicklung',
         description: 'Cloud-basiertes Tool für 50K+ aktive Nutzer'
       },
       {
-        title: 'Logistik Software',
+        title: 'Logistik-Software',
         category: 'Individuelle Lösung',
         description: 'Echtzeit-Tracking-System für Unternehmenslogistik'
       }
     ]
   },
   pricing: {
-    tag: "Arbeite mit mir",
-    title: "Wählen Sie Ihren Plan",
+    tag: "Wie können wir starten",
+    title: "Wählen wir Ihren Plan",
     description: "Flexible Designpakete, angepasst an Ihre Projektbedürfnisse und Ihr Budget.",
     descriptionCode: "Skalierbare Softwarelösungen, die mit Ihrem Unternehmen wachsen.",
-    viewDetails: "Details Anzeigen",
-    learnMore: "Mehr über diesen Plan erfahren →",
+    viewDetails: "Details ansehen",
+    learnMore: "Mehr Infos zu diesem Plan →",
     customSolution: "Benötigen Sie eine individuelle Lösung?",
     contactUs: "Kontaktieren Sie uns",
-    forQuote: "für ein maßgeschneidertes Angebot.",
+    forQuote: "und erhalten Sie ein individuelles Angebot.",
     designPlans: [
       {
         name: 'Starter',
         price: '€2.500',
         period: '/projekt',
-        label: 'Für kleine Projekte',
-        description: 'Perfekt für Startups und kleine Unternehmen, die ihre Designbasis aufbauen.',
+        label: 'Für einmalige Projekte',
+        description: 'Perfekt für Unternehmer und kleine Unternehmen.',
         features: [
-          'UI/UX Design Beratung',
-          'Wireframing & Prototyping',
+          'UI/UX Design-Beratung',
+          'Webdesign & Werbebanner',
           'Bis zu 5 Seiten Design',
           'Basis Markenrichtlinien',
           '2 Revisionsrunden',
           'E-Mail Support'
         ],
-        cta: 'Starter Wählen',
+        cta: 'Starter-Plan wählen',
         link: '#contact',
         highlighted: false
       },
@@ -106,19 +106,19 @@ export const de: Dictionary = {
         name: 'Professional',
         price: '€5.000',
         period: '/projekt',
-        label: 'Am Beliebtesten',
+        label: 'Am beliebtesten',
         description: 'Ideal für wachsende Unternehmen, die umfassende Designlösungen benötigen.',
         features: [
-          'Alles im Starter Paket',
+          'Alles im Starter-Paket',
           'Customer Journey Mapping',
           'Bis zu 15 Seiten Design',
           'Umfassendes Designsystem',
           'Interaktive Prototypen',
-          'Unbegrenzte Revisionen',
-          'Priority Support',
-          'User Testing Session'
+          '5 Revisionen',
+          'Priorisierter Support',
+          'SEO- und Mobil-freundlich'
         ],
-        cta: 'Professional Wählen',
+        cta: 'Professional-Plan wählen',
         link: '#contact',
         highlighted: true
       },
@@ -126,40 +126,40 @@ export const de: Dictionary = {
         name: 'Enterprise',
         price: '€10.000+',
         period: '/projekt',
-        label: 'Für Große Teams',
+        label: 'Für große Teams',
         description: 'Umfassende Designpartnerschaft für etablierte Unternehmen und komplexe Projekte.',
         features: [
-          'Alles im Professional Paket',
-          'Vollständiges Produktdesign',
-          'Unbegrenzte Seiten',
-          'CRM Marketing Strategie',
-          'Business Development',
-          'Design Team Training',
+          'Alles im Professional-Paket',
+          'End-to-End Produktdesign',
+          '30+ Seiten und Menüdesign',
+          'Marketing-Beratung',
+          'Business Development Beratung',
+          'Team-Training',
           'Dedizierter Designer',
-          '24/7 Priority Support',
+          '24/7 Priorisierter Support',
           'Laufende Wartung'
         ],
-        cta: 'Enterprise Wählen',
+        cta: 'Enterprise-Plan wählen',
         link: '#contact',
         highlighted: false
       }
     ],
     codePlans: [
       {
-        name: 'Basis',
+        name: 'Basic',
         price: '€5.000',
         period: '/projekt',
         label: 'Beste für MVPs',
         description: 'Perfekt für Startups, die ihr erstes Softwareprodukt oder MVP entwickeln.',
         features: [
           'Individuelle Webanwendung',
-          'Responsive Design',
-          'Basis API Integration',
-          'Datenbank Setup',
+          'Mobil-kompatibles Design',
+          'Basis API-Integration',
+          'Datenbank-Setup',
           '3 Monate Support',
           'Dokumentation'
         ],
-        cta: 'Basis Wählen',
+        cta: 'Basic-Plan wählen',
         link: '#contact',
         highlighted: false
       },
@@ -167,89 +167,89 @@ export const de: Dictionary = {
         name: 'Business',
         price: '€15.000',
         period: '/projekt',
-        label: 'Am Beliebtesten',
+        label: 'Am beliebtesten',
         description: 'Umfassende Lösung für Unternehmen, die robuste Softwaresysteme benötigen.',
         features: [
-          'Alles im Basis Paket',
-          'ERP/B2B Plattform',
-          'Erweiterte API Entwicklung',
-          'Multi-User System',
-          'Admin Dashboard',
-          'Zahlungsintegration',
+          'Alles im Basic-Paket',
+          'ERP/B2B-Plattform',
+          'Erweiterte API-Entwicklung',
+          'Multi-User-System',
+          'Admin-Panel (Dashboard)',
+          'Zahlungssystem-Integration',
           '6 Monate Support',
           'Sicherheitsaudit',
-          'Performance Optimierung'
+          'Performance-Optimierung'
         ],
-        cta: 'Business Wählen',
+        cta: 'Business-Plan wählen',
         link: '#contact',
         highlighted: true
       },
       {
-        name: 'Corporate',
+        name: 'Enterprise',
         price: '€30.000+',
         period: '/projekt',
-        label: 'Enterprise Grade',
+        label: 'Enterprise-Level',
         description: 'Full-Scale Enterprise-Softwareentwicklung mit dediziertem Team-Support.',
         features: [
-          'Alles im Business Paket',
-          'Custom SaaS Plattform',
-          'Branchenspezifische Funktionen',
+          'Alles im Business-Paket',
+          'Custom SaaS-Plattform',
+          'Sektorspezifische Funktionen',
           'Erweiterte Sicherheit',
-          'Microservices Architektur',
-          'CI/CD Pipelines',
+          'Microservices-Architektur',
+          'CI/CD-Prozesse',
           'Load Balancing',
-          'Dediziertes Entwicklerteam',
+          'Dediziertes Software-Team',
           '12 Monate Support',
           'Training & Onboarding'
         ],
-        cta: 'Corporate Wählen',
+        cta: 'Enterprise-Plan wählen',
         link: '#contact',
         highlighted: false
       }
     ]
   },
   services: {
-    tag: "Dienstleistungen",
-    titleDesign: "Design Expertise",
-    titleCode: "Software Lösungen",
-    descriptionDesign: "Umfassende UX-UI-Services, fokussiert auf außergewöhnliche Benutzererlebnisse und Geschäftsergebnisse.",
-    descriptionCode: "Enterprise-Softwareentwicklung, die robuste, skalierbare Lösungen für moderne Unternehmen liefert.",
-    loadMore: "Mehr Anzeigen",
-    showLess: "Weniger Anzeigen",
+    tag: "Unsere Dienstleistungen",
+    titleDesign: "Design-Expertise",
+    titleCode: "Produktlösungen",
+    descriptionDesign: "Umfassende UX/UI-Designservices mit Fokus auf Benutzerfreundlichkeit, Flow-Optimierung und Produktstrategie.",
+    descriptionCode: "Enterprise-Softwareentwicklung, die robuste, skalierbare Lösungen für moderne Unternehmen bietet.",
+    loadMore: "Mehr anzeigen",
+    showLess: "Weniger anzeigen",
     designServices: [
       {
-        title: 'UX Beratung',
+        title: 'UX-Beratung',
         description: 'Strategische UX-Führung zur Optimierung von Benutzererlebnissen und Förderung des Geschäftswachstums durch datengestützte Erkenntnisse.'
       },
       {
-        title: 'Produktdesign',
-        description: 'End-to-End Produktdesign vom Konzept bis zum Launch, das intuitive Schnittstellen schafft, die Benutzer lieben.'
+        title: 'Produkt-Optimierung',
+        description: 'End-to-End-Neugestaltung Ihres bestehenden Produktkonzepts und Ihrer Verkaufsstrategie mit intuitiven Schnittstellen, die Benutzer lieben.'
       },
       {
-        title: 'Business Development',
-        description: 'Strategisches Design Thinking zur Identifizierung von Chancen und Entwicklung überzeugender digitaler Produkte.'
+        title: 'Neugeschäftsentwicklung',
+        description: 'End-to-End-Unterstützung zur Identifizierung von Wachstumschancen für Ihre Idee und Erstellung überzeugender digitaler Produkte.'
       },
       {
         title: 'Customer Journey Mapping',
-        description: 'Visualisierung und Optimierung jedes Touchpoints in der Kundenreise für maximales Engagement.'
+        description: 'Visualisieren und optimieren Sie jeden Touchpoint in der Reise Ihres Kunden für maximales Engagement.'
       },
       {
-        title: 'CRM Marketing',
+        title: 'CRM-Marketing',
         description: 'Design von Kundenbeziehungsstrategien, die die Loyalität steigern und dauerhafte Markenbindung schaffen.'
       }
     ],
     codeServices: [
       {
-        title: 'ERP Systeme',
+        title: 'ERP-Systeme',
         description: 'Umfassende Enterprise Resource Planning Lösungen, die Abläufe in Ihrer gesamten Organisation rationalisieren.'
       },
       {
-        title: 'B2B Plattformen',
+        title: 'B2B-Plattformen',
         description: 'Skalierbare B2B Web- und Mobile-Plattformen, die Unternehmen verbinden und den Handel effizient vorantreiben.'
       },
       {
-        title: 'SaaS Entwicklung',
-        description: 'Cloud-basierte Software-as-a-Service-Lösungen, gebaut für Skalierung, Sicherheit und nahtlose Benutzererlebnisse.'
+        title: 'SaaS-Entwicklung',
+        description: 'Cloud-basierte Softwarelösungen, gebaut für Skalierung, Sicherheit und nahtlose Benutzererlebnisse.'
       },
       {
         title: 'Corporate Software',
@@ -262,19 +262,19 @@ export const de: Dictionary = {
     ]
   },
   focusAreas: {
-    tag: "Unser Fokus",
-    titleDesign: "Design Philosophie",
-    titleCode: "Technologie Stack",
+    tag: "Themen im Fokus",
+    titleDesign: "Unsere Design-Philosophie",
+    titleCode: "Unser Tech-Stack",
     designFocus: [
       {
         title: 'Customer Journey Mapping',
         description: 'Wir visualisieren jeden Touchpoint in der Erfahrung Ihres Kunden und identifizieren Schmerzpunkte und Verbesserungsmöglichkeiten.',
-        highlights: ['Benutzerforschung', 'Journey Visualisierung', 'Touchpoint Analyse', 'Erlebnisoptimierung']
+        highlights: ['Benutzerforschung', 'Journey Visualisierung', 'Touchpoint Analyse', 'Messung']
       },
       {
-        title: 'Produkt UI Design',
+        title: 'Neues Produktdesign',
         description: 'Erstellung schöner, intuitiver Schnittstellen, die mit Ihrer Marke übereinstimmen und Benutzer bei jeder Interaktion begeistern.',
-        highlights: ['Interface Design', 'Design Systeme', 'Prototyping', 'Visual Design']
+        highlights: ['Interface Design', 'Design-Bibliothek', 'Prototyping', 'Werbe-Visuals']
       },
       {
         title: 'User Experience (UX)',
@@ -284,14 +284,14 @@ export const de: Dictionary = {
     ],
     codeFocus: [
       {
-        title: 'ERP Lösungen',
+        title: 'ERP-Lösungen',
         description: 'Enterprise Resource Planning Systeme, die alle Aspekte Ihrer Geschäftsabläufe in einer einheitlichen Plattform integrieren.',
         highlights: ['Prozessautomatisierung', 'Echtzeit-Analytik', 'Multi-Modul Integration', 'Skalierbare Architektur']
       },
       {
         title: 'B2B & SaaS Plattformen',
-        description: 'Bau robuster Web- und Mobile-Plattformen für Business-to-Business-Interaktionen und Software-as-a-Service-Bereitstellung.',
-        highlights: ['Multi-Tenant Architektur', 'API Entwicklung', 'Cloud Infrastruktur', 'Security First']
+        description: 'Bau robuster Web- und Mobile-Plattformen, konzipiert für B2B-Interaktionen und SaaS-Bereitstellung.',
+        highlights: ['Multi-Tenant Architektur', 'API Entwicklung', 'Cloud Infrastruktur', 'Sicherheit zuerst']
       },
       {
         title: 'Sektorspezifische Software',
@@ -302,7 +302,7 @@ export const de: Dictionary = {
   },
   testimonials: {
     tag: "Kundenerfolg",
-    title: "Was Kunden Sagen",
+    title: "Was unsere Kunden sagen",
     descriptionDesign: "Vertraut von führenden Marken für außergewöhnliche Designerlebnisse.",
     descriptionCode: "Wir stärken Unternehmen mit Enterprise-Grade Softwarelösungen.",
     designTestimonials: [
@@ -322,9 +322,9 @@ export const de: Dictionary = {
       },
       {
         name: 'Emma Rodriguez',
-        role: 'Marketingleiterin',
+        role: 'Marketing Managerin',
         company: 'HealthCare Plus',
-        text: 'Hervorragende Arbeit an unserer CRM-Marketingstrategie. Das Designteam versteht modernes Nutzerverhalten wirklich.',
+        text: 'Großartige Arbeit an unserer CRM-Marketingstrategie. Das Designteam versteht modernes Nutzerverhalten wirklich.',
         rating: 5
       }
     ],
@@ -353,12 +353,12 @@ export const de: Dictionary = {
     ]
   },
   cta: {
-    titleDesign: "Bereit, einen Designer zu engagieren?",
-    titleCode: "Bereit, einen Entwickler zu engagieren?",
-    descDesign: "Lassen Sie uns zusammenarbeiten, um außergewöhnliche Designs zu schaffen, die Ihre digitale Präsenz transformieren und echte Ergebnisse liefern.",
-    descCode: "Arbeiten Sie mit einem erfahrenen Entwickler zusammen, um Enterprise-Software zu bauen, die mit Ihrem Unternehmen skaliert.",
-    btnPrimary: "Jetzt Beauftragen",
-    btnSecondary: "Verfügbarkeit Prüfen",
+    titleDesign: "Sind Sie bereit, mit uns zu arbeiten?",
+    titleCode: "Sind Sie bereit, mit uns zu arbeiten?",
+    descDesign: "Lassen Sie uns heute beginnen, Designs zu schaffen, die Ihre digitale Präsenz transformieren und echte Ergebnisse liefern.",
+    descCode: "Lassen Sie uns heute beginnen, Enterprise-Grade Software für Ihr Unternehmen zu bauen.",
+    btnPrimary: "Lassen Sie uns starten",
+    btnSecondary: "Gespräch buchen",
     statProjects: "Abgeschlossene Projekte",
     statSystems: "Erstellte Systeme",
     statSuccess: "Kundenerfolgsrate",
@@ -375,8 +375,8 @@ export const de: Dictionary = {
     codeServices: ['ERP Systeme', 'B2B Plattformen', 'SaaS Entwicklung', 'Individuelle Software', 'API Integration'],
     companyLinks: ['Über uns', 'Prozesse', 'Fallstudien', 'Karriere', 'Blog'],
     copyright: "Alle Rechte vorbehalten.",
-    privacy: "Datenschutz",
-    terms: "AGB",
+    privacy: "Datenschutzrichtlinie",
+    terms: "Nutzungsbedingungen",
     cookie: "Cookie-Richtlinie"
   }
 };
