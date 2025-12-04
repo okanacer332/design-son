@@ -1,21 +1,14 @@
 "use client";
 
-import * as React from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/src/lib/i18n/LanguageContext";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/src/components/ui/dropdown-menu";
 
 interface LanguageSelectorProps {
   mode: 'design' | 'code';
 }
 
 // --- ÖZEL SVG BAYRAK İKONLARI (Minimalist & Yuvarlak) ---
-
 const FlagTR = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 32 32" className={className}>
     <circle cx="16" cy="16" r="16" fill="#E30A17" />
@@ -90,13 +83,11 @@ const FlagAR = ({ className }: { className?: string }) => (
     <circle cx="16" cy="16" r="16" fill="#006C35" />
     <path fill="#FFFFFF" d="M10,8 h12 v4 h-12 z" transform="translate(0, 4)" /> 
     <path fill="#FFFFFF" d="M10,12 h2 v8 h-2 z" transform="translate(0, 4)" />
-    {/* Minimalist kılıç temsili */}
     <path fill="#FFFFFF" d="M8,22 h16 v2 h-16 z" />
   </svg>
 );
 
 // --- KONFIGÜRASYON ---
-
 const FlagMap: Record<string, React.ElementType> = {
   TR: FlagTR,
   EN: FlagEN,
@@ -118,9 +109,21 @@ const LanguageNames: Record<string, string> = {
 };
 
 // --- BİLEŞEN ---
-
 export function LanguageSelector({ mode }: LanguageSelectorProps) {
   const { language, setLanguage, availableLanguages } = useLanguage();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Dışarı tıklandığında menüyü kapat
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   // Tasarım moduna göre renkler
   const activeColorClass = mode === 'design' 
@@ -136,37 +139,52 @@ export function LanguageSelector({ mode }: LanguageSelectorProps) {
     : 'bg-blue-500/10 text-blue-300';
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger className={`flex items-center gap-1 text-sm font-medium text-white/90 transition-colors outline-none group ${activeColorClass}`}>
-        <span className="tracking-wide">{language}</span>
-        <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
-      </DropdownMenuTrigger>
-      
-      <DropdownMenuContent 
-        align="end" 
-        sideOffset={8}
-        className={`bg-slate-900/95 backdrop-blur-xl border ${dropdownBorderClass} text-white min-w-[150px] p-1.5 rounded-xl shadow-xl max-h-[400px] overflow-y-auto scrollbar-hide`}
+    <div className="relative" ref={dropdownRef}>
+      {/* TRIGGER BUTONU */}
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className={`flex items-center gap-1 text-sm font-medium text-white/90 transition-colors outline-none group ${activeColorClass}`}
       >
-        {availableLanguages.map((langCode) => {
-          const FlagComponent = FlagMap[langCode] || FlagEN;
-          const langName = LanguageNames[langCode] || langCode;
-          const isActive = language === langCode;
+        <span className="tracking-wide">{language}</span>
+        <ChevronDown className={`w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      
+      {/* DROPDOWN MENU - ABSOLUTE POZİSYON */}
+      {/* "absolute right-0 top-full mt-2" sayesinde header'ı itmez, üstte açılır */}
+      {isOpen && (
+        <div 
+          className={`absolute right-0 top-full mt-2 z-50 origin-top-right
+            bg-slate-900/95 backdrop-blur-xl border ${dropdownBorderClass} 
+            text-white min-w-[150px] p-1.5 rounded-xl shadow-xl 
+            max-h-[400px] overflow-y-auto scrollbar-hide
+            animate-in fade-in zoom-in-95 duration-200`}
+        >
+          {availableLanguages.map((langCode) => {
+            const FlagComponent = FlagMap[langCode] || FlagEN;
+            const langName = LanguageNames[langCode] || langCode;
+            const isActive = language === langCode;
 
-          return (
-            <DropdownMenuItem 
-              key={langCode}
-              onClick={() => setLanguage(langCode)}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer text-sm font-medium transition-all focus:bg-white/5 focus:text-white ${isActive ? activeItemBg : 'text-gray-400 hover:text-white'}`}
-            >
-              <FlagComponent className="w-5 h-5 shadow-sm rounded-full flex-shrink-0" />
-              <span>{langName}</span>
-              {isActive && (
-                <span className="ml-auto w-1.5 h-1.5 rounded-full bg-current shadow-[0_0_8px_currentColor]"></span>
-              )}
-            </DropdownMenuItem>
-          );
-        })}
-      </DropdownMenuContent>
-    </DropdownMenu>
+            return (
+              <button
+                key={langCode}
+                onClick={() => {
+                  setLanguage(langCode);
+                  setIsOpen(false);
+                }}
+                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left cursor-pointer text-sm font-medium transition-all focus:bg-white/5 focus:text-white 
+                  ${isActive ? activeItemBg : 'text-gray-400 hover:text-white hover:bg-white/5'}
+                `}
+              >
+                <FlagComponent className="w-5 h-5 shadow-sm rounded-full flex-shrink-0" />
+                <span>{langName}</span>
+                {isActive && (
+                  <span className="ml-auto w-1.5 h-1.5 rounded-full bg-current shadow-[0_0_8px_currentColor]"></span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
 }
