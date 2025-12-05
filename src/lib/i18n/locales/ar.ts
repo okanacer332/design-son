@@ -1,358 +1,358 @@
 import { Dictionary } from '../types';
 
-export const es: Dictionary = {
+export const ar: Dictionary = {
   header: {
-    menu: "Menú",
-    portfolio: "Portafolio",
-    services: "Servicios",
-    about: "Nosotros",
-    contact: "Contacto",
-    readyText: "¿Listo para comenzar tu nuevo proyecto?",
-    getInTouch: "Ponerse en Contacto"
+    menu: "القائمة",
+    portfolio: "أعمالنا",
+    services: "خدماتنا",
+    about: "من نحن",
+    contact: "تواصل معنا",
+    readyText: "هل أنت مستعد لبدء مشروعك الجديد؟",
+    getInTouch: "تواصل معنا"
   },
   hero: {
-    designTag: "✨ Gestión Integral de Productos",
-    designTitle: ["Soluciones de", "Diseño Efectivo", "Para Su Negocio"],
-    designDesc: "Simplificamos flujos de productos, potenciamos interfaces y creamos experiencias que agregan valor al usuario.",
-    designBtnPrimary: "Hablemos de Su Proyecto",
-    designBtnSecondary: "Nuestros Trabajos",
-    codeTag: "💻 Soluciones de Software Empresarial",
-    codeTitle: ["Tecnología", "Innovación", "Código"],
-    codeDesc: "Construimos plataformas ERP y SaaS de nivel empresarial personalizadas para cada industria.",
-    codeBtnPrimary: "Empezar a Desarrollar",
-    codeBtnSecondary: "Explorar Soluciones"
+    designTag: "✨ إدارة المنتجات من البداية للنهاية",
+    designTitle: ["حلول تصميم", "فعالة", "لتعزيز أعمالك"],
+    designDesc: "نقوم بتبسيط تدفق المنتجات، وتعزيز الواجهات، وإنشاء تجارب تضيف قيمة للمستخدم.",
+    designBtnPrimary: "لنتحدث عن مشروعك",
+    designBtnSecondary: "أعمالنا",
+    codeTag: "💻 حلول برمجية للمؤسسات",
+    codeTitle: ["تكنولوجيا", "ابتكار", "كود"],
+    codeDesc: "نبني منصات ERP و SaaS مخصصة على مستوى المؤسسات لكل القطاعات.",
+    codeBtnPrimary: "ابدأ التطوير",
+    codeBtnSecondary: "استكشف الحلول"
   },
   portfolio: {
-    tag: "Nuestros Proyectos",
-    title: "Trabajos Destacados",
-    description: "Descubra nuestros exitosos proyectos de diseño que transforman experiencias de usuario.",
-    descriptionCode: "Examine las soluciones de diseño empresarial que hemos desarrollado para empresas de diversos sectores.",
-    viewAll: "Ver Todos los Proyectos",
+    tag: "مشاريعنا",
+    title: "أعمال مميزة",
+    description: "اكتشف مشاريع التصميم الناجحة لدينا التي تحول تجارب المستخدم.",
+    descriptionCode: "اطلع على حلول التصميم المؤسسي التي طورناها لشركات في قطاعات مختلفة.",
+    viewAll: "عرض جميع المشاريع",
     designProjects: [
       {
-        title: 'Plataforma Logística',
-        category: 'Diseño de Producto',
-        description: 'Renovación completa de UX aumentando la tasa de conversión en un 45%'
+        title: 'منصة لوجستية',
+        category: 'تصميم المنتج',
+        description: 'تجديد كامل لتجربة المستخدم (UX) مما زاد معدل التحويل بنسبة 45%'
       },
       {
-        title: 'Plataforma Educativa',
-        category: 'Viaje B2C',
-        description: 'Optimizado con enfoque en Diseño de Producto y Servicio'
+        title: 'منصة تعليمية',
+        category: 'رحلة B2C',
+        description: 'تم التحسين بالتركيز على تصميم المنتج والخدمة'
       },
       {
-        title: 'Plataforma SaaS (Nube)',
-        category: 'Diseño UI',
-        description: 'Interfaz moderna con un sistema de diseño integral'
+        title: 'منصة SaaS (سحابية)',
+        category: 'تصميم واجهة المستخدم',
+        description: 'واجهة حديثة مع نظام تصميم شامل'
       },
       {
-        title: 'Plataforma de Hotel y Reservas',
-        category: 'Consultoría UX',
-        description: 'Mejora de la experiencia de descubrimiento y compra del cliente'
+        title: 'منصة فنادق وحجوزات',
+        category: 'استشارات UX',
+        description: 'تحسين تجربة العميل في الاستكشاف والشراء'
       }
     ],
     codeProjects: [
       {
-        title: 'ERP de Manufactura',
-        category: 'Sistema ERP',
-        description: 'ERP a gran escala gestionando 500+ usuarios en 12 instalaciones'
+        title: 'ERP للتصنيع',
+        category: 'نظام ERP',
+        description: 'نظام ERP واسع النطاق يدير أكثر من 500 مستخدم في 12 منشأة'
       },
       {
-        title: 'Marketplace B2B',
-        category: 'Plataforma B2B',
-        description: 'Plataforma multi-vendedor procesando 10k+ transacciones diarias'
+        title: 'سوق B2B',
+        category: 'منصة B2B',
+        description: 'منصة متعددة البائعين تعالج أكثر من 10 آلاف معاملة يومياً'
       },
       {
-        title: 'SaaS de Gestión de Proyectos',
-        category: 'Desarrollo SaaS',
-        description: 'Herramienta basada en la nube sirviendo a 50k+ usuarios activos'
+        title: 'SaaS لإدارة المشاريع',
+        category: 'تطوير SaaS',
+        description: 'أداة سحابية تخدم أكثر من 50 ألف مستخدم نشط'
       },
       {
-        title: 'Software Logístico',
-        category: 'Solución Personalizada',
-        description: 'Sistema de seguimiento en tiempo real para logística corporativa'
+        title: 'برنامج لوجستي',
+        category: 'حل مخصص',
+        description: 'نظام تتبع في الوقت الفعلي للخدمات اللوجستية للشركات'
       }
     ]
   },
   pricing: {
-    tag: "Cómo Empezar",
-    title: "Elija Su Plan",
-    description: "Paquetes de diseño flexibles adaptados a las necesidades y presupuesto de su proyecto.",
-    descriptionCode: "Soluciones de software escalables que crecerán con su negocio.",
-    viewDetails: "Ver Detalles",
-    learnMore: "Más información sobre este plan →",
-    customSolution: "¿Necesita una solución personalizada?",
-    contactUs: "Contáctenos",
-    forQuote: "y obtenga una cotización a medida.",
+    tag: "كيف نبدأ",
+    title: "اختر خطتك",
+    description: "باقات تصميم مرنة مصممة خصيصاً لاحتياجات مشروعك وميزانيتك.",
+    descriptionCode: "حلول برمجية قابلة للتوسع ستنمو مع نمو عملك.",
+    viewDetails: "عرض التفاصيل",
+    learnMore: "معرفة المزيد عن هذه الخطة ←",
+    customSolution: "هل تحتاج إلى حل مخصص؟",
+    contactUs: "اتصل بنا",
+    forQuote: "واحصل على عرض سعر خاص.",
     designPlans: [
       {
-        name: 'Inicio Básico',
+        name: 'بداية أساسية',
         price: '$999',
-        period: '/Mes $18',
-        label: 'Para Proyectos Únicos',
-        description: 'Perfecto para Emprendedores y Pequeñas Empresas.',
+        period: '/شهرياً $18',
+        label: 'للمشاريع لمرة واحدة',
+        description: 'مثالية لرواد الأعمال والشركات الصغيرة.',
         features: [
-          'Consultoría de Diseño UI/UX',
-          'Diseño Web y Banners Publicitarios',
-          'Diseño de hasta 5 Páginas',
-          'Optimización SEO Básica',
+          'استشارات تصميم UI/UX',
+          'تصميم ويب ولافتات إعلانية',
+          'تصميم حتى 5 صفحات',
+          'تحسين محركات البحث (SEO) الأساسي',
         ],
-        cta: 'Seleccionar Plan Inicio',
+        cta: 'اختر خطة البداية',
         link: '#contact',
         highlighted: false
       },
       {
-        name: 'Profesional',
+        name: 'احترافي',
         price: '$1799',
-        period: '/proyecto',
-        label: 'Más Popular',
-        description: 'Ideal para empresas en crecimiento que necesitan soluciones de diseño integrales.',
+        period: '/مشروع',
+        label: 'الأكثر شيوعاً',
+        description: 'مثالية للشركات النامية التي تحتاج إلى حلول تصميم شاملة.',
         features: [
-          'Diseño + Desarrollo de Sitio Web Corporativo',
-          'Panel de Administración (Admin Panel)',
-          'Instalación de 2 Módulos (RRHH, Almacén, CRM, etc.)',
-          'Pruebas de Usuario y Feedback',
+          'تصميم وتطوير موقع ويب للشركات',
+          'لوحة إدارة (Admin Panel)',
+          'تثبيت وحدتين (الموارد البشرية، المستودع، CRM، إلخ)',
+          'اختبار المستخدم والملاحظات',
         ],
-        cta: 'Seleccionar Plan Profesional',
+        cta: 'اختر الخطة الاحترافية',
         link: '#contact',
         highlighted: true
       },
       {
-        name: 'Empresarial',
+        name: 'مؤسسات',
         price: '$3499',
-        period: '/precio desde',
-        label: 'Para Grandes Equipos',
-        description: 'Alianza de diseño integral para empresas establecidas y proyectos complejos.',
+        period: '/سعر يبدأ من',
+        label: 'للفرق الكبيرة',
+        description: 'شراكة تصميم شاملة للشركات الراسخة والمشاريع المعقدة.',
         features: [
-          'Todo lo del paquete Profesional',
-          'Análisis y Desarrollo de Extremo a Extremo',
-          'Soporte Prioritario y Mantenimiento',
-          'Asesoramiento de Marketing',
+          'كل ما في الباقة الاحترافية',
+          'تحليل وتطوير من البداية للنهاية',
+          'دعم وصيانة ذات أولوية',
+          'نصائح تسويقية',
         ],
-        cta: 'Contactar',
+        cta: 'تواصل معنا',
         link: '#contact',
         highlighted: false
       }
     ],
     codePlans: [
       {
-        name: 'Inicio Básico',
+        name: 'بداية أساسية',
         price: '$999',
-        period: '/Mes $18',
-        label: 'Para Proyectos Únicos',
-        description: 'Perfecto para Emprendedores y Pequeñas Empresas.',
+        period: '/شهرياً $18',
+        label: 'للمشاريع لمرة واحدة',
+        description: 'مثالية لرواد الأعمال والشركات الصغيرة.',
         features: [
-          'Consultoría de Diseño UI/UX',
-          'Diseño Web y Banners Publicitarios',
-          'Diseño de hasta 5 Páginas',
-          'Optimización SEO Básica',
+          'استشارات تصميم UI/UX',
+          'تصميم ويب ولافتات إعلانية',
+          'تصميم حتى 5 صفحات',
+          'تحسين محركات البحث (SEO) الأساسي',
         ],
-        cta: 'Seleccionar Plan Inicio',
+        cta: 'اختر خطة البداية',
         link: '#contact',
         highlighted: false
       },
       {
-        name: 'Profesional',
+        name: 'احترافي',
         price: '$1799',
-        period: '/proyecto',
-        label: 'Más Popular',
-        description: 'Ideal para empresas en crecimiento que necesitan soluciones de diseño integrales.',
+        period: '/مشروع',
+        label: 'الأكثر شيوعاً',
+        description: 'مثالية للشركات النامية التي تحتاج إلى حلول تصميم شاملة.',
         features: [
-          'Diseño + Desarrollo de Sitio Web Corporativo',
-          'Panel de Administración (Admin Panel)',
-          'Instalación de 2 Módulos (RRHH, Almacén, CRM, etc.)',
-          'Pruebas de Usuario y Feedback',
+          'تصميم وتطوير موقع ويب للشركات',
+          'لوحة إدارة (Admin Panel)',
+          'تثبيت وحدتين (الموارد البشرية، المستودع، CRM، إلخ)',
+          'اختبار المستخدم والملاحظات',
         ],
-        cta: 'Seleccionar Plan Profesional',
+        cta: 'اختر الخطة الاحترافية',
         link: '#contact',
         highlighted: true
       },
       {
-        name: 'Empresarial',
+        name: 'مؤسسات',
         price: '$3499',
-        period: '/precio desde',
-        label: 'Para Grandes Equipos',
-        description: 'Alianza de diseño integral para empresas establecidas y proyectos complejos.',
+        period: '/سعر يبدأ من',
+        label: 'للفرق الكبيرة',
+        description: 'شراكة تصميم شاملة للشركات الراسخة والمشاريع المعقدة.',
         features: [
-          'Todo lo del paquete Profesional',
-          'Análisis y Desarrollo de Extremo a Extremo',
-          'Soporte Prioritario y Mantenimiento',
-          'Asesoramiento de Marketing',
+          'كل ما في الباقة الاحترافية',
+          'تحليل وتطوير من البداية للنهاية',
+          'دعم وصيانة ذات أولوية',
+          'نصائح تسويقية',
         ],
-        cta: 'Contactar',
+        cta: 'تواصل معنا',
         link: '#contact',
         highlighted: false
       }
     ],
   },
   services: {
-    tag: "Nuestros Servicios",
-    titleDesign: "Experiencia en Diseño",
-    titleCode: "Soluciones de Producto",
-    descriptionDesign: "Servicios integrales de diseño UX/UI centrados en usabilidad, optimización de flujos y estrategia de producto.",
-    descriptionCode: "Servicios de desarrollo de software empresarial que ofrecen soluciones robustas y escalables.",
-    loadMore: "Mostrar Más",
-    showLess: "Mostrar Menos",
+    tag: "خدماتنا",
+    titleDesign: "خبرة التصميم",
+    titleCode: "حلول المنتجات",
+    descriptionDesign: "خدمات تصميم UX/UI شاملة تركز على سهولة الاستخدام، وتحسين التدفق، واستراتيجية المنتج.",
+    descriptionCode: "خدمات تطوير برمجيات على مستوى المؤسسات تقدم حلولاً قوية وقابلة للتوسع.",
+    loadMore: "عرض المزيد",
+    showLess: "عرض أقل",
     designServices: [
       {
-        title: 'Consultoría UX',
-        description: 'Guía estratégica de UX para optimizar experiencias de usuario con insights basados en datos.'
+        title: 'استشارات UX',
+        description: 'توجيه استراتيجي لتجربة المستخدم لتحسين التجارب برؤى مدعومة بالبيانات.'
       },
       {
-        title: 'Doctorado de Producto',
-        description: 'Rediseño integral de su concepto de producto y estrategia de ventas con interfaces intuitivas.'
+        title: 'معالجة المنتج',
+        description: 'إعادة تصميم شاملة لمفهوم منتجك واستراتيجية البيع مع واجهات بديهية.'
       },
       {
-        title: 'Desarrollo de Nuevos Negocios',
-        description: 'Soporte de extremo a extremo para identificar oportunidades de crecimiento y crear productos digitales atractivos.'
+        title: 'تطوير أعمال جديدة',
+        description: 'دعم من البداية للنهاية لتحديد فرص النمو لفكرتك وإنشاء منتجات رقمية جذابة.'
       },
       {
-        title: 'Mapeo del Viaje del Cliente',
-        description: 'Visualice y optimice cada punto de contacto en el viaje de su cliente para el máximo compromiso.'
+        title: 'رسم رحلة العميل',
+        description: 'تصور وتحسين كل نقطة اتصال في رحلة عميلك لتحقيق أقصى قدر من التفاعل.'
       },
       {
-        title: 'Marketing CRM',
-        description: 'Diseño de estrategias de relación con el cliente que aumentan la lealtad y construyen afinidad de marca.'
+        title: 'تسويق CRM',
+        description: 'تصميم استراتيجيات علاقات العملاء التي تزيد الولاء وتبني ارتباطاً دائماً بالعلامة التجارية.'
       }
     ],
     codeServices: [
       {
-        title: 'Sistemas ERP',
-        description: 'Soluciones integrales de planificación de recursos empresariales que organizan operaciones en toda su organización.'
+        title: 'أنظمة ERP',
+        description: 'حلول تخطيط موارد المؤسسات الشاملة التي تنظم العمليات عبر مؤسستك.'
       },
       {
-        title: 'Plataformas B2B',
-        description: 'Plataformas web y móviles B2B escalables que conectan empresas y realizan comercio eficientemente.'
+        title: 'منصات B2B',
+        description: 'منصات ويب وموبايل B2B قابلة للتوسع تربط بين الشركات وتدير التجارة بكفاءة.'
       },
       {
-        title: 'Desarrollo SaaS',
-        description: 'Soluciones de software como servicio basadas en la nube construidas para escala y seguridad.'
+        title: 'تطوير SaaS',
+        description: 'حلول البرمجيات كخدمة المستندة إلى السحابة والمبنية للتوسع والأمان.'
       },
       {
-        title: 'Software Empresarial',
-        description: 'Desarrollo de software personalizado adaptado específicamente a su industria y requisitos.'
+        title: 'برمجيات المؤسسات',
+        description: 'تطوير برمجيات مخصصة مصممة خصيصاً لقطاعك ومتطلبات عملك.'
       },
       {
-        title: 'Soluciones Personalizadas',
-        description: 'Aplicaciones empresariales dedicadas diseñadas para resolver sus desafíos y flujos de trabajo únicos.'
+        title: 'حلول مخصصة',
+        description: 'تطبيقات مؤسسية مخصصة مصممة لحل تحديات عملك الفريدة وسير العمل.'
       }
     ]
   },
   focusAreas: {
-    tag: "Nuestras Áreas de Enfoque",
-    titleDesign: "Filosofía de Diseño",
-    titleCode: "Pila Tecnológica",
+    tag: "مجالات تركيزنا",
+    titleDesign: "فلسفة التصميم",
+    titleCode: "التقنيات المستخدمة",
     designFocus: [
       {
-        title: 'Mapeo del Viaje del Cliente',
-        description: 'Visualizamos cada punto de contacto en la experiencia de su cliente, identificando puntos débiles y oportunidades.',
-        highlights: ['Investigación de Usuario', 'Visualización de Viaje', 'Análisis de Puntos de Contacto', 'Medición']
+        title: 'رسم رحلة العميل',
+        description: 'نحن نتصور كل نقطة اتصال في تجربة عميلك، ونحدد نقاط الألم وفرص التحسين.',
+        highlights: ['بحث المستخدم', 'تصور الرحلة', 'تحليل نقاط الاتصال', 'القياس']
       },
       {
-        title: 'Diseño de Nuevos Productos',
-        description: 'Deleitamos a los usuarios en cada interacción creando interfaces hermosas e intuitivas alineadas con su marca.',
-        highlights: ['Diseño de Interfaz', 'Biblioteca de Diseño', 'Prototipado', 'Visuales Publicitarios']
+        title: 'تصميم منتجات جديدة',
+        description: 'نسعد المستخدمين في كل تفاعل من خلال إنشاء واجهات جميلة وبديهية تتماشى مع علامتك التجارية.',
+        highlights: ['تصميم الواجهة', 'مكتبة التصميم', 'النماذج الأولية', 'المرئيات الإعلانية']
       },
       {
-        title: 'Experiencia de Usuario (UX)',
-        description: 'Estrategia UX integral que combina investigación, pruebas e iteración para crear experiencias fluidas.',
-        highlights: ['Investigación UX', 'Pruebas de Usabilidad', 'Arquitectura de Información', 'Diseño de Interacción']
+        title: 'تجربة المستخدم (UX)',
+        description: 'استراتيجية UX شاملة تجمع بين البحث والاختبار والتكرار لإنشاء تجارب سلسة.',
+        highlights: ['بحث UX', 'اختبار قابلية الاستخدام', 'هندسة المعلومات', 'تصميم التفاعل']
       },
     ],
     codeFocus: [
       {
-        title: 'Soluciones ERP',
-        description: 'Sistemas ERP que integran todos los aspectos de sus operaciones comerciales en una plataforma unificada.',
-        highlights: ['Automatización de Procesos', 'Analítica en Tiempo Real', 'Integración Multi-módulo', 'Arquitectura Escalable']
+        title: 'حلول ERP',
+        description: 'أنظمة تخطيط موارد المؤسسات التي تدمج جميع جوانب عمليات عملك في منصة موحدة.',
+        highlights: ['أتمتة العمليات', 'تحليلات في الوقت الفعلي', 'تكامل متعدد الوحدات', 'هيكلية قابلة للتوسع']
       },
       {
-        title: 'Plataformas B2B y SaaS',
-        description: 'Plataformas web y móviles robustas diseñadas para interacciones entre empresas y entrega de SaaS.',
-        highlights: ['Arquitectura Multi-inquilino', 'Desarrollo de API', 'Infraestructura en la Nube', 'Seguridad Primero']
+        title: 'منصات B2B و SaaS',
+        description: 'منصات ويب وموبايل قوية مصممة للتفاعلات بين الشركات وتقديم البرمجيات كخدمة.',
+        highlights: ['هيكلية متعددة المستأجرين', 'تطوير API', 'بنية تحتية سحابية', 'الأمان أولاً']
       },
       {
-        title: 'Software Específico de Industria',
-        description: 'Software empresarial personalizado adaptado a los desafíos únicos y flujos de trabajo de su sector.',
-        highlights: ['Experiencia en Industria', 'Funciones Personalizadas', 'Listo para Cumplimiento', 'Soporte de Integración']
+        title: 'برمجيات خاصة بالقطاع',
+        description: 'برمجيات مؤسسية مخصصة لتناسب التحديات الفريدة ومتطلبات الامتثال في قطاعك.',
+        highlights: ['خبرة في القطاع', 'ميزات مخصصة', 'جاهزية الامتثال', 'دعم التكامل']
       }
     ]
   },
   testimonials: {
-    tag: "Éxito del Cliente",
-    title: "Lo Que Dicen Nuestros Clientes",
-    descriptionDesign: "Marcas líderes confían en nosotros para ofrecer experiencias de diseño excepcionales.",
-    descriptionCode: "Empoderamos a las empresas con soluciones de software de nivel empresarial.",
+    tag: "نجاح العملاء",
+    title: "ماذا يقول عملاؤنا",
+    descriptionDesign: "تثق بنا العلامات التجارية الرائدة لتقديم تجارب تصميم استثنائية.",
+    descriptionCode: "نقوم بتمكين الشركات من خلال حلول برمجية على مستوى المؤسسات.",
     designTestimonials: [
       {
         name: 'Sarah Mitchell',
-        role: 'CEO, RetailTech',
-        company: 'E-Commerce',
-        text: 'El mapeo del viaje del cliente transformó toda nuestra experiencia de usuario. Las tasas de conversión aumentaron un 45%.',
+        role: 'الرئيس التنفيذي، RetailTech',
+        company: 'تجارة إلكترونية',
+        text: 'رسم رحلة العميل حول تجربة المستخدم لدينا بالكامل. زادت معدلات التحويل بنسبة 45% في غضون ثلاثة أشهر.',
         rating: 5
       },
       {
         name: 'David Chen',
-        role: 'Director de Producto',
+        role: 'مدير المنتج',
         company: 'FinanceApp',
-        text: 'La consultoría UX nos ayudó a identificar puntos ciegos que no conocíamos. El trabajo de diseño de producto fue excepcional.',
+        text: 'ساعدتنا استشارات UX في تحديد نقاط عمياء لم نكن نعرف بوجودها. كان عمل تصميم المنتج استثنائياً.',
         rating: 5
       },
       {
         name: 'Emma Rodriguez',
-        role: 'Gerente de Marketing',
+        role: 'مدير التسويق',
         company: 'HealthCare Plus',
-        text: 'Gran trabajo en nuestra estrategia de marketing CRM. El equipo de diseño realmente entiende el comportamiento moderno.',
+        text: 'عمل رائع في استراتيجية تسويق CRM الخاصة بنا. فريق التصميم يفهم حقاً سلوك المستخدم الحديث.',
         rating: 5
       }
     ],
     codeTestimonials: [
       {
         name: 'Michael Anderson',
-        role: 'CTO, Manufacturing Co',
-        company: 'Sector Industrial',
-        text: 'El sistema ERP que construyeron revolucionó nuestras operaciones. Integración perfecta entre todos los departamentos.',
+        role: 'المدير التقني، Manufacturing Co',
+        company: 'القطاع الصناعي',
+        text: 'نظام ERP الذي بنوه أحدث ثورة في عملياتنا. تكامل سلس بين جميع الأقسام.',
         rating: 5
       },
       {
         name: 'Lisa Thompson',
-        role: 'VP de Tecnología',
-        company: 'Soluciones B2B',
-        text: 'Desarrollo de plataforma B2B excepcional. El equipo entregó una solución escalable que cumplió perfectamente nuestras demandas.',
+        role: 'نائب الرئيس للتكنولوجيا',
+        company: 'حلول B2B',
+        text: 'تطوير منصة B2B استثنائي. قدم الفريق حلاً قابلاً للتوسع لبى مطالبنا المتزايدة بشكل مثالي.',
         rating: 5
       },
       {
         name: 'James Wilson',
-        role: 'Fundador',
-        company: 'Startup SaaS',
-        text: 'Construyeron toda nuestra plataforma SaaS desde el concepto hasta el despliegue. La calidad del código es de primer nivel.',
+        role: 'مؤسس',
+        company: 'SaaS Startup',
+        text: 'لقد بنوا منصة SaaS الخاصة بنا بالكامل من الفكرة إلى النشر. جودة الكود والهيكلية من الطراز الأول.',
         rating: 5
       }
     ]
   },
   cta: {
-    titleDesign: "¿Listo para Trabajar con Nosotros?",
-    titleCode: "¿Listo para Trabajar con Nosotros?",
-    descDesign: "Comencemos hoy a crear diseños que transformen su presencia digital y brinden resultados reales.",
-    descCode: "Comencemos hoy a construir software de nivel empresarial para su negocio.",
-    btnPrimary: "Empecemos",
-    btnSecondary: "Llamada de Descubrimiento",
-    statProjects: "Proyectos Completados",
-    statSystems: "Sistemas Instalados",
-    statSuccess: "Tasa de Éxito",
-    statSupportDesign: "Soporte Continuo",
-    statSupportCode: "Soporte de Desarrollo"
+    titleDesign: "هل أنت مستعد للعمل معنا؟",
+    titleCode: "هل أنت مستعد للعمل معنا؟",
+    descDesign: "لنبدأ العمل اليوم لإنشاء تصميمات تحول وجودك الرقمي وتقدم نتائج حقيقية.",
+    descCode: "لنبدأ العمل اليوم لبناء برمجيات على مستوى المؤسسات لعملك.",
+    btnPrimary: "لنبدأ",
+    btnSecondary: "مكالمة استكشافية",
+    statProjects: "مشروع مكتمل",
+    statSystems: "نظام مثبت",
+    statSuccess: "معدل نجاح العملاء",
+    statSupportDesign: "دعم مستمر",
+    statSupportCode: "دعم التطوير"
   },
   footer: {
-    brandDescDesign: "Creando experiencias de usuario excepcionales a través de un diseño innovador.",
-    brandDescCode: "Construyendo soluciones de software empresarial para empresas modernas.",
-    colServices: "Servicios",
-    colCompany: "Empresa",
-    colContact: "Contacto",
-    designServices: ['Consultor UX', 'Diseño de Producto', 'Desarrollo de Negocio', 'Mapeo de Viaje', 'Marketing CRM'],
-    codeServices: ['Sistemas ERP', 'Plataformas B2B', 'Desarrollo SaaS', 'Software Personalizado', 'Integración API'],
-    companyLinks: ['Nosotros', 'Nuestros Procesos', 'Casos de Estudio', 'Carreras', 'Blog'],
-    copyright: "Todos los derechos reservados.",
-    privacy: "Política de Privacidad",
-    terms: "Términos de Servicio",
-    cookie: "Política de Cookies"
+    brandDescDesign: "نبتكر تجارب مستخدم استثنائية من خلال التصميم المبتكر.",
+    brandDescCode: "نبني حلولاً برمجية مؤسسية للشركات الحديثة.",
+    colServices: "الخدمات",
+    colCompany: "الشركة",
+    colContact: "اتصل بنا",
+    designServices: ['مستشار UX', 'تصميم المنتج', 'تطوير الأعمال', 'رسم الرحلة', 'تسويق CRM'],
+    codeServices: ['أنظمة ERP', 'منصات B2B', 'تطوير SaaS', 'برمجيات مخصصة', 'تكامل API'],
+    companyLinks: ['من نحن', 'عملياتنا', 'دراسات حالة', 'وظائف', 'مدونة'],
+    copyright: "جميع الحقوق محفوظة.",
+    privacy: "سياسة الخصوصية",
+    terms: "شروط الخدمة",
+    cookie: "سياسة ملفات تعريف الارتباط"
   }
 };
