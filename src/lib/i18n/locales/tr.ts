@@ -16,9 +16,9 @@ export const tr: Dictionary = {
     designDesc: "Ürün akışlarını sadeleştiriyor, arayüzleri güçlendiriyor ve kullanıcıya değer katan deneyimler oluşturuyoruz.",
     designBtnPrimary: "Projenizi Dinleyelim",
     designBtnSecondary: "İşlerimiz",
-    codeTag: "💻 Kurumsal Yazılım Çözümleri",
-    codeTitle: ["Teknoloji", "İnovasyon", "Kod"],
-    codeDesc: "Her sektör için özelleştirilmiş, kurumsal düzeyde ERP ve SaaS platformları inşa ediyoruz.",
+    codeTag: "💻 Bireysel/Kurumsal Çözümler",
+    codeTitle: ["Dijitalin", "Ötesini", "Tasarlayın"],
+    codeDesc: "Karmaşık iş süreçlerinizi basitleştiren, size özel kurumsal yazılım ekosistemleri kuruyoruz",
     codeBtnPrimary: "Geliştirmeye Başla",
     codeBtnSecondary: "Çözümleri İncele"
   },
