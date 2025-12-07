@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image'; // Image bileşeni eklendi
 import { Switch } from './Switch';
 import { LanguageSelector } from './LanguageSelector';
 import { useLanguage } from '@/src/lib/i18n/LanguageContext';
@@ -55,34 +56,21 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
         <div className="flex items-center justify-between">
           
           {/* --- SOL: LOGO (ACR / ACRTECH) --- */}
-          {/* onClick eklendi: Tıklayınca en başa döner */}
           <div 
             onClick={scrollToTop}
-            className="flex items-center gap-2 sm:gap-3 cursor-pointer group"
+            className="flex items-center cursor-pointer group"
           >
-            <div className={`relative flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br transition-all duration-700 shadow-lg group-hover:scale-105 ${
-              mode === 'design'
-                ? 'from-purple-500 to-fuchsia-500 group-hover:shadow-purple-500/30'
-                : 'from-blue-500 to-cyan-500 group-hover:shadow-blue-500/30'
-            }`}>
-              <svg 
-                className="w-4 h-4 sm:w-5 sm:h-5 text-white drop-shadow-md" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2.5" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              >
-                <path d="M12 2L2 22h20" />
-                <path d="M5 12h14" />
-                <path d="M12 2v20" className="opacity-50" />
-              </svg>
+            {/* Logo Container */}
+            {/* brightness-0 ve invert sınıflarını sildik, logo orijinal haliyle görünecek */}
+            <div className="relative w-32 h-10 sm:w-40 sm:h-12 transition-transform duration-300 group-hover:scale-105">
+              <Image
+                src="/acrtech.png"
+                alt="ACRTECH Logo"
+                fill
+                className="object-contain" 
+                priority
+              />
             </div>
-            <span className="text-white text-lg sm:text-xl font-bold tracking-tight group-hover:opacity-90 transition-opacity">
-              <span className="md:hidden">ACR</span>
-              <span className="hidden md:inline">ACRTECH</span>
-            </span>
           </div>
 
           {/* --- SAĞ: KONTROL BLOĞU (Switch | Dil | Menü) --- */}
