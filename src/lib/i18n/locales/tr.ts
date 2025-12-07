@@ -3,19 +3,19 @@ import { Dictionary } from '../types';
 export const tr: Dictionary = {
   header: {
     menu: "Menü",
-    portfolio: "Portfolyo",
+    portfolio: "İşlerimiz",
     services: "Hizmetler",
     about: "Hakkımızda",
     contact: "İletişim",
-    readyText: "Yeni projene başlamaya hazır mısın?",
-    getInTouch: "İletişime Geç"
+    readyText: "Bizimle Çalışmaya hazır mısınız?",
+    getInTouch: "Sizi Arayalım"
   },
   hero: {
-    designTag: "✨ Uçtan Uca Ürün Yönetimi",
+    designTag: "✨Uçtan Uca Ürün Yönetimi & Danışmanlık",
     designTitle: ["İşinizi Güçlendiren", "Etkili Tasarım", "Çözümleri"],
     designDesc: "Ürün akışlarını sadeleştiriyor, arayüzleri güçlendiriyor ve kullanıcıya değer katan deneyimler oluşturuyoruz.",
-    designBtnPrimary: "Projenizi Dinleyelim",
-    designBtnSecondary: "İşlerimiz",
+    designBtnPrimary: "Paketinizi Seçin",
+    designBtnSecondary: "Danışmanlık Alın",
     codeTag: "💻 Kurumsal Yazılım Çözümleri",
     codeTitle: ["Teknoloji", "İnovasyon", "Kod"],
     codeDesc: "Her sektör için özelleştirilmiş, kurumsal düzeyde ERP ve SaaS platformları inşa ediyoruz.",
@@ -103,7 +103,7 @@ export const tr: Dictionary = {
       {
         name: 'Profesyonel',
         price: '$1799',
-        period: '/proje',
+        period: '/$25 Aylık',
         label: 'En Popüler',
         description: 'Kapsamlı tasarım çözümlerine ihtiyaç duyan büyüyen işletmeler için ideal.',
         features: [
@@ -112,23 +112,23 @@ export const tr: Dictionary = {
           'Seçtiğiniz 2 Modülün Kurulumu (İK, Depo, CRM vb.)',
           'Kullanıcı Testi & Geri Bildirim',
         ],
-        cta: 'Profesyonel Planı Seç',
+        cta: 'Profesyonel Planı Seçin',
         link: '#contact',
         highlighted: true
       },
       {
         name: 'Kurumsal',
         price: '$3499',
-        period: '/baslayan fiyatlarla',
+        period: '/Başlayan Fiyatlarla',
         label: 'Büyük Ekipler İçin',
-        description: 'Köklü şirketler ve karmaşık projeler için kapsamlı tasarım ortaklığı.',
+        description: 'Hacimli şirketler ve karmaşık projeler için kapsamlı Ürün & Partnerlik.',
         features: [
           'Profesyonel Paketindeki Her Şey',
           'Uçtan Uca Analiz & Gelistirme',
           'Öncelikli Destek & Bakım',
-          'Pazarlama Tavsiyeleri',
+          'Strateji Önerileri',
         ],
-        cta: 'İletişime geç',
+        cta: 'İletişime geçin',
         link: '#contact',
         highlighted: false
       }
@@ -157,8 +157,8 @@ export const tr: Dictionary = {
         label: 'En Popüler',
         description: 'Kapsamlı tasarım çözümlerine ihtiyaç duyan büyüyen işletmeler için ideal.',
         features: [
-          'Kurumsal Web Sitesi Tasarım + Geliştirme',
-          'Yönetim Paneli (Admin Panel)',
+          'UI/UX Tasarım Danışmanlığı',
+          'Web sitesi + Yönetim Paneli (Admin Panel)',
           'Seçtiğiniz 2 Modülün Kurulumu (İK, Depo, CRM vb.)',
           'Kullanıcı Testi & Geri Bildirim',
         ],
@@ -238,16 +238,16 @@ export const tr: Dictionary = {
     ]
   },focusAreas: {
     tag: "Odaklandığımız Konular",
-    titleDesign: "Tasarım Felsefemiz",
-    titleCode: "Teknoloji Yığınımız",
+    titleDesign: "Danışmanlık Alanlarımız",
+    titleCode: "Teknoloji Çözümlerimiz",
     designFocus: [
       {
-        title: 'Müşteri Yolculuğu Haritalama',
+        title: 'Müşteri Yolculuğu Haritalama(CX)',
         description: 'Müşterinizin deneyimindeki her temas noktasını görselleştiriyor, sorunlu noktaları ve iyileştirme fırsatlarını belirliyoruz.',
         highlights: ['Kullanıcı Araştırması', 'Yolculuk Görselleştirme', 'Temas Noktası Analizi', 'Ölçümleme']
       },
       {
-        title: 'Yeni Ürün Tasarımı',
+        title: 'Yeni Ürün Tasarımı (UI)',
         description: 'Markanızla uyumlu, güzel ve sezgisel arayüzler yaratarak kullanıcıları her etkileşimde memnun ediyoruz.',
         highlights: ['Arayüz Tasarımı', 'Tasarım Kütuphanesi', 'Prototipleme', 'Reklam Görseli']
       },
@@ -269,7 +269,7 @@ export const tr: Dictionary = {
         highlights: ['Çok Kiracılı Mimari', 'API Geliştirme', 'Bulut Altyapısı', 'Önce Güvenlik']
       },
       {
-        title: 'Sektöre Özel Yazılım',
+        title: 'Sektörünüze Özel Yazılım',
         description: 'Sektörünüzün benzersiz zorluklarına, uyumluluk gereksinimlerine ve iş akışlarına göre uyarlanmış özel kurumsal yazılımlar.',
         highlights: ['Sektör Uzmanlığı', 'Özel Özellikler', 'Uyumluluk Hazır', 'Entegrasyon Desteği']
       }
@@ -282,44 +282,44 @@ export const tr: Dictionary = {
     descriptionCode: "İşletmeleri kurumsal düzeyde yazılım çözümleriyle güçlendiriyoruz.",
     designTestimonials: [
       {
-        name: 'Sarah Mitchell',
+        name: 'Seçil Seperci',
         role: 'CEO, RetailTech',
-        company: 'E-Ticaret',
-        text: 'Müşteri yolculuğu haritalaması tüm kullanıcı deneyimimizi dönüştürdü. Dönüşüm oranları üç ay içinde %45 arttı.',
+        company: 'E-Ticaret Platformu',
+        text: 'Müşteri yolculuğu haritalaması ile kısa zamandatüm kullanıcı deneyimimizi dönüştürdük. Dönüşüm oranları üç ay içinde %45 arttı.',
         rating: 5
       },
       {
-        name: 'David Chen',
+        name: 'Mehmet Can T.',
         role: 'Ürün Direktörü',
-        company: 'FinanceApp',
+        company: 'Finans Uygulaması',
         text: 'UX danışmanlığı, varlığından bile haberdar olmadığımız kör noktaları belirlememize yardımcı oldu. Ürün tasarımı çalışması olağanüstüydü.',
         rating: 5
       },
       {
-        name: 'Emma Rodriguez',
+        name: 'Elif Didem Y.',
         role: 'Pazarlama Müdürü',
-        company: 'HealthCare Plus',
-        text: 'CRM pazarlama stratejimiz üzerinde harika bir çalışma. Tasarım ekibi modern kullanıcı davranışını gerçekten anlıyor.',
+        company: 'Kişisel Sağlık Uygulaması',
+        text: 'CRM pazarlama stratejimiz üzerinde harika bir çalışma yaptık. Tasarım ekibi ihtiyacımızı gerçekten anladı.',
         rating: 5
       }
     ],
     codeTestimonials: [
       {
-        name: 'Michael Anderson',
+        name: 'Mehmet A.',
         role: 'CTO, Manufacturing Co',
         company: 'Endüstriyel Sektör',
         text: 'İnşa ettikleri ERP sistemi operasyonlarımızda devrim yarattı. Tüm departmanlar arasında sorunsuz entegrasyon sağlandı.',
         rating: 5
       },
       {
-        name: 'Lisa Thompson',
+        name: 'Furkan T.',
         role: 'VP Teknoloji',
         company: 'B2B Çözümleri',
         text: 'Olağanüstü B2B platform geliştirme. Ekip, artan taleplerimizi mükemmel şekilde karşılayan ölçeklenebilir bir çözüm sundu.',
         rating: 5
       },
       {
-        name: 'James Wilson',
+        name: 'Çetin S. D.',
         role: 'Kurucu',
         company: 'SaaS Girişimi',
         text: 'Konseptten dağıtıma kadar tüm SaaS platformumuzu inşa ettiler. Kod kalitesi ve mimari üst düzeyde.',
