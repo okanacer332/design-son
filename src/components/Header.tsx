@@ -142,17 +142,16 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
         </div>
       </header>
 
-      {/* --- MOBILE BOTTOM FIXED BAR (60px HEIGHT) --- */}
+      {/* --- MOBILE BOTTOM FIXED BAR (100px HEIGHT) --- */}
       {/* - Fixed Bottom: Ekranın altına yapışık.
-          - H-[60px]: Yükseklik tam 60px.
+          - H-[100px]: Yükseklik tam 100px olarak ayarlandı.
           - Flex Center: Switch butonunu dikey ve yatay ortalar.
           - Glass Effect: Backdrop-blur-xl ile güçlü cam efekti.
-          - BG Opacity: /30 ile içerik hafifçe görünür.
       */}
       <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden">
         <div 
           className={`
-            w-full h-[60px] px-4
+            w-full h-[100px] px-4
             flex items-center justify-center
             backdrop-blur-xl border-t
             transition-all duration-500
@@ -161,8 +160,8 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
               : 'bg-blue-950/30 border-blue-500/20 shadow-[0_-4px_30px_rgba(30,58,138,0.15)]'}
           `}
         >
-          {/* Switch Butonu - Hafif küçültüldü (scale-90) ki 60px içine ferah otursun */}
-          <div className="transform scale-90">
+          {/* Switch Butonu - Ferah alan içinde rahat kullanım için scale-110 */}
+          <div className="transform scale-110">
             <Switch mode={mode} onToggle={onToggle} />
           </div>
         </div>
