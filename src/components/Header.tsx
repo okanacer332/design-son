@@ -142,27 +142,27 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
         </div>
       </header>
 
-      {/* --- MOBILE BOTTOM FLOATING DOCK (GLASS EFFECT) --- */}
-      {/* - Sadece mobilde görünür (sm:hidden)
-          - Bottom 8 (biraz yukarıda)
-          - Left 1/2 + Translate (Ortalanmış)
-          - Backdrop Blur + Hafif Beyaz Opaklık (Glassmorphism)
-          - w-fit (Hug content)
+      {/* --- MOBILE BOTTOM FIXED BAR (60px HEIGHT) --- */}
+      {/* - Fixed Bottom: Ekranın altına yapışık.
+          - H-[60px]: Yükseklik tam 60px.
+          - Flex Center: Switch butonunu dikey ve yatay ortalar.
+          - Glass Effect: Backdrop-blur-xl ile güçlü cam efekti.
+          - BG Opacity: /30 ile içerik hafifçe görünür.
       */}
-      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 sm:hidden">
+      <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden">
         <div 
           className={`
-            p-2 rounded-full 
-            backdrop-blur-xl shadow-2xl border
-            transition-all duration-500
+            w-full h-[60px] px-4
             flex items-center justify-center
+            backdrop-blur-xl border-t
+            transition-all duration-500
             ${mode === 'design' 
-              ? 'bg-purple-950/20 border-purple-500/20 shadow-purple-900/20' 
-              : 'bg-blue-950/20 border-blue-500/20 shadow-blue-900/20'}
+              ? 'bg-purple-950/30 border-purple-500/20 shadow-[0_-4px_30px_rgba(88,28,135,0.15)]' 
+              : 'bg-blue-950/30 border-blue-500/20 shadow-[0_-4px_30px_rgba(30,58,138,0.15)]'}
           `}
         >
-          {/* Switch Butonu - Biraz büyütülmüş */}
-          <div className="transform scale-110">
+          {/* Switch Butonu - Hafif küçültüldü (scale-90) ki 60px içine ferah otursun */}
+          <div className="transform scale-90">
             <Switch mode={mode} onToggle={onToggle} />
           </div>
         </div>
