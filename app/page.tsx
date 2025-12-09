@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { LanguageProvider } from '@/src/lib/i18n/LanguageContext'; // EKLENDİ
+import { useMode } from '@/src/lib/context/ModeContext'; // Context eklendi
 import { Header } from '@/src/components/Header';
 import { Hero } from '@/src/components/Hero';
 import { Portfolio } from '@/src/components/Portfolio';
@@ -12,9 +12,9 @@ import { Testimonials } from '@/src/components/Testimonials';
 import { CTA } from '@/src/components/CTA';
 import { Footer } from '@/src/components/Footer';
 
-// İçerik bileşenini ayırdım ki 'useLanguage' hook'unu kullanabilsin (Provider'ın içinde olmalı)
-function AppContent() {
-  const [mode, setMode] = useState<'design' | 'code'>('design');
+export default function Home() {
+  // Local state yerine global context kullanıyoruz
+  const { mode, toggleMode } = useMode();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,8 @@ function AppContent() {
     <div className={`min-h-screen transition-colors duration-1000 ease-in-out ${
       mode === 'design' ? 'bg-slate-950' : 'bg-slate-950'
     }`}>
-      <Header mode={mode} onToggle={setMode} isScrolled={isScrolled} />
+      {/* Header artık global toggleMode fonksiyonunu kullanıyor */}
+      <Header mode={mode} onToggle={toggleMode} isScrolled={isScrolled} />
       
       <main>
         <Hero mode={mode} />
@@ -44,13 +45,5 @@ function AppContent() {
       
       <Footer mode={mode} />
     </div>
-  );
-}
-
-export default function Home() {
-  return (
-    <LanguageProvider>
-      <AppContent />
-    </LanguageProvider>
   );
 }

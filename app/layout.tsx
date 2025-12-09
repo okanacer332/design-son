@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ModeProvider } from "@/src/lib/context/ModeContext";
+import { LanguageProvider } from '@/src/lib/i18n/LanguageContext';
 
-// Projede default font kullanımı analiz edildiğinde sans-serif kullanıldığı görülüyor.
-// Inter en güvenli ve modern seçimdir.
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fullpage Banner Design",
+  title: "ACR Tech - Design & Code Agency",
   description: "Modern Design and Code Agency Portfolio",
 };
 
@@ -18,7 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ModeProvider>
+          <LanguageProvider>
+            {children}
+          </LanguageProvider>
+        </ModeProvider>
+      </body>
     </html>
   );
 }
