@@ -142,27 +142,27 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
         </div>
       </header>
 
-      {/* --- MOBILE BOTTOM FIXED BAR --- */}
-      {/* Sadece mobilde görünür (sm:hidden). 
-          Ekranın en altına yapışık (bottom-0), tam genişlikte ve 100px yüksekliğinde.
-          Kullanıcı içerikten ayırt edebilsin diye arka plan ve border eklendi. 
+      {/* --- MOBILE BOTTOM FLOATING DOCK (GLASS EFFECT) --- */}
+      {/* - Sadece mobilde görünür (sm:hidden)
+          - Bottom 8 (biraz yukarıda)
+          - Left 1/2 + Translate (Ortalanmış)
+          - Backdrop Blur + Hafif Beyaz Opaklık (Glassmorphism)
+          - w-fit (Hug content)
       */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden">
+      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 sm:hidden">
         <div 
-          className={`w-full h-[100px] flex items-center justify-center 
-            bg-slate-950/90 backdrop-blur-xl 
-            border-t shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.5)]
-            transition-colors duration-500 pb-2
-            ${mode === 'design' ? 'border-purple-500/20' : 'border-blue-500/20'}
+          className={`
+            p-2 rounded-full 
+            backdrop-blur-xl shadow-2xl border
+            transition-all duration-500
+            flex items-center justify-center
+            ${mode === 'design' 
+              ? 'bg-purple-950/20 border-purple-500/20 shadow-purple-900/20' 
+              : 'bg-blue-950/20 border-blue-500/20 shadow-blue-900/20'}
           `}
         >
-          {/* Arka plan hafif gradient (Glow Effect) */}
-          <div className={`absolute inset-0 pointer-events-none opacity-20 bg-gradient-to-t transition-colors duration-500 ${
-             mode === 'design' ? 'from-purple-900/40 to-transparent' : 'from-blue-900/40 to-transparent'
-          }`} />
-
-          {/* Switch Butonu - Biraz daha büyük */}
-          <div className="relative z-10 transform scale-110">
+          {/* Switch Butonu - Biraz büyütülmüş */}
+          <div className="transform scale-110">
             <Switch mode={mode} onToggle={onToggle} />
           </div>
         </div>
