@@ -1,8 +1,12 @@
+// src/components/PricingPlans.tsx
+
 "use client";
 
+import { useState } from 'react';
 import { Check } from 'lucide-react';
 import { useLanguage } from '@/src/lib/i18n/LanguageContext';
 import { TransitionWrapper } from '@/src/components/TransitionWrapper';
+import { ContactModal } from '@/src/components/ContactModal'; // Modal import edildi
 
 interface PricingPlansProps {
   mode: 'design' | 'code';
@@ -10,9 +14,19 @@ interface PricingPlansProps {
 
 export function PricingPlans({ mode }: PricingPlansProps) {
   const { t } = useLanguage();
+  
+  // Modal State Yönetimi
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPlanName, setSelectedPlanName] = useState("");
 
   // Aktif modun planlarını context'ten alıyoruz
   const plans = mode === 'design' ? t.pricing.designPlans : t.pricing.codePlans;
+
+  // Butona tıklandığında çalışacak fonksiyon
+  const handlePlanClick = (planName: string) => {
+    setSelectedPlanName(planName);
+    setIsModalOpen(true);
+  };
 
   return (
     <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-slate-900 relative overflow-hidden">
@@ -35,12 +49,12 @@ export function PricingPlans({ mode }: PricingPlansProps) {
             {t.pricing.tag}
           </div>
           <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 px-4 py-2 leading-tight transition-colors duration-500 ${
-  mode === 'design'
-    ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
-    : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
-}`}>
-  {t.pricing.title}
-</h2>
+            mode === 'design'
+              ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
+              : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
+          }`}>
+            {t.pricing.title}
+          </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
             {mode === 'design' ? t.pricing.description : t.pricing.descriptionCode}
           </p>
@@ -111,18 +125,18 @@ export function PricingPlans({ mode }: PricingPlansProps) {
                     {plan.description}
                   </p>
 
-                  {/* CTA Buttons */}
+                  {/* CTA Buttons - GÜNCELLENDİ: onClick eklendi, href kaldırıldı/değiştirildi */}
                   <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-                    <a
-                      href={plan.link}
-                      className={`block w-full px-4 py-2.5 sm:px-6 sm:py-3 lg:py-3.5 rounded-full text-center transition-all duration-300 text-sm sm:text-base ${
+                    <button
+                      onClick={() => handlePlanClick(plan.name)}
+                      className={`block w-full px-4 py-2.5 sm:px-6 sm:py-3 lg:py-3.5 rounded-full text-center transition-all duration-300 text-sm sm:text-base cursor-pointer ${
                         mode === 'design'
                           ? 'bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600 text-white shadow-lg hover:shadow-xl'
                           : 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl'
                       }`}
                     >
                       {plan.cta}
-                    </a>
+                    </button>
                   </div>
 
                   {/* Features List */}
@@ -139,14 +153,14 @@ export function PricingPlans({ mode }: PricingPlansProps) {
 
                   {/* Link */}
                   <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/10">
-                    <a
-                      href={plan.link}
-                      className={`text-xs sm:text-sm hover:underline transition-colors duration-500 ${
+                    <button
+                      onClick={() => handlePlanClick(plan.name)}
+                      className={`text-xs sm:text-sm hover:underline transition-colors duration-500 bg-transparent border-none cursor-pointer ${
                         mode === 'design' ? 'text-purple-300' : 'text-blue-300'
                       }`}
                     >
                       {t.pricing.learnMore}
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -157,12 +171,26 @@ export function PricingPlans({ mode }: PricingPlansProps) {
         {/* Bottom Note */}
         <div className="text-center mt-12 sm:mt-16">
           <p className="text-gray-400 mb-4">
-            {t.pricing.customSolution} <a href="#contact" className={`hover:underline transition-colors duration-500 ${
-              mode === 'design' ? 'text-purple-300' : 'text-blue-300'
-            }`}>{t.pricing.contactUs}</a> {t.pricing.forQuote}
+            {t.pricing.customSolution} 
+            <button 
+              onClick={() => handlePlanClick("Kurumsal")} 
+              className={`hover:underline transition-colors duration-500 bg-transparent border-none cursor-pointer ml-1 mr-1 ${
+                mode === 'design' ? 'text-purple-300' : 'text-blue-300'
+              }`}
+            >
+              {t.pricing.contactUs}
+            </button> 
+            {t.pricing.forQuote}
           </p>
         </div>
       </div>
+
+      {/* Contact Modal Bileşeni Eklendi */}
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onOpenChange={setIsModalOpen}
+        initialPlan={selectedPlanName}
+      />
     </section>
   );
 }
