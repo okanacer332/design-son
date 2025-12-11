@@ -23,53 +23,61 @@ export const en: Dictionary = {
     codeBtnSecondary: "Explore Solutions"
   },
   portfolio: {
-    tag: "Our Projects",
-    title: "Featured Work",
-    description: "Discover our successful design projects that transform user experiences.",
-    descriptionCode: "Explore the enterprise design solutions we have developed for businesses in various sectors.",
-    viewAll: "View All Projects",
+    tag: "Neler Başardık?",
+    title: "Seçilmiş Başarı Hikayeleri",
+    description: "Tasarım odaklı düşünce yapımızla, iş hedeflerini kullanıcı ihtiyaçlarıyla buluşturduğumuz projeler.",
+    descriptionCode: "Farklı sektörlerin en karmaşık problemlerine getirdiğimiz, ölçeklenebilir mühendislik çözümleri.",
+    viewAll: "Tüm İşleri Gör",
     designProjects: [
       {
-        title: 'Logistics Platform',
-        category: 'Product Design',
-        description: 'Complete UX overhaul increasing conversion rate by 45%'
+        title: 'Lojistik Operasyon Paneli',
+        category: 'Ürün Tasarımı (UX/UI)',
+        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
+        image: '/portfolio/17.png'
       },
       {
-        title: 'Education Platform',
-        category: 'B2C Journey',
-        description: 'Optimized with a focus on Product and Service Design'
+        title: 'Online Eğitim Platformu',
+        category: 'B2C Kullanıcı Yolculuğu',
+        description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.',
+        image: '/portfolio/18.png'
       },
       {
-        title: 'SaaS (Cloud) Platform',
-        category: 'UI Design',
-        description: 'Modern interface with a comprehensive design system'
+        title: 'Bulut Tabanlı SaaS',
+        category: 'Tasarım Sistemi',
+        description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
+        image: '/portfolio/20.png'
       },
       {
-        title: 'Hotel & Booking Platform',
-        category: 'UX Consultancy',
-        description: 'Improved customer discovery and purchasing experience'
+        title: 'Otel & Rezervasyon Motoru',
+        category: 'UX Stratejisi',
+        description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.',
+        image: '/portfolio/22.png'
       }
     ],
     codeProjects: [
       {
-        title: 'Manufacturing ERP',
-        category: 'ERP System',
-        description: 'Full-scale ERP managing 500+ users across 12 facilities'
+        title: 'Akıllı Üretim ERP',
+        category: 'Endüstri 4.0',
+        description: '12 tesiste 500+ personelin anlık veri akışını yöneten mikro-servis mimarisi.',
+        image: '/portfolio/code-1.jpg'
       },
       {
-        title: 'B2B Marketplace',
-        category: 'B2B Platform',
-        description: 'Multi-vendor platform processing 10k+ daily transactions'
+        title: 'Global B2B Pazaryeri',
+        category: 'E-Ticaret Altyapısı',
+        description: 'Günlük 10.000+ işlemi hatasız işleyen, yüksek trafikli ticaret platformu.',
+        image: '/portfolio/code-2.jpg'
       },
       {
-        title: 'Project Management SaaS',
-        category: 'SaaS Development',
-        description: 'Cloud-based tool serving 50k+ active users'
+        title: 'Proje Yönetimi SaaS',
+        category: 'Multi-Tenant Mimari',
+        description: '50.000+ aktif kullanıcıya kesintisiz hizmet veren, bulut tabanlı performans aracı.',
+        image: '/portfolio/code-3.jpg'
       },
       {
-        title: 'Logistics Software',
-        category: 'Custom Solution',
-        description: 'Real-time tracking system for corporate logistics'
+        title: 'Lojistik Takip Yazılımı',
+        category: 'IoT & Real-time',
+        description: 'Kurumsal filolar için milisaniyelik veri işleyen gerçek zamanlı takip sistemi.',
+        image: '/portfolio/code-4.jpg'
       }
     ]
   },

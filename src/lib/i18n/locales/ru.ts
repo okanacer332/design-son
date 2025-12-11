@@ -23,53 +23,61 @@ export const ru: Dictionary = {
     codeBtnSecondary: "Изучить решения"
   },
   portfolio: {
-    tag: "Наши проекты",
-    title: "Избранные работы",
-    description: "Откройте для себя наши успешные дизайн-проекты, трансформирующие пользовательский опыт.",
-    descriptionCode: "Изучите корпоративные дизайн-решения, разработанные нами для различных отраслей.",
-    viewAll: "Все проекты",
+    tag: "Neler Başardık?",
+    title: "Seçilmiş Başarı Hikayeleri",
+    description: "Tasarım odaklı düşünce yapımızla, iş hedeflerini kullanıcı ihtiyaçlarıyla buluşturduğumuz projeler.",
+    descriptionCode: "Farklı sektörlerin en karmaşık problemlerine getirdiğimiz, ölçeklenebilir mühendislik çözümleri.",
+    viewAll: "Tüm İşleri Gör",
     designProjects: [
       {
-        title: 'Логистическая платформа',
-        category: 'Продуктовый дизайн',
-        description: 'Полное обновление UX, увеличившее конверсию на 45%'
+        title: 'Lojistik Operasyon Paneli',
+        category: 'Ürün Tasarımı (UX/UI)',
+        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
+        image: '/portfolio/17.png'
       },
       {
-        title: 'Образовательная платформа',
-        category: 'Путь клиента B2C',
-        description: 'Оптимизировано с фокусом на дизайн продукта и сервиса'
+        title: 'Online Eğitim Platformu',
+        category: 'B2C Kullanıcı Yolculuğu',
+        description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.',
+        image: '/portfolio/18.png'
       },
       {
-        title: 'SaaS (Облачная) платформа',
-        category: 'UI дизайн',
-        description: 'Современный интерфейс с комплексной дизайн-системой'
+        title: 'Bulut Tabanlı SaaS',
+        category: 'Tasarım Sistemi',
+        description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
+        image: '/portfolio/20.png'
       },
       {
-        title: 'Платформа бронирования отелей',
-        category: 'UX консалтинг',
-        description: 'Улучшен опыт поиска и покупки для клиентов'
+        title: 'Otel & Rezervasyon Motoru',
+        category: 'UX Stratejisi',
+        description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.',
+        image: '/portfolio/22.png'
       }
     ],
     codeProjects: [
       {
-        title: 'Производственная ERP',
-        category: 'ERP система',
-        description: 'Полномасштабная ERP, управляющая 500+ пользователями на 12 объектах'
+        title: 'Akıllı Üretim ERP',
+        category: 'Endüstri 4.0',
+        description: '12 tesiste 500+ personelin anlık veri akışını yöneten mikro-servis mimarisi.',
+        image: '/portfolio/code-1.jpg'
       },
       {
-        title: 'B2B Маркетплейс',
-        category: 'B2B платформа',
-        description: 'Мультивендорная платформа, обрабатывающая 10к+ транзакций ежедневно'
+        title: 'Global B2B Pazaryeri',
+        category: 'E-Ticaret Altyapısı',
+        description: 'Günlük 10.000+ işlemi hatasız işleyen, yüksek trafikli ticaret platformu.',
+        image: '/portfolio/code-2.jpg'
       },
       {
-        title: 'SaaS для управления проектами',
-        category: 'SaaS разработка',
-        description: 'Облачный инструмент, обслуживающий 50к+ активных пользователей'
+        title: 'Proje Yönetimi SaaS',
+        category: 'Multi-Tenant Mimari',
+        description: '50.000+ aktif kullanıcıya kesintisiz hizmet veren, bulut tabanlı performans aracı.',
+        image: '/portfolio/code-3.jpg'
       },
       {
-        title: 'Логистическое ПО',
-        category: 'Индивидуальное решение',
-        description: 'Система отслеживания в реальном времени для корпоративной логистики'
+        title: 'Lojistik Takip Yazılımı',
+        category: 'IoT & Real-time',
+        description: 'Kurumsal filolar için milisaniyelik veri işleyen gerçek zamanlı takip sistemi.',
+        image: '/portfolio/code-4.jpg'
       }
     ]
   },

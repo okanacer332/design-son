@@ -1,5 +1,8 @@
+// src/components/Portfolio.tsx
+
 "use client";
 
+import Image from 'next/image';
 import { useLanguage } from "@/src/lib/i18n/LanguageContext";
 import { TransitionWrapper } from "@/src/components/TransitionWrapper";
 
@@ -10,24 +13,8 @@ interface PortfolioProps {
 export function Portfolio({ mode }: PortfolioProps) {
   const { t } = useLanguage();
 
-  // Renk gradientlerini burada (UI tarafında) tutuyoruz çünkü bunlar çeviri değil, stil.
-  const designGradients = [
-    'from-purple-400 to-pink-500',
-    'from-fuchsia-400 to-purple-500',
-    'from-purple-500 to-indigo-500',
-    'from-pink-400 to-purple-500'
-  ];
-
-  const codeGradients = [
-    'from-blue-400 to-cyan-500',
-    'from-cyan-400 to-blue-500',
-    'from-blue-500 to-indigo-500',
-    'from-cyan-400 to-teal-500'
-  ];
-
   // Aktif modun projelerini seçiyoruz
   const activeProjects = mode === 'design' ? t.portfolio.designProjects : t.portfolio.codeProjects;
-  const activeGradients = mode === 'design' ? designGradients : codeGradients;
 
   return (
     <section id="portfolio" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-slate-900">
@@ -60,26 +47,44 @@ export function Portfolio({ mode }: PortfolioProps) {
             {activeProjects.map((project, index) => (
               <div
                 key={index}
-                className={`group relative overflow-hidden rounded-3xl cursor-pointer transition-all duration-500 hover:scale-105`}
+                className={`group relative overflow-hidden rounded-3xl cursor-pointer h-64 sm:h-72 md:h-96`}
               >
-                {/* Project Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${activeGradients[index]} opacity-80 group-hover:opacity-90 transition-opacity`}></div>
+                {/* Project Image Background */}
+                <div className="absolute inset-0 w-full h-full">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  {/* Image Overlay for Readability */}
+                  <div className={`absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-500 ${
+                    mode === 'design' ? 'group-hover:mix-blend-multiply bg-purple-950/20' : 'group-hover:mix-blend-multiply bg-blue-950/20'
+                  }`}></div>
+                  
+                  {/* Gradient Overlay at Bottom */}
+                  <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                </div>
                 
                 {/* Content */}
-                <div className="relative p-6 sm:p-8 md:p-10 h-64 sm:h-72 md:h-80 flex flex-col justify-end">
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-white/80 text-xs sm:text-sm mb-2">{project.category}</p>
-                    <h3 className="text-white text-lg sm:text-xl md:text-2xl mb-2 sm:mb-3">
+                <div className="absolute inset-0 p-6 sm:p-8 md:p-10 flex flex-col justify-end z-10">
+                  <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-3 backdrop-blur-md border ${
+                      mode === 'design' 
+                        ? 'bg-purple-500/20 border-purple-500/30 text-purple-100' 
+                        : 'bg-blue-500/20 border-blue-500/30 text-blue-100'
+                    }`}>
+                      {project.category}
+                    </div>
+                    <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 drop-shadow-md">
                       {project.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-white/90">
+                    <p className="text-sm sm:text-base text-gray-200 line-clamp-2 opacity-90 group-hover:opacity-100 transition-opacity">
                       {project.description}
                     </p>
                   </div>
                 </div>
-
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
               </div>
             ))}
           </div>

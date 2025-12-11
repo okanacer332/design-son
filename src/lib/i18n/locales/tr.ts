@@ -1,24 +1,24 @@
+// src/lib/i18n/locales/tr.ts
+
 import { Dictionary } from '../types';
 
 export const tr: Dictionary = {
   header: {
     menu: "Menü",
-    portfolio: "Başarı Hikayeleri", // "İşlerimiz" yerine daha iddialı
-    services: "Çözümlerimiz", // "Hizmetler" yerine çözüm odaklı
+    portfolio: "Başarı Hikayeleri",
+    services: "Çözümlerimiz",
     about: "Biz Kimiz",
     contact: "Bize Ulaşın",
     readyText: "Projenizi hayata geçirmeye hazır mısınız?",
-    getInTouch: "Ücretsiz Analiz Al" // "Sizi Arayalım" yerine değer vaadi
+    getInTouch: "Ücretsiz Analiz Al"
   },
   hero: {
-    // Design Modu: Sonuç ve Dönüşüm odaklı
     designTag: "✨ Veri Odaklı Ürün Tasarımı & Strateji",
     designTitle: ["Markanızı Dönüştüren", "Etkili Tasarım", "Stratejileri"],
     designDesc: "Sadece estetik değil, iş sonuçları üreten arayüzler tasarlıyoruz. Ürün akışlarını sadeleştirip, kullanıcı sadakati yaratan deneyimler kurguluyoruz.",
     designBtnPrimary: "İletişim Formu",
     designBtnSecondary: "İşlerimiz",
     
-    // Code Modu: Güven, Ölçeklenebilirlik ve Performans odaklı
     codeTag: "💻 Ölçeklenebilir Kurumsal Mimariler",
     codeTitle: ["Geleceğe Hazır", "Yüksek Performanslı", "Yazılımlar"],
     codeDesc: "İşletmenizin büyüme hızına ayak uyduran, güvenli ve modüler ERP & SaaS altyapıları inşa ediyoruz. Karmaşık süreçleri, yalın kodlara dönüştürüyoruz.",
@@ -30,49 +30,57 @@ export const tr: Dictionary = {
     title: "Seçilmiş Başarı Hikayeleri",
     description: "Tasarım odaklı düşünce yapımızla, iş hedeflerini kullanıcı ihtiyaçlarıyla buluşturduğumuz projeler.",
     descriptionCode: "Farklı sektörlerin en karmaşık problemlerine getirdiğimiz, ölçeklenebilir mühendislik çözümleri.",
-    viewAll: "İşlerimiz",
+    viewAll: "Tüm İşleri Gör",
     designProjects: [
       {
         title: 'Lojistik Operasyon Paneli',
         category: 'Ürün Tasarımı (UX/UI)',
-        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.'
+        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
+        image: '/portfolio/17.png'
       },
       {
         title: 'Online Eğitim Platformu',
         category: 'B2C Kullanıcı Yolculuğu',
-        description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.'
+        description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.',
+        image: '/portfolio/18.png'
       },
       {
         title: 'Bulut Tabanlı SaaS',
         category: 'Tasarım Sistemi',
-        description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.'
+        description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
+        image: '/portfolio/20.png'
       },
       {
         title: 'Otel & Rezervasyon Motoru',
         category: 'UX Stratejisi',
-        description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.'
+        description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.',
+        image: '/portfolio/22.png'
       }
     ],
     codeProjects: [
       {
         title: 'Akıllı Üretim ERP',
         category: 'Endüstri 4.0',
-        description: '12 tesiste 500+ personelin anlık veri akışını yöneten mikro-servis mimarisi.'
+        description: '12 tesiste 500+ personelin anlık veri akışını yöneten mikro-servis mimarisi.',
+        image: '/portfolio/code-1.jpg'
       },
       {
         title: 'Global B2B Pazaryeri',
         category: 'E-Ticaret Altyapısı',
-        description: 'Günlük 10.000+ işlemi hatasız işleyen, yüksek trafikli ticaret platformu.'
+        description: 'Günlük 10.000+ işlemi hatasız işleyen, yüksek trafikli ticaret platformu.',
+        image: '/portfolio/code-2.jpg'
       },
       {
         title: 'Proje Yönetimi SaaS',
         category: 'Multi-Tenant Mimari',
-        description: '50.000+ aktif kullanıcıya kesintisiz hizmet veren, bulut tabanlı performans aracı.'
+        description: '50.000+ aktif kullanıcıya kesintisiz hizmet veren, bulut tabanlı performans aracı.',
+        image: '/portfolio/code-3.jpg'
       },
       {
         title: 'Lojistik Takip Yazılımı',
         category: 'IoT & Real-time',
-        description: 'Kurumsal filolar için milisaniyelik veri işleyen gerçek zamanlı takip sistemi.'
+        description: 'Kurumsal filolar için milisaniyelik veri işleyen gerçek zamanlı takip sistemi.',
+        image: '/portfolio/code-4.jpg'
       }
     ]
   },
@@ -87,7 +95,7 @@ export const tr: Dictionary = {
     forQuote: "ekibimiz ihtiyaçlarınızı analiz etsin.",
     designPlans: [
       {
-        name: 'MVP & Lansman', // Girişimci yerine daha profesyonel
+        name: 'MVP & Lansman',
         price: '$999',
         period: '/Başlangıç',
         label: 'Hızlı Başlangıç',
@@ -103,7 +111,7 @@ export const tr: Dictionary = {
         highlighted: false
       },
       {
-        name: 'Büyüme (Growth)', // İşletme yerine hedefe odaklı
+        name: 'Büyüme (Growth)',
         price: '$1799',
         period: '/Proje Bazlı',
         label: 'En Çok Tercih Edilen',
@@ -119,7 +127,7 @@ export const tr: Dictionary = {
         highlighted: true
       },
       {
-        name: 'Kurumsal Partner', // Tam Kapsam yerine
+        name: 'Kurumsal Partner',
         price: '$3499',
         period: '/Başlayan Fiyatlarla',
         label: 'Büyük Ölçekli Operasyon',

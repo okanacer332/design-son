@@ -23,53 +23,61 @@ export const fr: Dictionary = {
     codeBtnSecondary: "Explorer les Solutions"
   },
   portfolio: {
-    tag: "Nos Projets",
-    title: "Travaux en Vedette",
-    description: "Découvrez nos projets de design réussis qui transforment les expériences utilisateurs.",
-    descriptionCode: "Examinez les solutions de conception d'entreprise que nous avons développées pour des entreprises de divers secteurs.",
-    viewAll: "Voir Tous les Projets",
+    tag: "Neler Başardık?",
+    title: "Seçilmiş Başarı Hikayeleri",
+    description: "Tasarım odaklı düşünce yapımızla, iş hedeflerini kullanıcı ihtiyaçlarıyla buluşturduğumuz projeler.",
+    descriptionCode: "Farklı sektörlerin en karmaşık problemlerine getirdiğimiz, ölçeklenebilir mühendislik çözümleri.",
+    viewAll: "Tüm İşleri Gör",
     designProjects: [
       {
-        title: 'Plateforme Logistique',
-        category: 'Design Produit',
-        description: 'Refonte complète de l\'UX augmentant le taux de conversion de 45%'
+        title: 'Lojistik Operasyon Paneli',
+        category: 'Ürün Tasarımı (UX/UI)',
+        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
+        image: '/portfolio/17.png'
       },
       {
-        title: 'Plateforme Éducative',
-        category: 'Parcours B2C',
-        description: 'Optimisé en se concentrant sur le design de produit et de service'
+        title: 'Online Eğitim Platformu',
+        category: 'B2C Kullanıcı Yolculuğu',
+        description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.',
+        image: '/portfolio/18.png'
       },
       {
-        title: 'Plateforme SaaS (Cloud)',
-        category: 'Design UI',
-        description: 'Interface moderne avec un système de design complet'
+        title: 'Bulut Tabanlı SaaS',
+        category: 'Tasarım Sistemi',
+        description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
+        image: '/portfolio/20.png'
       },
       {
-        title: 'Plateforme Hôtellerie & Réservation',
-        category: 'Consulting UX',
-        description: 'Amélioration de l\'expérience de découverte et d\'achat client'
+        title: 'Otel & Rezervasyon Motoru',
+        category: 'UX Stratejisi',
+        description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.',
+        image: '/portfolio/22.png'
       }
     ],
     codeProjects: [
       {
-        title: 'ERP de Production',
-        category: 'Système ERP',
-        description: 'ERP complet gérant plus de 500 utilisateurs dans 12 installations'
+        title: 'Akıllı Üretim ERP',
+        category: 'Endüstri 4.0',
+        description: '12 tesiste 500+ personelin anlık veri akışını yöneten mikro-servis mimarisi.',
+        image: '/portfolio/code-1.jpg'
       },
       {
-        title: 'Place de Marché B2B',
-        category: 'Plateforme B2B',
-        description: 'Plateforme multi-vendeurs traitant plus de 10k transactions par jour'
+        title: 'Global B2B Pazaryeri',
+        category: 'E-Ticaret Altyapısı',
+        description: 'Günlük 10.000+ işlemi hatasız işleyen, yüksek trafikli ticaret platformu.',
+        image: '/portfolio/code-2.jpg'
       },
       {
-        title: 'SaaS de Gestion de Projet',
-        category: 'Développement SaaS',
-        description: 'Outil basé sur le cloud servant plus de 50k utilisateurs actifs'
+        title: 'Proje Yönetimi SaaS',
+        category: 'Multi-Tenant Mimari',
+        description: '50.000+ aktif kullanıcıya kesintisiz hizmet veren, bulut tabanlı performans aracı.',
+        image: '/portfolio/code-3.jpg'
       },
       {
-        title: 'Logiciel Logistique',
-        category: 'Solution Personnalisée',
-        description: 'Système de suivi en temps réel pour la logistique d\'entreprise'
+        title: 'Lojistik Takip Yazılımı',
+        category: 'IoT & Real-time',
+        description: 'Kurumsal filolar için milisaniyelik veri işleyen gerçek zamanlı takip sistemi.',
+        image: '/portfolio/code-4.jpg'
       }
     ]
   },

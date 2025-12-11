@@ -22,54 +22,62 @@ export const es: Dictionary = {
     codeBtnPrimary: "Empezar a Desarrollar",
     codeBtnSecondary: "Explorar Soluciones"
   },
-  portfolio: {
-    tag: "Nuestros Proyectos",
-    title: "Trabajos Destacados",
-    description: "Descubra nuestros exitosos proyectos de diseño que transforman experiencias de usuario.",
-    descriptionCode: "Examine las soluciones de diseño empresarial que hemos desarrollado para empresas de diversos sectores.",
-    viewAll: "Ver Todos los Proyectos",
+ portfolio: {
+    tag: "Neler Başardık?",
+    title: "Seçilmiş Başarı Hikayeleri",
+    description: "Tasarım odaklı düşünce yapımızla, iş hedeflerini kullanıcı ihtiyaçlarıyla buluşturduğumuz projeler.",
+    descriptionCode: "Farklı sektörlerin en karmaşık problemlerine getirdiğimiz, ölçeklenebilir mühendislik çözümleri.",
+    viewAll: "Tüm İşleri Gör",
     designProjects: [
       {
-        title: 'Plataforma Logística',
-        category: 'Diseño de Producto',
-        description: 'Renovación completa de UX aumentando la tasa de conversión en un 45%'
+        title: 'Lojistik Operasyon Paneli',
+        category: 'Ürün Tasarımı (UX/UI)',
+        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
+        image: '/portfolio/17.png'
       },
       {
-        title: 'Plataforma Educativa',
-        category: 'Viaje B2C',
-        description: 'Optimizado con enfoque en Diseño de Producto y Servicio'
+        title: 'Online Eğitim Platformu',
+        category: 'B2C Kullanıcı Yolculuğu',
+        description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.',
+        image: '/portfolio/18.png'
       },
       {
-        title: 'Plataforma SaaS (Nube)',
-        category: 'Diseño UI',
-        description: 'Interfaz moderna con un sistema de diseño integral'
+        title: 'Bulut Tabanlı SaaS',
+        category: 'Tasarım Sistemi',
+        description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
+        image: '/portfolio/20.png'
       },
       {
-        title: 'Plataforma de Hotel y Reservas',
-        category: 'Consultoría UX',
-        description: 'Mejora de la experiencia de descubrimiento y compra del cliente'
+        title: 'Otel & Rezervasyon Motoru',
+        category: 'UX Stratejisi',
+        description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.',
+        image: '/portfolio/22.png'
       }
     ],
     codeProjects: [
       {
-        title: 'ERP de Manufactura',
-        category: 'Sistema ERP',
-        description: 'ERP a gran escala gestionando 500+ usuarios en 12 instalaciones'
+        title: 'Akıllı Üretim ERP',
+        category: 'Endüstri 4.0',
+        description: '12 tesiste 500+ personelin anlık veri akışını yöneten mikro-servis mimarisi.',
+        image: '/portfolio/code-1.jpg'
       },
       {
-        title: 'Marketplace B2B',
-        category: 'Plataforma B2B',
-        description: 'Plataforma multi-vendedor procesando 10k+ transacciones diarias'
+        title: 'Global B2B Pazaryeri',
+        category: 'E-Ticaret Altyapısı',
+        description: 'Günlük 10.000+ işlemi hatasız işleyen, yüksek trafikli ticaret platformu.',
+        image: '/portfolio/code-2.jpg'
       },
       {
-        title: 'SaaS de Gestión de Proyectos',
-        category: 'Desarrollo SaaS',
-        description: 'Herramienta basada en la nube sirviendo a 50k+ usuarios activos'
+        title: 'Proje Yönetimi SaaS',
+        category: 'Multi-Tenant Mimari',
+        description: '50.000+ aktif kullanıcıya kesintisiz hizmet veren, bulut tabanlı performans aracı.',
+        image: '/portfolio/code-3.jpg'
       },
       {
-        title: 'Software Logístico',
-        category: 'Solución Personalizada',
-        description: 'Sistema de seguimiento en tiempo real para logística corporativa'
+        title: 'Lojistik Takip Yazılımı',
+        category: 'IoT & Real-time',
+        description: 'Kurumsal filolar için milisaniyelik veri işleyen gerçek zamanlı takip sistemi.',
+        image: '/portfolio/code-4.jpg'
       }
     ]
   },

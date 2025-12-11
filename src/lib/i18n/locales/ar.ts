@@ -23,53 +23,61 @@ export const ar: Dictionary = {
     codeBtnSecondary: "استكشف الحلول"
   },
   portfolio: {
-    tag: "مشاريعنا",
-    title: "أعمال مميزة",
-    description: "اكتشف مشاريع التصميم الناجحة لدينا التي تحول تجارب المستخدم.",
-    descriptionCode: "اطلع على حلول التصميم المؤسسي التي طورناها لشركات في قطاعات مختلفة.",
-    viewAll: "عرض جميع المشاريع",
+    tag: "Neler Başardık?",
+    title: "Seçilmiş Başarı Hikayeleri",
+    description: "Tasarım odaklı düşünce yapımızla, iş hedeflerini kullanıcı ihtiyaçlarıyla buluşturduğumuz projeler.",
+    descriptionCode: "Farklı sektörlerin en karmaşık problemlerine getirdiğimiz, ölçeklenebilir mühendislik çözümleri.",
+    viewAll: "Tüm İşleri Gör",
     designProjects: [
       {
-        title: 'منصة لوجستية',
-        category: 'تصميم المنتج',
-        description: 'تجديد كامل لتجربة المستخدم (UX) مما زاد معدل التحويل بنسبة 45%'
+        title: 'Lojistik Operasyon Paneli',
+        category: 'Ürün Tasarımı (UX/UI)',
+        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
+        image: '/portfolio/17.png'
       },
       {
-        title: 'منصة تعليمية',
-        category: 'رحلة B2C',
-        description: 'تم التحسين بالتركيز على تصميم المنتج والخدمة'
+        title: 'Online Eğitim Platformu',
+        category: 'B2C Kullanıcı Yolculuğu',
+        description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.',
+        image: '/portfolio/18.png'
       },
       {
-        title: 'منصة SaaS (سحابية)',
-        category: 'تصميم واجهة المستخدم',
-        description: 'واجهة حديثة مع نظام تصميم شامل'
+        title: 'Bulut Tabanlı SaaS',
+        category: 'Tasarım Sistemi',
+        description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
+        image: '/portfolio/20.png'
       },
       {
-        title: 'منصة فنادق وحجوزات',
-        category: 'استشارات UX',
-        description: 'تحسين تجربة العميل في الاستكشاف والشراء'
+        title: 'Otel & Rezervasyon Motoru',
+        category: 'UX Stratejisi',
+        description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.',
+        image: '/portfolio/22.png'
       }
     ],
     codeProjects: [
       {
-        title: 'ERP للتصنيع',
-        category: 'نظام ERP',
-        description: 'نظام ERP واسع النطاق يدير أكثر من 500 مستخدم في 12 منشأة'
+        title: 'Akıllı Üretim ERP',
+        category: 'Endüstri 4.0',
+        description: '12 tesiste 500+ personelin anlık veri akışını yöneten mikro-servis mimarisi.',
+        image: '/portfolio/code-1.jpg'
       },
       {
-        title: 'سوق B2B',
-        category: 'منصة B2B',
-        description: 'منصة متعددة البائعين تعالج أكثر من 10 آلاف معاملة يومياً'
+        title: 'Global B2B Pazaryeri',
+        category: 'E-Ticaret Altyapısı',
+        description: 'Günlük 10.000+ işlemi hatasız işleyen, yüksek trafikli ticaret platformu.',
+        image: '/portfolio/code-2.jpg'
       },
       {
-        title: 'SaaS لإدارة المشاريع',
-        category: 'تطوير SaaS',
-        description: 'أداة سحابية تخدم أكثر من 50 ألف مستخدم نشط'
+        title: 'Proje Yönetimi SaaS',
+        category: 'Multi-Tenant Mimari',
+        description: '50.000+ aktif kullanıcıya kesintisiz hizmet veren, bulut tabanlı performans aracı.',
+        image: '/portfolio/code-3.jpg'
       },
       {
-        title: 'برنامج لوجستي',
-        category: 'حل مخصص',
-        description: 'نظام تتبع في الوقت الفعلي للخدمات اللوجستية للشركات'
+        title: 'Lojistik Takip Yazılımı',
+        category: 'IoT & Real-time',
+        description: 'Kurumsal filolar için milisaniyelik veri işleyen gerçek zamanlı takip sistemi.',
+        image: '/portfolio/code-4.jpg'
       }
     ]
   },
