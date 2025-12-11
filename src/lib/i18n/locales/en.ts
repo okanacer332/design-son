@@ -78,7 +78,6 @@ export const en: Dictionary = {
     title: "Choose Your Plan",
     description: "Flexible design packages tailored to your project needs and budget.",
     descriptionCode: "Scalable software solutions that will grow with your business.",
-    viewDetails: "View Details",
     learnMore: "Learn more about this plan →",
     customSolution: "Need a custom solution?",
     contactUs: "Contact us",

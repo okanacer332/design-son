@@ -78,7 +78,6 @@ export const de: Dictionary = {
     title: "Wählen Sie Ihren Plan",
     description: "Flexible Designpakete, abgestimmt auf Ihre Projektanforderungen und Ihr Budget.",
     descriptionCode: "Skalierbare Softwarelösungen, die mit Ihrem Unternehmen wachsen.",
-    viewDetails: "Details ansehen",
     learnMore: "Mehr über diesen Plan erfahren →",
     customSolution: "Benötigen Sie eine individuelle Lösung?",
     contactUs: "Kontaktieren Sie uns",

@@ -78,7 +78,6 @@ export const fr: Dictionary = {
     title: "Choisissez Votre Plan",
     description: "Des forfaits de design flexibles adaptés aux besoins et au budget de votre projet.",
     descriptionCode: "Des solutions logicielles évolutives qui grandiront avec votre entreprise.",
-    viewDetails: "Voir les Détails",
     learnMore: "En savoir plus sur ce plan →",
     customSolution: "Besoin d'une solution personnalisée ?",
     contactUs: "Contactez-nous",

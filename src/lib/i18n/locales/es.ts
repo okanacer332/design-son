@@ -78,7 +78,6 @@ export const es: Dictionary = {
     title: "Elija Su Plan",
     description: "Paquetes de diseño flexibles adaptados a las necesidades y presupuesto de su proyecto.",
     descriptionCode: "Soluciones de software escalables que crecerán con su negocio.",
-    viewDetails: "Ver Detalles",
     learnMore: "Más información sobre este plan →",
     customSolution: "¿Necesita una solución personalizada?",
     contactUs: "Contáctenos",

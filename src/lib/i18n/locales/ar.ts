@@ -78,7 +78,6 @@ export const ar: Dictionary = {
     title: "اختر خطتك",
     description: "باقات تصميم مرنة مصممة خصيصاً لاحتياجات مشروعك وميزانيتك.",
     descriptionCode: "حلول برمجية قابلة للتوسع ستنمو مع نمو عملك.",
-    viewDetails: "عرض التفاصيل",
     learnMore: "معرفة المزيد عن هذه الخطة ←",
     customSolution: "هل تحتاج إلى حل مخصص؟",
     contactUs: "اتصل بنا",
