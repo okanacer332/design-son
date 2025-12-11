@@ -138,17 +138,9 @@ export function PricingPlans({ mode }: PricingPlansProps) {
                       </li>
                     ))}
                   </ul>
-
-                  <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/10">
-                    <button
-                      onClick={() => handlePlanClick(plan.name)}
-                      className={`text-xs sm:text-sm hover:underline transition-colors duration-500 bg-transparent border-none cursor-pointer ${
-                        mode === 'design' ? 'text-purple-300' : 'text-blue-300'
-                      }`}
-                    >
-                      {t.pricing.learnMore}
-                    </button>
-                  </div>
+                  
+                  {/* Link (Learn More) Kısmı Kaldırıldı */}
+                  
                 </div>
               </div>
             ))}
@@ -171,7 +163,6 @@ export function PricingPlans({ mode }: PricingPlansProps) {
         </div>
       </div>
 
-      {/* DÜZELTME BURADA YAPILDI: mode={mode} eklendi */}
       <ContactModal 
         isOpen={isModalOpen} 
         onOpenChange={setIsModalOpen}
