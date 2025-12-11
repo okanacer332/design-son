@@ -36,25 +36,25 @@ export const tr: Dictionary = {
         title: 'Lojistik Operasyon Paneli',
         category: 'Ürün Tasarımı (UX/UI)',
         description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
-        image: '/portfolio/17.png'
+        image: '/portfolio/22.png'
       },
       {
         title: 'Online Eğitim Platformu',
         category: 'B2C Kullanıcı Yolculuğu',
         description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.',
-        image: '/portfolio/18.png'
+        image: '/portfolio/17.png'
       },
       {
         title: 'Bulut Tabanlı SaaS',
         category: 'Tasarım Sistemi',
         description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
-        image: '/portfolio/20.png'
+        image: '/portfolio/18.png'
       },
       {
         title: 'Otel & Rezervasyon Motoru',
         category: 'UX Stratejisi',
         description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.',
-        image: '/portfolio/22.png'
+        image: '/portfolio/20.png'
       }
     ],
     codeProjects: [
@@ -62,25 +62,25 @@ export const tr: Dictionary = {
         title: 'Akıllı Üretim ERP',
         category: 'Endüstri 4.0',
         description: '12 tesiste 500+ personelin anlık veri akışını yöneten mikro-servis mimarisi.',
-        image: '/portfolio/code-1.jpg'
+        image: '/portfolio/22.png'
       },
       {
         title: 'Global B2B Pazaryeri',
         category: 'E-Ticaret Altyapısı',
         description: 'Günlük 10.000+ işlemi hatasız işleyen, yüksek trafikli ticaret platformu.',
-        image: '/portfolio/code-2.jpg'
+        image: '/portfolio/17.png'
       },
       {
         title: 'Proje Yönetimi SaaS',
         category: 'Multi-Tenant Mimari',
         description: '50.000+ aktif kullanıcıya kesintisiz hizmet veren, bulut tabanlı performans aracı.',
-        image: '/portfolio/code-3.jpg'
+        image: '/portfolio/18.png'
       },
       {
         title: 'Lojistik Takip Yazılımı',
         category: 'IoT & Real-time',
         description: 'Kurumsal filolar için milisaniyelik veri işleyen gerçek zamanlı takip sistemi.',
-        image: '/portfolio/code-4.jpg'
+        image: '/portfolio/20.png'
       }
     ]
   },
