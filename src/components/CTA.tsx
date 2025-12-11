@@ -27,13 +27,13 @@ export function CTA({ mode }: CTAProps) {
               : 'bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/30'
           }`}>
             <div className="text-center">
-              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 px-4 transition-colors duration-500 ${
-                mode === 'design'
-                  ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
-                  : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
-              }`}>
-                {mode === 'design' ? t.cta.titleDesign : t.cta.titleCode}
-              </h2>
+              <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 px-4 py-2 leading-tight transition-colors duration-500 ${
+  mode === 'design'
+    ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
+    : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
+}`}>
+  {mode === 'design' ? t.cta.titleDesign : t.cta.titleCode}
+</h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto px-4">
                 {mode === 'design' ? t.cta.descDesign : t.cta.descCode}
               </p>

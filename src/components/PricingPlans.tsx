@@ -34,13 +34,13 @@ export function PricingPlans({ mode }: PricingPlansProps) {
           }`}>
             {t.pricing.tag}
           </div>
-          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 px-4 transition-colors duration-500 ${
-            mode === 'design'
-              ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
-              : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
-          }`}>
-            {t.pricing.title}
-          </h2>
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 px-4 py-2 leading-tight transition-colors duration-500 ${
+  mode === 'design'
+    ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
+    : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
+}`}>
+  {t.pricing.title}
+</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
             {mode === 'design' ? t.pricing.description : t.pricing.descriptionCode}
           </p>

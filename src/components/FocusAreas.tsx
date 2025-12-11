@@ -30,13 +30,13 @@ export function FocusAreas({ mode }: FocusAreasProps) {
           }`}>
             {t.focusAreas.tag}
           </div>
-          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 px-4 transition-colors duration-500 ${
-            mode === 'design'
-              ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
-              : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
-          }`}>
-            {mode === 'design' ? t.focusAreas.titleDesign : t.focusAreas.titleCode}
-          </h2>
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 px-4 py-2 leading-tight transition-colors duration-500 ${
+  mode === 'design'
+    ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
+    : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
+}`}>
+  {mode === 'design' ? t.focusAreas.titleDesign : t.focusAreas.titleCode}
+</h2>
         </TransitionWrapper>
 
         {/* Focus Areas Grid - Animasyonlu */}
