@@ -35,7 +35,7 @@ export function ModeProvider({ children }: { children: ReactNode }) {
       // Adım 1: Site açıldıktan 1.5 saniye sonra CODE moduna geç
       const timer1 = setTimeout(() => {
         setMode('code');
-      }, 1500);
+      }, 1000);
 
       // Adım 2: Code modunda 2.5 saniye durduktan sonra DESIGN moduna geri dön
       const timer2 = setTimeout(() => {
@@ -46,7 +46,7 @@ export function ModeProvider({ children }: { children: ReactNode }) {
         
         // Varsayılan tercihi design olarak kaydet
         localStorage.setItem('acr-mode', 'design');
-      }, 4000); // 1500ms (başlangıç) + 2500ms (bekleme) = 4000ms
+      }, 3000); // 1500ms (başlangıç) + 2500ms (bekleme) = 4000ms
 
       // Temizlik (Component unmount olursa timerları iptal et)
       return () => {
