@@ -1,3 +1,5 @@
+// src/components/Services.tsx
+
 "use client";
 
 import { useState } from 'react';
@@ -25,6 +27,73 @@ export function Services({ mode }: ServicesProps) {
   // Görüntülenecek servisleri filtrele
   const displayedServices = showAll ? servicesList : servicesList.slice(0, 4);
 
+  // Kart Render Fonksiyonu (Kod tekrarını önlemek için)
+  const renderServiceCard = (service: any, index: number) => {
+    const Icon = iconsList[index];
+    const isExpanded = expandedIndex === index;
+
+    return (
+      <div
+        key={index}
+        className={`group rounded-lg sm:rounded-xl backdrop-blur-sm border transition-all duration-300 overflow-hidden ${
+          isExpanded
+            ? mode === 'design'
+              ? 'bg-purple-500/10 border-purple-500/40 shadow-lg shadow-purple-500/20'
+              : 'bg-blue-500/10 border-blue-500/40 shadow-lg shadow-blue-500/20'
+            : mode === 'design'
+              ? 'bg-purple-500/5 border-purple-500/20 hover:bg-purple-500/10 hover:border-purple-500/30'
+              : 'bg-blue-500/5 border-blue-500/20 hover:bg-blue-500/10 hover:border-blue-500/30'
+        }`}
+      >
+        {/* Accordion Header */}
+        <button
+          onClick={() => setExpandedIndex(isExpanded ? null : index)}
+          className="w-full p-3 sm:p-4 lg:p-5 flex items-center gap-3 sm:gap-4 text-left"
+        >
+          <div className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+            mode === 'design'
+              ? 'bg-gradient-to-br from-purple-500 to-fuchsia-500 group-hover:shadow-lg group-hover:shadow-purple-500/50'
+              : 'bg-gradient-to-br from-blue-500 to-cyan-500 group-hover:shadow-lg group-hover:shadow-blue-500/50'
+          }`}>
+            <Icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+          </div>
+          
+          <div className="flex-1 min-w-0">
+            <h3 className={`text-base sm:text-lg lg:text-xl mb-1 transition-colors duration-300 ${
+              mode === 'design' ? 'text-purple-200' : 'text-blue-200'
+            }`}>
+              {service.title}
+            </h3>
+            {!isExpanded && (
+              <p className="text-xs sm:text-sm text-gray-500 truncate pr-2">
+                {service.description}
+              </p>
+            )}
+          </div>
+          
+          <ChevronDown 
+            className={`w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-400 transition-transform duration-300 flex-shrink-0 ${
+              isExpanded ? 'rotate-180' : ''
+            } ${mode === 'design' ? 'group-hover:text-purple-300' : 'group-hover:text-blue-300'}`}
+          />
+        </button>
+        
+        {/* Accordion Content */}
+        <div 
+          className={`transition-all duration-300 ease-in-out ${
+            isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="px-3 sm:px-4 lg:px-5 pb-3 sm:pb-4 lg:pb-5 pl-11 sm:pl-14 lg:pl-16">
+            <p className="text-xs sm:text-sm lg:text-base text-gray-400 leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section id="services" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-slate-900 relative overflow-hidden">
       {/* Background gradient */}
@@ -46,12 +115,12 @@ export function Services({ mode }: ServicesProps) {
             {t.services.tag}
           </div>
           <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 px-4 py-2 leading-tight transition-colors duration-500 ${
-  mode === 'design'
-    ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
-    : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
-}`}>
-  {mode === 'design' ? t.services.titleDesign : t.services.titleCode}
-</h2>
+            mode === 'design'
+              ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
+              : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
+          }`}>
+            {mode === 'design' ? t.services.titleDesign : t.services.titleCode}
+          </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
             {mode === 'design' ? t.services.descriptionDesign : t.services.descriptionCode}
           </p>
@@ -59,73 +128,34 @@ export function Services({ mode }: ServicesProps) {
 
         {/* Services Accordion Grid - Animasyonlu */}
         <TransitionWrapper modeKey={mode + "-services"}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 max-w-6xl mx-auto">
-            {displayedServices.map((service, index) => {
-              const Icon = iconsList[index];
-              const isExpanded = expandedIndex === index;
-              
-              return (
-                <div
-                  key={index}
-                  className={`group rounded-lg sm:rounded-xl backdrop-blur-sm border transition-all duration-300 overflow-hidden ${
-                    isExpanded
-                      ? mode === 'design'
-                        ? 'bg-purple-500/10 border-purple-500/40 shadow-lg shadow-purple-500/20'
-                        : 'bg-blue-500/10 border-blue-500/40 shadow-lg shadow-blue-500/20'
-                      : mode === 'design'
-                        ? 'bg-purple-500/5 border-purple-500/20 hover:bg-purple-500/10 hover:border-purple-500/30'
-                        : 'bg-blue-500/5 border-blue-500/20 hover:bg-blue-500/10 hover:border-blue-500/30'
-                  }`}
-                >
-                  {/* Accordion Header */}
-                  <button
-                    onClick={() => setExpandedIndex(isExpanded ? null : index)}
-                    className="w-full p-3 sm:p-4 lg:p-5 flex items-center gap-3 sm:gap-4 text-left"
-                  >
-                    <div className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                      mode === 'design'
-                        ? 'bg-gradient-to-br from-purple-500 to-fuchsia-500 group-hover:shadow-lg group-hover:shadow-purple-500/50'
-                        : 'bg-gradient-to-br from-blue-500 to-cyan-500 group-hover:shadow-lg group-hover:shadow-blue-500/50'
-                    }`}>
-                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                    </div>
-                    
-                    <div className="flex-1 min-w-0">
-                      <h3 className={`text-base sm:text-lg lg:text-xl mb-1 transition-colors duration-300 ${
-                        mode === 'design' ? 'text-purple-200' : 'text-blue-200'
-                      }`}>
-                        {service.title}
-                      </h3>
-                      {!isExpanded && (
-                        <p className="text-xs sm:text-sm text-gray-500 truncate pr-2">
-                          {service.description}
-                        </p>
-                      )}
-                    </div>
-                    
-                    <ChevronDown 
-                      className={`w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-400 transition-transform duration-300 flex-shrink-0 ${
-                        isExpanded ? 'rotate-180' : ''
-                      } ${mode === 'design' ? 'group-hover:text-purple-300' : 'group-hover:text-blue-300'}`}
-                    />
-                  </button>
-                  
-                  {/* Accordion Content */}
-                  <div 
-                    className={`transition-all duration-300 ease-in-out ${
-                      isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                  >
-                    <div className="px-3 sm:px-4 lg:px-5 pb-3 sm:pb-4 lg:pb-5 pl-11 sm:pl-14 lg:pl-16">
-                      <p className="text-xs sm:text-sm lg:text-base text-gray-400 leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+          
+          {/* MOBİL GÖRÜNÜM (Tek Sütun) */}
+          <div className="flex flex-col gap-3 md:hidden">
+            {displayedServices.map((service, index) => renderServiceCard(service, index))}
           </div>
+
+          {/* MASAÜSTÜ GÖRÜNÜM (İki Bağımsız Sütun - Masonry Etkisi) */}
+          {/* items-start: Sütunların içeriğe göre uzamasını sağlar, birbirini etkilemez */}
+          <div className="hidden md:grid grid-cols-2 gap-4 items-start max-w-6xl mx-auto">
+            
+            {/* Sol Sütun (Çift Sayılar: 0, 2, 4...) */}
+            <div className="flex flex-col gap-4">
+              {displayedServices.map((service, index) => {
+                if (index % 2 !== 0) return null; // Sadece çiftleri al
+                return renderServiceCard(service, index);
+              })}
+            </div>
+
+            {/* Sağ Sütun (Tek Sayılar: 1, 3, 5...) */}
+            <div className="flex flex-col gap-4">
+              {displayedServices.map((service, index) => {
+                if (index % 2 === 0) return null; // Sadece tekleri al
+                return renderServiceCard(service, index);
+              })}
+            </div>
+
+          </div>
+
         </TransitionWrapper>
 
         {/* Load More Button */}
