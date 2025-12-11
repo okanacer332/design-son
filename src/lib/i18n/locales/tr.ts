@@ -87,7 +87,7 @@ export const tr: Dictionary = {
   pricing: {
     tag: "İş Birliği Modelleri",
     title: "Size Uygun Planı Seçin",
-    description: "Projenizin aşamasına ve hedeflerinize özel, şeffaf ve sonuç odaklı tasarım paketleri.",
+    description: "Projenizin aşamasına ve hedeflerinize özel, şeffaf ve sonuç odaklı yazılım çözümleri",
     descriptionCode: "MVP'den Holding seviyesine kadar, işletmenizle birlikte büyüyen esnek yazılım paketleri.",
     learnMore: "Bu paketin detayları →",
     customSolution: "Daha büyük bir vizyonunuz mu var?",
@@ -95,25 +95,25 @@ export const tr: Dictionary = {
     forQuote: "ekibimiz ihtiyaçlarınızı analiz etsin.",
     designPlans: [
       {
-        name: 'MVP & Lansman',
+        name: 'Başlangıç',
         price: '$999',
-        period: '/Başlangıç',
+        period: '/ Tek Seferlik',
         label: 'Hızlı Başlangıç',
         description: 'Fikrini doğrulamak ve pazara hızlı girmek isteyen girişimler için.',
         features: [
           'Stratejik UI/UX Danışmanlığı',
           'Dönüşüm Odaklı Landing Page',
           'Mobil Uyumlu (Responsive) Tasarım',
-          'Temel Marka Kimliği Entegrasyonu',
+          'İlk Yıl Servis Bakımı Ücretsiz',
         ],
-        cta: 'İletişim Formu',
+        cta: 'Paketi Satın Al',
         link: '#contact',
         highlighted: false
       },
       {
         name: 'Büyüme (Growth)',
         price: '$1799',
-        period: '/Proje Bazlı',
+        period: ' + 18$ Aylık',
         label: 'En Çok Tercih Edilen',
         description: 'Dijital varlığını güçlendirmek ve operasyonel süreçleri yönetmek isteyen şirketler için.',
         features: [
@@ -122,7 +122,7 @@ export const tr: Dictionary = {
           '2 Adet Modül Entegrasyonu (CRM/İK)',
           'Kullanıcı Testleri & İyileştirme',
         ],
-        cta: 'İletişim Formu',
+        cta: 'Paketi Satın Al',
         link: '#contact',
         highlighted: true
       },
@@ -145,25 +145,25 @@ export const tr: Dictionary = {
     ],
     codePlans: [
       {
-        name: 'MVP Core',
+        name: 'Başlangıç',
         price: '$999',
-        period: '/Başlangıç',
+        period: '/Tek Seferlik',
         label: 'Prototip & Demo',
         description: 'Yatırım öncesi fikrinizi çalışan bir ürüne dönüştürmek için ideal.',
         features: [
           'Modern Frontend Mimarisi',
           'Mobil Uyumlu (Responsive) Kodlama',
           'Temel SEO & Performans Optimizasyonu',
-          'Temel Veritabanı Kurulumu',
+          'İlk Yıl Servis Bakımı Ücretsiz',
         ],
-        cta: 'MVP Planını Seç',
+        cta: 'Paketi Satın Al',
         link: '#contact',
         highlighted: false
       },
       {
         name: 'Scale-Up',
         price: '$1799',
-        period: '/Proje Bazlı',
+        period: '+ 18$ Aylık',
         label: 'Yüksek Performans',
         description: 'Trafiği artan ve süreçlerini otomatize etmek isteyen işletmeler için.',
         features: [
@@ -172,7 +172,7 @@ export const tr: Dictionary = {
           '2 Harici Servis Entegrasyonu',
           'Güvenlik & Yedekleme Altyapısı',
         ],
-        cta: 'Scale-Up Planını Seç',
+        cta: 'Paketi Satın Al',
         link: '#contact',
         highlighted: true
       },
