@@ -1,8 +1,7 @@
-// src/components/ContactModal.tsx
-
 "use client";
 
 import { useEffect, useState } from "react";
+import { Check, Star } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -26,16 +25,38 @@ interface ContactModalProps {
   isOpen: boolean;
   onOpenChange: (open: boolean) => void;
   initialPlan: string;
+  mode: 'design' | 'code';
 }
 
-export function ContactModal({ isOpen, onOpenChange, initialPlan }: ContactModalProps) {
+export function ContactModal({ isOpen, onOpenChange, initialPlan, mode }: ContactModalProps) {
   const [selectedPlan, setSelectedPlan] = useState("");
 
-  // Modal her açıldığında veya initialPlan değiştiğinde dropdown'ı güncelle
+  // TEMA YAPILANDIRMASI
+  const theme = mode === 'design' ? {
+    gradientBg: "bg-gradient-to-br from-[#1a0b2e] via-[#2e1065] to-[#1a0b2e]",
+    titleGradient: "bg-gradient-to-r from-purple-200 via-fuchsia-300 to-pink-300",
+    border: "border-purple-500/20",
+    inputBg: "bg-white/5 focus:bg-white/10",
+    inputBorder: "border-white/10 focus:border-purple-500/50",
+    ring: "focus:ring-purple-500/20",
+    label: "text-purple-100/80",
+    button: "bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-500 hover:to-fuchsia-500 shadow-purple-500/25",
+    badge: "bg-fuchsia-500/20 text-fuchsia-200 border-fuchsia-500/30"
+  } : {
+    gradientBg: "bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#0f172a]",
+    titleGradient: "bg-gradient-to-r from-blue-200 via-cyan-300 to-teal-300",
+    border: "border-blue-500/20",
+    inputBg: "bg-white/5 focus:bg-white/10",
+    inputBorder: "border-white/10 focus:border-blue-500/50",
+    ring: "focus:ring-blue-500/20",
+    label: "text-blue-100/80",
+    button: "bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 shadow-blue-500/25",
+    badge: "bg-cyan-500/20 text-cyan-200 border-cyan-500/30"
+  };
+
   useEffect(() => {
     if (isOpen) {
-      // Gelen plan ismine göre eşleştirme yapıyoruz
-      if (initialPlan.includes("Başlangıç") || initialPlan.includes("Basic")) {
+      if (initialPlan.includes("Başlangıç") || initialPlan.includes("Basic") || initialPlan.includes("MVP")) {
         setSelectedPlan("baslangic");
       } else if (initialPlan.includes("Büyüme") || initialPlan.includes("Scale") || initialPlan.includes("Profesyonel")) {
         setSelectedPlan("buyume");
@@ -49,35 +70,58 @@ export function ContactModal({ isOpen, onOpenChange, initialPlan }: ContactModal
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form gönderme işlemleri buraya gelecek
-    console.log("Form gönderildi");
+    console.log("Form gönderildi", { selectedPlan, mode });
     onOpenChange(false);
+  };
+
+  // Validasyon Helper'ları (TypeScript hatalarını önlemek için özelleştirildi)
+  const handleInvalid = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    (e.target as HTMLInputElement).setCustomValidity("Bu alanı doldurmalısınız");
+  };
+
+  const handleInput = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    (e.target as HTMLInputElement).setCustomValidity("");
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px] bg-slate-900 border-white/10 text-white">
+      <DialogContent 
+        className={`
+          sm:max-w-[500px] w-[95%] 
+          max-h-[85vh] overflow-y-auto custom-scrollbar
+          rounded-2xl ${theme.gradientBg} ${theme.border} text-white shadow-2xl p-6 sm:p-8 
+          transition-all duration-500
+        `}
+      >
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent">
+          <DialogTitle className={`text-2xl sm:text-3xl font-bold bg-clip-text text-transparent ${theme.titleGradient}`}>
             Projenizi Başlatalım
           </DialogTitle>
-          <DialogDescription className="text-gray-400">
-            Aşağıdaki formu doldurun, size özel çözüm için hemen iletişime geçelim.
+          <DialogDescription className="text-white/60 text-sm sm:text-base mt-2">
+            Hayalinizdeki projeyi gerçeğe dönüştürmek için ilk adımı atın.
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="grid gap-5 py-4">
+        <form onSubmit={handleSubmit} className="grid gap-5 sm:gap-6 py-4">
           
-          {/* 1. PLAN SEÇİMİ (DROPDOWN) */}
+          {/* 1. PLAN SEÇİMİ */}
           <div className="grid gap-2">
-            <Label htmlFor="plan" className="text-gray-300">Seçilen Paket</Label>
+            <Label htmlFor="plan" className={theme.label}>Seçilen Paket</Label>
             <Select value={selectedPlan} onValueChange={setSelectedPlan}>
-              <SelectTrigger className="bg-slate-800/50 border-white/10 text-white">
+              <SelectTrigger className={`h-11 sm:h-12 w-full ${theme.inputBg} ${theme.inputBorder} text-white rounded-xl transition-all`}>
                 <SelectValue placeholder="Paket Seçiniz" />
               </SelectTrigger>
-              <SelectContent className="bg-slate-900 border-white/10 text-white">
+              <SelectContent className={`bg-slate-900 ${theme.border} text-white`}>
                 <SelectItem value="baslangic">Başlangıç - $999</SelectItem>
-                <SelectItem value="buyume">Büyüme (Growth) - $1799</SelectItem>
+                <SelectItem value="buyume" className="w-full">
+                  <div className="flex items-center justify-between w-full gap-2 pr-2">
+                    <span>Büyüme (Growth) - $1799</span>
+                    <span className={`text-[10px] px-2 py-0.5 rounded-full border flex items-center gap-1 whitespace-nowrap ${theme.badge}`}>
+                      <Star className="w-3 h-3 fill-current" />
+                      En Çok Tercih Edilen
+                    </span>
+                  </div>
+                </SelectItem>
                 <SelectItem value="kurumsal">Kurumsal Partner</SelectItem>
               </SelectContent>
             </Select>
@@ -85,61 +129,67 @@ export function ContactModal({ isOpen, onOpenChange, initialPlan }: ContactModal
 
           {/* 2. AD SOYAD */}
           <div className="grid gap-2">
-            <Label htmlFor="name" className="text-gray-300">Ad Soyad</Label>
+            <Label htmlFor="name" className={theme.label}>Ad Soyad</Label>
             <Input 
               id="name" 
               placeholder="Adınız Soyadınız" 
-              className="bg-slate-800/50 border-white/10 text-white placeholder:text-gray-500"
-              required 
+              className={`h-11 sm:h-12 w-full ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all`}
+              required
+              onInvalid={handleInvalid}
+              onInput={handleInput}
             />
           </div>
 
-          {/* 3. TELEFON (TR KODLU) */}
+          {/* 3. TELEFON */}
           <div className="grid gap-2">
-            <Label htmlFor="phone" className="text-gray-300">Telefon Numarası</Label>
+            <Label htmlFor="phone" className={theme.label}>Telefon Numarası</Label>
             <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm font-medium border-r border-white/10 pr-2">
+              <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60 text-sm font-medium border-r border-white/10 pr-2 h-5 flex items-center">
                 +90
               </div>
               <Input 
                 id="phone" 
                 type="tel"
                 placeholder="5XX XXX XX XX" 
-                className="pl-14 bg-slate-800/50 border-white/10 text-white placeholder:text-gray-500"
+                className={`h-11 sm:h-12 w-full pl-14 ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all`}
                 required 
+                onInvalid={handleInvalid}
+                onInput={handleInput}
               />
             </div>
           </div>
 
-          {/* 4. EMAIL (OPSİYONEL) */}
+          {/* 4. EMAIL */}
           <div className="grid gap-2">
             <div className="flex items-center gap-2">
-              <Label htmlFor="email" className="text-gray-300">E-Posta</Label>
-              <span className="text-xs text-gray-500">(Opsiyonel)</span>
+              <Label htmlFor="email" className={theme.label}>E-Posta</Label>
+              <span className="text-xs text-white/40">(Opsiyonel)</span>
             </div>
             <Input 
               id="email" 
               type="email"
               placeholder="ornek@sirket.com" 
-              className="bg-slate-800/50 border-white/10 text-white placeholder:text-gray-500"
+              className={`h-11 sm:h-12 w-full ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all`}
             />
           </div>
 
-          {/* 5. PROJE AÇIKLAMASI */}
+          {/* 5. AÇIKLAMA */}
           <div className="grid gap-2">
-            <Label htmlFor="message" className="text-gray-300">Projenizden Bahsedin</Label>
+            <Label htmlFor="message" className={theme.label}>Projenizden Bahsedin</Label>
             <Textarea 
               id="message" 
               placeholder="Projeniz hakkında kısa bir bilgi..." 
-              className="bg-slate-800/50 border-white/10 text-white placeholder:text-gray-500 min-h-[100px]"
+              className={`min-h-[120px] w-full ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all resize-none p-3`}
               required
+              onInvalid={handleInvalid}
+              onInput={handleInput}
             />
           </div>
 
-          <div className="pt-2">
+          <div className="pt-2 sticky bottom-0 bg-inherit pb-2">
             <Button 
               type="submit" 
-              className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-medium py-6"
+              className={`w-full h-12 sm:h-14 rounded-full text-white font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02] ${theme.button}`}
             >
               Gönder
             </Button>

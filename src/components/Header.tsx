@@ -46,7 +46,8 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        // pr-[var(--removed-body-scroll-bar-size)] -> Modal açıldığında kaymayı önler
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 pr-[var(--removed-body-scroll-bar-size)] ${
           isScrolled
             ? 'bg-slate-900/80 backdrop-blur-md shadow-2xl py-3 border-b border-white/5'
             : 'bg-transparent py-4 sm:py-6'
@@ -55,7 +56,7 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex items-center justify-between">
             
-            {/* --- SOL: LOGO (ACR / ACRTECH) --- */}
+            {/* --- SOL: LOGO --- */}
             <div 
               onClick={scrollToTop}
               className="flex items-center cursor-pointer group"
@@ -71,10 +72,9 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
               </div>
             </div>
 
-            {/* --- SAĞ: KONTROL BLOĞU (Switch | Dil | Menü) --- */}
+            {/* --- SAĞ: KONTROL BLOĞU --- */}
             <div className="flex items-center gap-3 sm:gap-5">
               
-              {/* DESKTOP SWITCH: Sadece sm ve üzeri ekranlarda görünür */}
               <div className="hidden sm:block transform scale-100 origin-right">
                 <Switch mode={mode} onToggle={onToggle} />
               </div>
@@ -142,12 +142,7 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
         </div>
       </header>
 
-      {/* --- MOBILE BOTTOM FIXED BAR (100px HEIGHT) --- */}
-      {/* - Fixed Bottom: Ekranın altına yapışık.
-          - H-[100px]: Yükseklik tam 100px olarak ayarlandı.
-          - Flex Center: Switch butonunu dikey ve yatay ortalar.
-          - Glass Effect: Backdrop-blur-xl ile güçlü cam efekti.
-      */}
+      {/* --- MOBILE BOTTOM FIXED BAR --- */}
       <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden">
         <div 
           className={`
@@ -160,7 +155,6 @@ export function Header({ mode, onToggle, isScrolled }: HeaderProps) {
               : 'bg-blue-950/30 border-blue-500/20 shadow-[0_-4px_30px_rgba(30,58,138,0.15)]'}
           `}
         >
-          {/* Switch Butonu - Ferah alan içinde rahat kullanım için scale-110 */}
           <div className="transform scale-110">
             <Switch mode={mode} onToggle={onToggle} />
           </div>

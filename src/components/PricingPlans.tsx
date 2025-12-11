@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Check } from 'lucide-react';
 import { useLanguage } from '@/src/lib/i18n/LanguageContext';
 import { TransitionWrapper } from '@/src/components/TransitionWrapper';
-import { ContactModal } from '@/src/components/ContactModal'; // Modal import edildi
+import { ContactModal } from '@/src/components/ContactModal';
 
 interface PricingPlansProps {
   mode: 'design' | 'code';
@@ -15,14 +15,11 @@ interface PricingPlansProps {
 export function PricingPlans({ mode }: PricingPlansProps) {
   const { t } = useLanguage();
   
-  // Modal State Yönetimi
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlanName, setSelectedPlanName] = useState("");
 
-  // Aktif modun planlarını context'ten alıyoruz
   const plans = mode === 'design' ? t.pricing.designPlans : t.pricing.codePlans;
 
-  // Butona tıklandığında çalışacak fonksiyon
   const handlePlanClick = (planName: string) => {
     setSelectedPlanName(planName);
     setIsModalOpen(true);
@@ -30,7 +27,6 @@ export function PricingPlans({ mode }: PricingPlansProps) {
 
   return (
     <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 bg-slate-900 relative overflow-hidden">
-      {/* Background gradient */}
       <div className={`absolute inset-0 opacity-10 transition-colors duration-1000 ${
         mode === 'design' 
           ? 'bg-gradient-to-b from-purple-500/20 to-transparent' 
@@ -39,7 +35,6 @@ export function PricingPlans({ mode }: PricingPlansProps) {
 
       <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* Section Header - Animasyonlu */}
         <TransitionWrapper modeKey={mode} className="text-center mb-12 sm:mb-16">
           <div className={`inline-block px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm mb-4 transition-colors duration-500 ${
             mode === 'design'
@@ -60,7 +55,6 @@ export function PricingPlans({ mode }: PricingPlansProps) {
           </p>
         </TransitionWrapper>
 
-        {/* Pricing Cards - Animasyonlu */}
         <TransitionWrapper modeKey={mode + "-plans"}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {plans.map((plan, index) => (
@@ -76,7 +70,7 @@ export function PricingPlans({ mode }: PricingPlansProps) {
                       : 'bg-slate-800/50 border-blue-500/20 shadow-xl shadow-black/50 hover:shadow-2xl hover:shadow-blue-500/30'
                 }`}
               >
-                {/* Animated Border Effect */}
+                {/* Animated Border */}
                 <div className={`absolute inset-0 rounded-xl sm:rounded-2xl lg:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none ${
                   mode === 'design'
                     ? 'animated-border-purple'
@@ -95,7 +89,6 @@ export function PricingPlans({ mode }: PricingPlansProps) {
                   }}
                 ></div>
                 
-                {/* Label */}
                 {plan.label && (
                   <div className={`absolute -top-3 left-4 sm:left-6 z-10 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs shadow-lg whitespace-nowrap transition-colors duration-500 ${
                     mode === 'design'
@@ -107,25 +100,21 @@ export function PricingPlans({ mode }: PricingPlansProps) {
                 )}
 
                 <div className="p-4 sm:p-6 lg:p-8">
-                  {/* Plan Name */}
                   <h3 className={`text-xl sm:text-2xl lg:text-3xl mb-2 mt-2 transition-colors duration-500 ${
                     mode === 'design' ? 'text-purple-200' : 'text-blue-200'
                   }`}>
                     {plan.name}
                   </h3>
 
-                  {/* Price */}
                   <div className="mb-3 sm:mb-4">
                     <span className="text-3xl sm:text-4xl lg:text-5xl text-white">{plan.price}</span>
                     <span className="text-gray-400 text-base sm:text-lg">{plan.period}</span>
                   </div>
 
-                  {/* Description */}
                   <p className="text-xs sm:text-sm lg:text-base text-gray-400 mb-4 sm:mb-6 min-h-[2.5rem] sm:min-h-[3rem]">
                     {plan.description}
                   </p>
 
-                  {/* CTA Buttons - GÜNCELLENDİ: onClick eklendi, href kaldırıldı/değiştirildi */}
                   <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     <button
                       onClick={() => handlePlanClick(plan.name)}
@@ -139,7 +128,6 @@ export function PricingPlans({ mode }: PricingPlansProps) {
                     </button>
                   </div>
 
-                  {/* Features List */}
                   <ul className="space-y-2 sm:space-y-3 lg:space-y-4">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2 sm:gap-3">
@@ -151,7 +139,6 @@ export function PricingPlans({ mode }: PricingPlansProps) {
                     ))}
                   </ul>
 
-                  {/* Link */}
                   <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-white/10">
                     <button
                       onClick={() => handlePlanClick(plan.name)}
@@ -168,7 +155,6 @@ export function PricingPlans({ mode }: PricingPlansProps) {
           </div>
         </TransitionWrapper>
 
-        {/* Bottom Note */}
         <div className="text-center mt-12 sm:mt-16">
           <p className="text-gray-400 mb-4">
             {t.pricing.customSolution} 
@@ -185,11 +171,12 @@ export function PricingPlans({ mode }: PricingPlansProps) {
         </div>
       </div>
 
-      {/* Contact Modal Bileşeni Eklendi */}
+      {/* DÜZELTME BURADA YAPILDI: mode={mode} eklendi */}
       <ContactModal 
         isOpen={isModalOpen} 
         onOpenChange={setIsModalOpen}
         initialPlan={selectedPlanName}
+        mode={mode} 
       />
     </section>
   );
