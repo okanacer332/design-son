@@ -74,7 +74,7 @@ export function ContactModal({ isOpen, onOpenChange, initialPlan, mode }: Contac
     onOpenChange(false);
   };
 
-  // Validasyon Helper'ları (TypeScript hatalarını önlemek için özelleştirildi)
+  // Validasyon Helper'ları
   const handleInvalid = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     (e.target as HTMLInputElement).setCustomValidity("Bu alanı doldurmalısınız");
   };
@@ -87,36 +87,83 @@ export function ContactModal({ isOpen, onOpenChange, initialPlan, mode }: Contac
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent 
         className={`
-          sm:max-w-[500px] w-[95%] 
-          max-h-[85vh] overflow-y-auto custom-scrollbar
+          w-[95%] sm:max-w-[700px] 
+          max-h-[95vh] overflow-y-auto custom-scrollbar
           rounded-2xl ${theme.gradientBg} ${theme.border} text-white shadow-2xl p-6 sm:p-8 
           transition-all duration-500
         `}
       >
-        <DialogHeader>
+        <DialogHeader className="mb-2">
           <DialogTitle className={`text-2xl sm:text-3xl font-bold bg-clip-text text-transparent ${theme.titleGradient}`}>
             Projenizi Başlatalım
           </DialogTitle>
-          <DialogDescription className="text-white/60 text-sm sm:text-base mt-2">
-            Hayalinizdeki projeyi gerçeğe dönüştürmek için ilk adımı atın.
+          <DialogDescription className="text-white/60 text-sm sm:text-base mt-1">
+            Hayalinizdeki projeyi gerçeğe dönüştürmek için detayları paylaşın.
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="grid gap-5 sm:gap-6 py-4">
+        {/* 2 Sütunlu Grid Yapısı (Desktop'ta yan yana, Mobilde alt alta) */}
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
           
-          {/* 1. PLAN SEÇİMİ */}
-          <div className="grid gap-2">
+          {/* 1. AD SOYAD */}
+          <div className="grid gap-1.5">
+            <Label htmlFor="name" className={theme.label}>Ad Soyad</Label>
+            <Input 
+              id="name" 
+              placeholder="Adınız Soyadınız" 
+              className={`h-11 w-full ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all`}
+              required
+              onInvalid={handleInvalid}
+              onInput={handleInput}
+            />
+          </div>
+
+          {/* 2. TELEFON */}
+          <div className="grid gap-1.5">
+            <Label htmlFor="phone" className={theme.label}>Telefon Numarası</Label>
+            <div className="relative">
+              <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60 text-sm font-medium border-r border-white/10 pr-2 h-5 flex items-center">
+                +90
+              </div>
+              <Input 
+                id="phone" 
+                type="tel"
+                placeholder="5XX XXX XX XX" 
+                className={`h-11 w-full pl-14 ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all`}
+                required 
+                onInvalid={handleInvalid}
+                onInput={handleInput}
+              />
+            </div>
+          </div>
+
+          {/* 3. E-POSTA (Sol Sütun) */}
+          <div className="grid gap-1.5">
+            <div className="flex items-center gap-2">
+              <Label htmlFor="email" className={theme.label}>E-Posta</Label>
+              <span className="text-xs text-white/40">(Opsiyonel)</span>
+            </div>
+            <Input 
+              id="email" 
+              type="email"
+              placeholder="ornek@sirket.com" 
+              className={`h-11 w-full ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all`}
+            />
+          </div>
+
+          {/* 4. PLAN SEÇİMİ (Sağ Sütun) */}
+          <div className="grid gap-1.5">
             <Label htmlFor="plan" className={theme.label}>Seçilen Paket</Label>
             <Select value={selectedPlan} onValueChange={setSelectedPlan}>
-              <SelectTrigger className={`h-11 sm:h-12 w-full ${theme.inputBg} ${theme.inputBorder} text-white rounded-xl transition-all`}>
+              <SelectTrigger className={`h-11 w-full ${theme.inputBg} ${theme.inputBorder} text-white rounded-xl transition-all overflow-hidden`}>
                 <SelectValue placeholder="Paket Seçiniz" />
               </SelectTrigger>
               <SelectContent className={`bg-slate-900 ${theme.border} text-white`}>
                 <SelectItem value="baslangic">Başlangıç - $999</SelectItem>
                 <SelectItem value="buyume" className="w-full">
-                  <div className="flex items-center justify-between w-full gap-2 pr-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-1 sm:gap-2">
                     <span>Büyüme (Growth) - $1799</span>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full border flex items-center gap-1 whitespace-nowrap ${theme.badge}`}>
+                    <span className={`text-[10px] px-2 py-0.5 rounded-full border flex items-center gap-1 w-fit ${theme.badge}`}>
                       <Star className="w-3 h-3 fill-current" />
                       En Çok Tercih Edilen
                     </span>
@@ -127,69 +174,24 @@ export function ContactModal({ isOpen, onOpenChange, initialPlan, mode }: Contac
             </Select>
           </div>
 
-          {/* 2. AD SOYAD */}
-          <div className="grid gap-2">
-            <Label htmlFor="name" className={theme.label}>Ad Soyad</Label>
-            <Input 
-              id="name" 
-              placeholder="Adınız Soyadınız" 
-              className={`h-11 sm:h-12 w-full ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all`}
-              required
-              onInvalid={handleInvalid}
-              onInput={handleInput}
-            />
-          </div>
-
-          {/* 3. TELEFON */}
-          <div className="grid gap-2">
-            <Label htmlFor="phone" className={theme.label}>Telefon Numarası</Label>
-            <div className="relative">
-              <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/60 text-sm font-medium border-r border-white/10 pr-2 h-5 flex items-center">
-                +90
-              </div>
-              <Input 
-                id="phone" 
-                type="tel"
-                placeholder="5XX XXX XX XX" 
-                className={`h-11 sm:h-12 w-full pl-14 ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all`}
-                required 
-                onInvalid={handleInvalid}
-                onInput={handleInput}
-              />
-            </div>
-          </div>
-
-          {/* 4. EMAIL */}
-          <div className="grid gap-2">
-            <div className="flex items-center gap-2">
-              <Label htmlFor="email" className={theme.label}>E-Posta</Label>
-              <span className="text-xs text-white/40">(Opsiyonel)</span>
-            </div>
-            <Input 
-              id="email" 
-              type="email"
-              placeholder="ornek@sirket.com" 
-              className={`h-11 sm:h-12 w-full ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all`}
-            />
-          </div>
-
-          {/* 5. AÇIKLAMA */}
-          <div className="grid gap-2">
+          {/* 5. AÇIKLAMA (Tam Genişlik - col-span-2) */}
+          <div className="grid gap-1.5 md:col-span-2">
             <Label htmlFor="message" className={theme.label}>Projenizden Bahsedin</Label>
             <Textarea 
               id="message" 
               placeholder="Projeniz hakkında kısa bir bilgi..." 
-              className={`min-h-[120px] w-full ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all resize-none p-3`}
+              className={`min-h-[100px] w-full ${theme.inputBg} ${theme.inputBorder} text-white placeholder:text-white/20 rounded-xl ${theme.ring} transition-all resize-none p-3`}
               required
               onInvalid={handleInvalid}
               onInput={handleInput}
             />
           </div>
 
-          <div className="pt-2 sticky bottom-0 bg-inherit pb-2">
+          {/* BUTON (Tam Genişlik - col-span-2) */}
+          <div className="pt-2 md:col-span-2">
             <Button 
               type="submit" 
-              className={`w-full h-12 sm:h-14 rounded-full text-white font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-[1.02] ${theme.button}`}
+              className={`w-full h-12 rounded-full text-white font-semibold text-lg shadow-lg transition-all duration-300 transform hover:scale-[1.01] active:scale-95 ${theme.button}`}
             >
               Gönder
             </Button>
