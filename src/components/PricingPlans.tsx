@@ -123,12 +123,6 @@ export function PricingPlans({ mode }: PricingPlansProps) {
                     >
                       {plan.cta}
                     </a>
-                    <a
-                      href={plan.link}
-                      className="block w-full px-4 py-2.5 sm:px-6 sm:py-3 lg:py-3.5 rounded-full text-center transition-all duration-300 bg-white/10 hover:bg-white/20 text-white border border-white/20 text-sm sm:text-base"
-                    >
-                      {t.pricing.viewDetails}
-                    </a>
                   </div>
 
                   {/* Features List */}

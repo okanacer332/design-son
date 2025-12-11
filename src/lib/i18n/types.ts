@@ -75,7 +75,6 @@ export type Dictionary = {
     title: string;
     description: string;
     descriptionCode: string;
-    viewDetails: string;
     learnMore: string;
     customSolution: string;
     contactUs: string;

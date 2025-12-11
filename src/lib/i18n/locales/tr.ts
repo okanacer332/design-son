@@ -15,22 +15,22 @@ export const tr: Dictionary = {
     designTag: "✨ Veri Odaklı Ürün Tasarımı & Strateji",
     designTitle: ["Markanızı Dönüştüren", "Etkili Tasarım", "Stratejileri"],
     designDesc: "Sadece estetik değil, iş sonuçları üreten arayüzler tasarlıyoruz. Ürün akışlarını sadeleştirip, kullanıcı sadakati yaratan deneyimler kurguluyoruz.",
-    designBtnPrimary: "Projeyi Başlat",
-    designBtnSecondary: "Portfolyoyu İncele",
+    designBtnPrimary: "İletişim Formu",
+    designBtnSecondary: "İşlerimiz",
     
     // Code Modu: Güven, Ölçeklenebilirlik ve Performans odaklı
     codeTag: "💻 Ölçeklenebilir Kurumsal Mimariler",
     codeTitle: ["Geleceğe Hazır", "Yüksek Performanslı", "Yazılımlar"],
     codeDesc: "İşletmenizin büyüme hızına ayak uyduran, güvenli ve modüler ERP & SaaS altyapıları inşa ediyoruz. Karmaşık süreçleri, yalın kodlara dönüştürüyoruz.",
-    codeBtnPrimary: "Teknik Çözümleri Gör",
-    codeBtnSecondary: "Danışmanlık Al"
+    codeBtnPrimary: "İletişim Formu",
+    codeBtnSecondary: "İşlerimiz"
   },
   portfolio: {
     tag: "Neler Başardık?",
     title: "Seçilmiş Başarı Hikayeleri",
     description: "Tasarım odaklı düşünce yapımızla, iş hedeflerini kullanıcı ihtiyaçlarıyla buluşturduğumuz projeler.",
     descriptionCode: "Farklı sektörlerin en karmaşık problemlerine getirdiğimiz, ölçeklenebilir mühendislik çözümleri.",
-    viewAll: "Tüm Vaka Analizlerini Gör",
+    viewAll: "İşlerimiz",
     designProjects: [
       {
         title: 'Lojistik Operasyon Paneli',
@@ -81,7 +81,6 @@ export const tr: Dictionary = {
     title: "Size Uygun Planı Seçin",
     description: "Projenizin aşamasına ve hedeflerinize özel, şeffaf ve sonuç odaklı tasarım paketleri.",
     descriptionCode: "MVP'den Holding seviyesine kadar, işletmenizle birlikte büyüyen esnek yazılım paketleri.",
-    viewDetails: "Kapsamı İncele",
     learnMore: "Bu paketin detayları →",
     customSolution: "Daha büyük bir vizyonunuz mu var?",
     contactUs: "Özel Teklif İsteyin",
@@ -99,7 +98,7 @@ export const tr: Dictionary = {
           'Mobil Uyumlu (Responsive) Tasarım',
           'Temel Marka Kimliği Entegrasyonu',
         ],
-        cta: 'MVP Planını Seç',
+        cta: 'İletişim Formu',
         link: '#contact',
         highlighted: false
       },
@@ -115,7 +114,7 @@ export const tr: Dictionary = {
           '2 Adet Modül Entegrasyonu (CRM/İK)',
           'Kullanıcı Testleri & İyileştirme',
         ],
-        cta: 'Büyüme Planını Seç',
+        cta: 'İletişim Formu',
         link: '#contact',
         highlighted: true
       },
@@ -131,7 +130,7 @@ export const tr: Dictionary = {
           '7/24 Öncelikli SLA Desteği',
           '3 Aylık Büyüme Stratejisi',
         ],
-        cta: 'Partnerlik Görüşmesi',
+        cta: 'İletişim Formu',
         link: '#contact',
         highlighted: false
       }
@@ -336,8 +335,8 @@ export const tr: Dictionary = {
     titleCode: "İşletmenizi Dijital Olarak Ölçekleyelim",
     descDesign: "Sadece pikselleri değil, işinizin geleceğini tasarlıyoruz. Hedeflerinizi konuşmak için tanışalım.",
     descCode: "Manuel süreçleri geride bırakın. Verimliliği artıran teknolojilerle tanışmak için ilk adımı atın.",
-    btnPrimary: "Hemen Başlayalım",
-    btnSecondary: "Ücretsiz Keşif Görüşmesi",
+    btnPrimary: "İletişim Formu",
+    btnSecondary: "Whatsapp",
     statProjects: "Tamamlanan Proje",
     statSystems: "Aktif Sistem",
     statSuccess: "Müşteri Memnuniyeti",

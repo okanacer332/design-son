@@ -8,7 +8,6 @@ import { Portfolio } from '@/src/components/Portfolio';
 import { PricingPlans } from '@/src/components/PricingPlans';
 import { Services } from '@/src/components/Services';
 import { FocusAreas } from '@/src/components/FocusAreas';
-import { Testimonials } from '@/src/components/Testimonials';
 import { CTA } from '@/src/components/CTA';
 import { Footer } from '@/src/components/Footer';
 
@@ -39,7 +38,6 @@ export default function Home() {
         <PricingPlans mode={mode} />
         <Services mode={mode} />
         <FocusAreas mode={mode} />
-        <Testimonials mode={mode} />
         <CTA mode={mode} />
       </main>
       
