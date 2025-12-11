@@ -33,9 +33,9 @@ export const tr: Dictionary = {
     viewAll: "Tüm İşleri Gör",
     designProjects: [
       {
-        title: 'Lojistik Operasyon Paneli',
-        category: 'Ürün Tasarımı (UX/UI)',
-        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
+        title: 'Geri Dönüşüm Operasyon Paneli',
+        category: 'Tekstil Geri Dönüşüm ERP Yazılımı',
+        description: 'Operasyonel verimliliği artıran, iş zekasını yükselten, uçtan uca platform kurulumu',
         image: '/portfolio/22.png'
       },
       {
@@ -46,7 +46,7 @@ export const tr: Dictionary = {
       },
       {
         title: 'Bulut Tabanlı SaaS',
-        category: 'Tasarım Sistemi',
+        category: 'Dell Cloud Service',
         description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
         image: '/portfolio/18.png'
       },
@@ -59,9 +59,9 @@ export const tr: Dictionary = {
     ],
     codeProjects: [
       {
-        title: 'Lojistik Operasyon Paneli',
-        category: 'Ürün Tasarımı (UX/UI)',
-        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
+        title: 'Geri Dönüşüm Operasyon Paneli',
+        category: 'Tekstil Geri Dönüşüm ERP Yazılımı',
+        description: 'Operasyonel verimliliği artıran, iş zekasını yükselten, uçtan uca platform kurulumu',
         image: '/portfolio/22.png'
       },
       {
@@ -72,7 +72,7 @@ export const tr: Dictionary = {
       },
       {
         title: 'Bulut Tabanlı SaaS',
-        category: 'Tasarım Sistemi',
+        category: 'Dell Cloud Service',
         description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
         image: '/portfolio/18.png'
       },
