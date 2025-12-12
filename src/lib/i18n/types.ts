@@ -137,4 +137,10 @@ export type Dictionary = {
     terms: string;
     cookie: string;
   };
+  notFound: {
+    title: string;
+    description: string;
+    homeBtn: string;
+    hubBtn: string;
+  };
 };

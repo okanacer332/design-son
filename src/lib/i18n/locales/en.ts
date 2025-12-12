@@ -361,5 +361,11 @@ export const en: Dictionary = {
     privacy: "Privacy Policy",
     terms: "Terms of Service",
     cookie: "Cookie Policy"
-  }
+  },
+  notFound: {
+    title: "Ooops! Page Not Found",
+    description: "We can't seem to find the page you're looking for.",
+    homeBtn: "Home Page",
+    hubBtn: "Explore Hub"
+  },
 };

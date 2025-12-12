@@ -364,5 +364,11 @@ export const tr: Dictionary = {
     privacy: "Gizlilik ve Güvenlik",
     terms: "Kullanım Koşulları",
     cookie: "Çerez Yönetimi"
-  }
+  },
+  notFound: {
+    title: "Ooops! Sayfa Bulunamadı",
+    description: "Aradığınız sayfayı bulamıyoruz. Taşınmış veya silinmiş olabilir.",
+    homeBtn: "Ana Sayfa",
+    hubBtn: "Blog'a Göz At"
+  },
 };
