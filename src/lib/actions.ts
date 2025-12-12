@@ -33,6 +33,9 @@ type ContactFormData = {
 };
 
 export async function sendEmail(data: ContactFormData) {
+  console.log("Mail Gönderimi Başladı");
+  console.log("Kullanıcı:", process.env.GMAIL_USER ? "Tanımlı ✅" : "Tanımlı DEĞİL ❌");
+  console.log("Şifre:", process.env.GMAIL_APP_PASSWORD ? "Tanımlı ✅" : "Tanımlı DEĞİL ❌");
   try {
     // ÖNEMLİ: Nodemailer'ı burada, fonksiyon içinde dinamik olarak import ediyoruz.
     // Bu sayede build sırasında client-side hatası almıyoruz.
