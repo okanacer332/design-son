@@ -1,27 +1,27 @@
 "use server";
 
 import { getAllContent, getContentBySlug, ContentType } from './mdx';
+import { Resend } from 'resend';
 
-// Dil kodunu (TR, EN) klasör adına (tr, en) çevir
+// --- İÇERİK YÖNETİMİ (MEVCUT KODLAR) ---
+
 function normalizeLang(lang: string) {
   return lang.toLowerCase();
 }
 
-// Client bileşeninden çağrılacak fonksiyon: Listeyi getir
 export async function fetchHubContent(type: ContentType, lang: string) {
   const normalizedLang = normalizeLang(lang);
   const items = await getAllContent(type, normalizedLang);
   return items;
 }
 
-// Client bileşeninden çağrılacak fonksiyon: Detayı getir
 export async function fetchHubDetail(type: ContentType, lang: string, slug: string) {
   const normalizedLang = normalizeLang(lang);
   const item = await getContentBySlug(type, normalizedLang, slug);
   return item;
 }
 
-// --- MAIL GÖNDERME İŞLEMİ ---
+// --- MAIL GÖNDERME İŞLEMİ (RESEND) ---
 
 type ContactFormData = {
   plan: string;
@@ -32,27 +32,19 @@ type ContactFormData = {
   mode: string;
 };
 
+// Resend istemcisi, API Key Vercel ortam değişkenlerinden otomatik alınır
+const resend = new Resend(process.env.RESEND_API_KEY);
+
 export async function sendEmail(data: ContactFormData) {
-  console.log("Mail Gönderimi Başladı");
-  console.log("Kullanıcı:", process.env.GMAIL_USER ? "Tanımlı ✅" : "Tanımlı DEĞİL ❌");
-  console.log("Şifre:", process.env.GMAIL_APP_PASSWORD ? "Tanımlı ✅" : "Tanımlı DEĞİL ❌");
   try {
-    // ÖNEMLİ: Nodemailer'ı burada, fonksiyon içinde dinamik olarak import ediyoruz.
-    // Bu sayede build sırasında client-side hatası almıyoruz.
-    const nodemailer = await import("nodemailer");
-
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
-      },
-    });
-
-    const mailOptions = {
-      from: process.env.GMAIL_USER,
-      // İki alıcıya aynı anda gönderim
-      to: ['acer.okanumut@gmail.com', 'meltemgoren94@gmail.com'], 
+    const { error } = await resend.emails.send({
+      // Domain doğrulaması yapana kadar 'onboarding@resend.dev' kullanmak zorundasın.
+      // Kendi domainini doğruladığında buraya 'info@acrtech.com' yazabilirsin.
+      from: 'ACR Tech Form <onboarding@resend.dev>',
+      
+      // ALICILAR:
+      to: ['acer.okanumut@gmail.com'],
+      
       subject: `🚀 Yeni Proje Başvurusu: ${data.name}`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; border: 1px solid #e5e7eb; border-radius: 10px;">
@@ -85,18 +77,18 @@ export async function sendEmail(data: ContactFormData) {
             <strong style="display: block; margin-bottom: 8px; color: #4b5563;">📝 Proje Detayı / Mesaj:</strong>
             <p style="margin: 0; white-space: pre-wrap; line-height: 1.5;">${data.message}</p>
           </div>
-          
-          <div style="margin-top: 30px; font-size: 12px; color: #9ca3af; text-align: center;">
-            Bu mesaj web sitenizdeki iletişim formundan gönderilmiştir.
-          </div>
         </div>
       `,
-    };
+    });
 
-    await transporter.sendMail(mailOptions);
+    if (error) {
+      console.error('Resend Hatası:', error);
+      return { success: false, error: error.message };
+    }
+
     return { success: true };
   } catch (error) {
-    console.error('Mail gönderme hatası:', error);
+    console.error('Beklenmeyen Hata:', error);
     return { success: false, error: 'Mail gönderilemedi.' };
   }
 }
