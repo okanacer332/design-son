@@ -1,28 +1,31 @@
+// src/lib/i18n/locales/tr.ts
+
 import { Dictionary } from '../types';
 
-export const es: Dictionary = {
+export const tr: Dictionary = {
   header: {
-    menu: "Menú",
-    portfolio: "Portafolio",
-    services: "Servicios",
-    about: "Nosotros",
-    contact: "Contacto",
-    readyText: "¿Listo para comenzar tu nuevo proyecto?",
-    getInTouch: "Ponerse en Contacto"
+    menu: "Menü",
+    portfolio: "Başarı Hikayeleri",
+    services: "Çözümlerimiz",
+    about: "Biz Kimiz",
+    contact: "Bize Ulaşın",
+    readyText: "Projenizi hayata geçirmeye hazır mısınız?",
+    getInTouch: "Ücretsiz Analiz Al"
   },
   hero: {
-    designTag: "✨ Gestión Integral de Productos",
-    designTitle: ["Soluciones de", "Diseño Efectivo", "Para Su Negocio"],
-    designDesc: "Simplificamos flujos de productos, potenciamos interfaces y creamos experiencias que agregan valor al usuario.",
-    designBtnPrimary: "Hablemos de Su Proyecto",
-    designBtnSecondary: "Nuestros Trabajos",
-    codeTag: "💻 Soluciones de Software Empresarial",
-    codeTitle: ["Tecnología", "Innovación", "Código"],
-    codeDesc: "Construimos plataformas ERP y SaaS de nivel empresarial personalizadas para cada industria.",
-    codeBtnPrimary: "Empezar a Desarrollar",
-    codeBtnSecondary: "Explorar Soluciones"
+    designTag: "✨ Veri Odaklı Ürün Tasarımı & Strateji",
+    designTitle: ["Markanızı Dönüştüren", "Etkili Tasarım", "Stratejileri"],
+    designDesc: "Sadece estetik değil, iş sonuçları üreten arayüzler tasarlıyoruz. Ürün akışlarını sadeleştirip, kullanıcı sadakati yaratan deneyimler kurguluyoruz.",
+    designBtnPrimary: "İletişim Formu",
+    designBtnSecondary: "İşlerimiz",
+    
+    codeTag: "💻 Ölçeklenebilir Bireysel/Kurumsal Mimariler",
+    codeTitle: ["Geleceğe Hazır", "Yüksek Performanslı", "Yazılımlar"],
+    codeDesc: "İşletmenizin büyüme hızına ayak uyduran, güvenli ve modüler ERP & SaaS altyapıları inşa ediyoruz. Basit, işlevsel ve aynı zamanda bütçenize de uygun!",
+    codeBtnPrimary: "İletişim Formu",
+    codeBtnSecondary: "İşlerimiz"
   },
- portfolio: {
+  portfolio: {
     tag: "Neler Başardık?",
     title: "Seçilmiş Başarı Hikayeleri",
     description: "Tasarım odaklı düşünce yapımızla, iş hedeflerini kullanıcı ihtiyaçlarıyla buluşturduğumuz projeler.",
@@ -30,336 +33,342 @@ export const es: Dictionary = {
     viewAll: "Tüm İşleri Gör",
     designProjects: [
       {
-        title: 'Lojistik Operasyon Paneli',
-        category: 'Ürün Tasarımı (UX/UI)',
-        description: 'Operasyonel verimliliği artıran, dönüşüm oranını %45 yükselten komple arayüz yenilemesi.',
-        image: '/portfolio/17.png'
+        title: 'Geri Dönüşüm Operasyon Paneli',
+        category: 'Tekstil Geri Dönüşüm ERP Yazılımı',
+        description: 'Operasyonel verimliliği artıran, iş zekasını yükselten, uçtan uca platform kurulumu',
+        image: '/portfolio/22.png'
       },
       {
         title: 'Online Eğitim Platformu',
         category: 'B2C Kullanıcı Yolculuğu',
         description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.',
-        image: '/portfolio/18.png'
+        image: '/portfolio/17.png'
       },
       {
         title: 'Bulut Tabanlı SaaS',
-        category: 'Tasarım Sistemi',
+        category: 'Dell Cloud Service',
         description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
-        image: '/portfolio/20.png'
+        image: '/portfolio/18.png'
       },
       {
-        title: 'Otel & Rezervasyon Motoru',
-        category: 'UX Stratejisi',
+        title: 'Global B2C Pazaryeri',
+        category: '2. El Bilet Alım Satım',
         description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.',
-        image: '/portfolio/22.png'
+        image: '/portfolio/20.png'
       }
     ],
     codeProjects: [
       {
-        title: 'Akıllı Üretim ERP',
-        category: 'Endüstri 4.0',
-        description: '12 tesiste 500+ personelin anlık veri akışını yöneten mikro-servis mimarisi.',
-        image: '/portfolio/code-1.jpg'
+        title: 'Geri Dönüşüm Operasyon Paneli',
+        category: 'Tekstil Geri Dönüşüm ERP Yazılımı',
+        description: 'Operasyonel verimliliği artıran, iş zekasını yükselten, uçtan uca platform kurulumu',
+        image: '/portfolio/22.png'
       },
       {
-        title: 'Global B2B Pazaryeri',
-        category: 'E-Ticaret Altyapısı',
-        description: 'Günlük 10.000+ işlemi hatasız işleyen, yüksek trafikli ticaret platformu.',
-        image: '/portfolio/code-2.jpg'
+        title: 'Online Eğitim Platformu',
+        category: 'B2C Kullanıcı Yolculuğu',
+        description: 'Kullanıcı tutundurma (retention) odaklı, oyunlaştırılmış servis tasarımı.',
+        image: '/portfolio/17.png'
       },
       {
-        title: 'Proje Yönetimi SaaS',
-        category: 'Multi-Tenant Mimari',
-        description: '50.000+ aktif kullanıcıya kesintisiz hizmet veren, bulut tabanlı performans aracı.',
-        image: '/portfolio/code-3.jpg'
+        title: 'Bulut Tabanlı SaaS',
+        category: 'Dell Cloud Service',
+        description: 'Hızlı geliştirme sağlayan, ölçeklenebilir ve tutarlı atomik tasarım sistemi.',
+        image: '/portfolio/18.png'
       },
       {
-        title: 'Lojistik Takip Yazılımı',
-        category: 'IoT & Real-time',
-        description: 'Kurumsal filolar için milisaniyelik veri işleyen gerçek zamanlı takip sistemi.',
-        image: '/portfolio/code-4.jpg'
+        title: 'Global B2C Pazaryeri',
+        category: '2. El Bilet Alım Satım',
+        description: 'Satın alma hunisindeki terk oranlarını düşüren, akıcı rezervasyon deneyimi.',
+        image: '/portfolio/20.png'
       }
     ]
   },
   pricing: {
-    tag: "Cómo Empezar",
-    title: "Elija Su Plan",
-    description: "Paquetes de diseño flexibles adaptados a las necesidades y presupuesto de su proyecto.",
-    descriptionCode: "Soluciones de software escalables que crecerán con su negocio.",
-    learnMore: "Más información sobre este plan →",
-    customSolution: "¿Necesita una solución personalizada?",
-    contactUs: "Contáctenos",
-    forQuote: "y obtenga una cotización a medida.",
+    tag: "İş Birliği Modelleri",
+    title: "Size Uygun Planı Seçin",
+    description: "Projenizin aşamasına ve hedeflerinize özel, şeffaf ve sonuç odaklı yazılım çözümleri",
+    descriptionCode: "MVP'den Holding seviyesine kadar, işletmenizle birlikte büyüyen esnek yazılım paketleri.",
+    learnMore: "Bu paketin detayları →",
+    customSolution: "Daha büyük bir vizyonunuz mu var?",
+    contactUs: "Özel Teklif İsteyin",
+    forQuote: "ekibimiz ihtiyaçlarınızı analiz etsin.",
     designPlans: [
       {
-        name: 'Inicio Básico',
+        name: 'Başlangıç',
         price: '$999',
-        period: '/Mes $18',
-        label: 'Para Proyectos Únicos',
-        description: 'Perfecto para Emprendedores y Pequeñas Empresas.',
+        period: '/ Tek Seferlik',
+        label: 'Hızlı Başlangıç',
+        description: 'Fikrini doğrulamak ve pazara hızlı girmek isteyen girişimler için.',
         features: [
-          'Consultoría de Diseño UI/UX',
-          'Diseño Web y Banners Publicitarios',
-          'Diseño de hasta 5 Páginas',
-          'Optimización SEO Básica',
+          'Stratejik UI/UX Danışmanlığı',
+          'Dönüşüm Odaklı Landing Page',
+          'Mobil Uyumlu (Responsive) Tasarım',
+          'İlk Yıl Servis Bakımı Ücretsiz',
         ],
-        cta: 'Seleccionar Plan Inicio',
+        cta: 'Paketi Satın Al',
         link: '#contact',
         highlighted: false
       },
       {
-        name: 'Profesional',
+        name: 'Büyüme (Growth)',
         price: '$1799',
-        period: '/proyecto',
-        label: 'Más Popular',
-        description: 'Ideal para empresas en crecimiento que necesitan soluciones de diseño integrales.',
+        period: ' + 18$ Aylık',
+        label: 'En Çok Tercih Edilen',
+        description: 'Dijital varlığını güçlendirmek ve operasyonel süreçleri yönetmek isteyen şirketler için.',
         features: [
-          'Diseño + Desarrollo de Sitio Web Corporativo',
-          'Panel de Administración (Admin Panel)',
-          'Instalación de 2 Módulos (RRHH, Almacén, CRM, etc.)',
-          'Pruebas de Usuario y Feedback',
+          'Çok Sayfalı Kurumsal Web Platformu',
+          'Özel Geliştirilmiş Yönetim Paneli (CMS)',
+          '2 Adet Modül Entegrasyonu (CRM/İK)',
+          'Kullanıcı Testleri & İyileştirme',
         ],
-        cta: 'Seleccionar Plan Profesional',
+        cta: 'Paketi Satın Al',
         link: '#contact',
         highlighted: true
       },
       {
-        name: 'Empresarial',
+        name: 'Kurumsal Partner',
         price: '$3499',
-        period: '/precio desde',
-        label: 'Para Grandes Equipos',
-        description: 'Alianza de diseño integral para empresas establecidas y proyectos complejos.',
+        period: '/Başlayan Fiyatlarla',
+        label: 'Büyük Ölçekli Operasyon',
+        description: 'Karmaşık iş süreçlerine sahip, uçtan uca dijital dönüşüm arayan kurumlar için.',
         features: [
-          'Todo lo del paquete Profesional',
-          'Análisis y Desarrollo de Extremo a Extremo',
-          'Soporte Prioritario y Mantenimiento',
-          'Asesoramiento de Marketing',
+          'Özel Yazılım Mimarisi & API',
+          'Kapsamlı Pazar & Rakip Analizi',
+          '7/24 Öncelikli SLA Desteği',
+          '3 Aylık Büyüme Stratejisi',
         ],
-        cta: 'Contactar',
+        cta: 'İletişim Formu',
         link: '#contact',
         highlighted: false
       }
     ],
     codePlans: [
       {
-        name: 'Inicio Básico',
+        name: 'Başlangıç',
         price: '$999',
-        period: '/Mes $18',
-        label: 'Para Proyectos Únicos',
-        description: 'Perfecto para Emprendedores y Pequeñas Empresas.',
+        period: '/Tek Seferlik',
+        label: 'Prototip & Demo',
+        description: 'Yatırım öncesi fikrinizi çalışan bir ürüne dönüştürmek için ideal.',
         features: [
-          'Consultoría de Diseño UI/UX',
-          'Diseño Web y Banners Publicitarios',
-          'Diseño de hasta 5 Páginas',
-          'Optimización SEO Básica',
+          'Modern Frontend Mimarisi',
+          'Mobil Uyumlu (Responsive) Kodlama',
+          'Temel SEO & Performans Optimizasyonu',
+          'İlk Yıl Servis Bakımı Ücretsiz',
         ],
-        cta: 'Seleccionar Plan Inicio',
+        cta: 'Paketi Satın Al',
         link: '#contact',
         highlighted: false
       },
       {
-        name: 'Profesional',
+        name: 'Scale-Up',
         price: '$1799',
-        period: '/proyecto',
-        label: 'Más Popular',
-        description: 'Ideal para empresas en crecimiento que necesitan soluciones de diseño integrales.',
+        period: '+ 18$ Aylık',
+        label: 'Yüksek Performans',
+        description: 'Trafiği artan ve süreçlerini otomatize etmek isteyen işletmeler için.',
         features: [
-          'Diseño + Desarrollo de Sitio Web Corporativo',
-          'Panel de Administración (Admin Panel)',
-          'Instalación de 2 Módulos (RRHH, Almacén, CRM, etc.)',
-          'Pruebas de Usuario y Feedback',
+          'Özel Backend Geliştirme',
+          'Gelişmiş Yönetim Paneli (Admin)',
+          '2 Harici Servis Entegrasyonu',
+          'Güvenlik & Yedekleme Altyapısı',
         ],
-        cta: 'Seleccionar Plan Profesional',
+        cta: 'Paketi Satın Al',
         link: '#contact',
         highlighted: true
       },
       {
-        name: 'Empresarial',
+        name: 'Enterprise Suite',
         price: '$3499',
-        period: '/precio desde',
-        label: 'Para Grandes Equipos',
-        description: 'Alianza de diseño integral para empresas establecidas y proyectos complejos.',
+        period: '/Başlayan Fiyatlarla',
+        label: 'Tam Ölçekli Çözüm',
+        description: 'Yüksek güvenlik ve performans gerektiren kritik iş uygulamaları için.',
         features: [
-          'Todo lo del paquete Profesional',
-          'Análisis y Desarrollo de Extremo a Extremo',
-          'Soporte Prioritario y Mantenimiento',
-          'Asesoramiento de Marketing',
+          'Mikro-servis Mimarisi',
+          'Gelişmiş API & Entegrasyonlar',
+          'Load Balancing & Auto-Scaling',
+          'DevOps & CI/CD Kurulumu',
         ],
-        cta: 'Contactar',
+        cta: 'Teknik Ekiple Görüş',
         link: '#contact',
         highlighted: false
       }
     ],
   },
   services: {
-    tag: "Nuestros Servicios",
-    titleDesign: "Experiencia en Diseño",
-    titleCode: "Soluciones de Producto",
-    descriptionDesign: "Servicios integrales de diseño UX/UI centrados en usabilidad, optimización de flujos y estrategia de producto.",
-    descriptionCode: "Servicios de desarrollo de software empresarial que ofrecen soluciones robustas y escalables.",
-    loadMore: "Mostrar Más",
-    showLess: "Mostrar Menos",
+    tag: "Uzmanlık Alanlarımız",
+    titleDesign: "Stratejik Tasarım",
+    titleCode: "Mühendislik Çözümleri",
+    descriptionDesign: "Kullanıcı psikolojisi ve iş stratejisini birleştiren, ölçülebilir sonuçlar üreten tasarım disiplini.",
+    descriptionCode: "Güvenlik, hız ve sürdürülebilirlik üzerine kurulu, modern yazılım mühendisliği hizmetleri.",
+    loadMore: "Tüm Yetenekleri Gör",
+    showLess: "Daha Az Göster",
     designServices: [
       {
-        title: 'Consultoría UX',
-        description: 'Guía estratégica de UX para optimizar experiencias de usuario con insights basados en datos.'
+        title: 'Stratejik UX Danışmanlığı',
+        description: 'Veri analizi ile kullanıcı davranışlarını çözümlüyor, ürününüzün başarı şansını artırıyoruz.'
       },
       {
-        title: 'Doctorado de Producto',
-        description: 'Rediseño integral de su concepto de producto y estrategia de ventas con interfaces intuitivas.'
+        title: 'Product Doctoring (İyileştirme)',
+        description: 'Mevcut ürününüzün darboğazlarını tespit edip, modern ve yüksek dönüşümlü bir yapıya kavuşturuyoruz.'
       },
       {
-        title: 'Desarrollo de Nuevos Negocios',
-        description: 'Soporte de extremo a extremo para identificar oportunidades de crecimiento y crear productos digitales atractivos.'
+        title: 'Dijital Ürün Geliştirme',
+        description: 'Fikirden lansmana kadar, pazar uyumu (PMF) yüksek dijital ürünler tasarlıyoruz.'
       },
       {
-        title: 'Mapeo del Viaje del Cliente',
-        description: 'Visualice y optimice cada punto de contacto en el viaje de su cliente para el máximo compromiso.'
+        title: 'Müşteri Yolculuğu (CJM)',
+        description: 'Kullanıcının markanızla temas ettiği her noktayı haritalandırıp, deneyimi optimize ediyoruz.'
       },
       {
-        title: 'Marketing CRM',
-        description: 'Diseño de estrategias de relación con el cliente que aumentan la lealtad y construyen afinidad de marca.'
+        title: 'Retention & CRM Tasarımı',
+        description: 'Kullanıcıyı sistemde tutan, sadakati artıran ve LTV (Yaşam Boyu Değer) odaklı akışlar.'
       }
     ],
     codeServices: [
       {
-        title: 'Sistemas ERP',
-        description: 'Soluciones integrales de planificación de recursos empresariales que organizan operaciones en toda su organización.'
+        title: 'Kurumsal ERP Sistemleri',
+        description: 'Departmanlar arası veri akışını tek merkezde toplayan, verimlilik odaklı yönetim sistemleri.'
       },
       {
-        title: 'Plataformas B2B',
-        description: 'Plataformas web y móviles B2B escalables que conectan empresas y realizan comercio eficientemente.'
+        title: 'B2B Ticaret Platformları',
+        description: 'Bayi, tedarikçi ve müşteri ağınızı yönetebileceğiniz, karmaşık iş kurallarına uygun platformlar.'
       },
       {
-        title: 'Desarrollo SaaS',
-        description: 'Soluciones de software como servicio basadas en la nube construidas para escala y seguridad.'
+        title: 'SaaS Altyapı Geliştirme',
+        description: 'Abonelik modeline uygun, çoklu kullanıcı (multi-tenant) destekli bulut yazılımları.'
       },
       {
-        title: 'Software Empresarial',
-        description: 'Desarrollo de software personalizado adaptado específicamente a su industria y requisitos.'
+        title: 'Özel Yazılım Mimarisi',
+        description: 'Paket programların yetersiz kaldığı noktalarda, işinize %100 uyumlu terzi işi çözümler.'
       },
       {
-        title: 'Soluciones Personalizadas',
-        description: 'Aplicaciones empresariales dedicadas diseñadas para resolver sus desafíos y flujos de trabajo únicos.'
+        title: 'API & Sistem Entegrasyonu',
+        description: 'Farklı yazılımların (Muhasebe, CRM, Pazaryeri) birbiriyle konuşmasını sağlayan entegrasyonlar.'
       }
     ]
   },
   focusAreas: {
-    tag: "Nuestras Áreas de Enfoque",
-    titleDesign: "Filosofía de Diseño",
-    titleCode: "Pila Tecnológica",
+    tag: "Yaklaşımımız",
+    titleDesign: "Tasarım Metodolojimiz",
+    titleCode: "Teknoloji Yığınımız",
     designFocus: [
       {
-        title: 'Mapeo del Viaje del Cliente',
-        description: 'Visualizamos cada punto de contacto en la experiencia de su cliente, identificando puntos débiles y oportunidades.',
-        highlights: ['Investigación de Usuario', 'Visualización de Viaje', 'Análisis de Puntos de Contacto', 'Medición']
+        title: 'Müşteri Deneyimi (CX) Haritalama',
+        description: 'Kullanıcının hissettiği, düşündüğü ve yaptığı her şeyi analiz ederek, pürüzsüz bir deneyim yolu çiziyoruz.',
+        highlights: ['Persona Analizi', 'Empati Haritaları', 'Acı Noktaları (Pain Points)', 'Çözüm Önerileri']
       },
       {
-        title: 'Diseño de Nuevos Productos',
-        description: 'Deleitamos a los usuarios en cada interacción creando interfaces hermosas e intuitivas alineadas con su marca.',
-        highlights: ['Diseño de Interfaz', 'Biblioteca de Diseño', 'Prototipado', 'Visuales Publicitarios']
+        title: 'Dönüşüm Odaklı UI Tasarımı',
+        description: 'Sadece güzel görünen değil, kullanıcının aksiyon almasını sağlayan (Click-through) arayüzler tasarlıyoruz.',
+        highlights: ['Atomik Tasarım', 'Design System', 'Erişilebilirlik', 'Mikro Etkileşimler']
       },
       {
-        title: 'Experiencia de Usuario (UX)',
-        description: 'Estrategia UX integral que combina investigación, pruebas e iteración para crear experiencias fluidas.',
-        highlights: ['Investigación UX', 'Pruebas de Usabilidad', 'Arquitectura de Información', 'Diseño de Interacción']
-      },
+        title: 'Veri Odaklı UX Araştırması',
+        description: 'Varsayımlarla değil, gerçek kullanıcı verileri ve testlerle kararlar alıyoruz.',
+        highlights: ['A/B Testleri', 'Isı Haritaları', 'Kullanılabilirlik Testi', 'Rakip Analizi']
+      }
     ],
     codeFocus: [
       {
-        title: 'Soluciones ERP',
-        description: 'Sistemas ERP que integran todos los aspectos de sus operaciones comerciales en una plataforma unificada.',
-        highlights: ['Automatización de Procesos', 'Analítica en Tiempo Real', 'Integración Multi-módulo', 'Arquitectura Escalable']
+        title: 'Gelişmiş ERP Mimarileri',
+        description: 'İşletmenizin sinir sistemini oluşturuyor, veri bütünlüğünü ve süreç hızını maksimize ediyoruz.',
+        highlights: ['İş Zekası (BI)', 'Otomasyon', 'Modüler Yapı', 'Rol Tabanlı Yetkilendirme']
       },
       {
-        title: 'Plataformas B2B y SaaS',
-        description: 'Plataformas web y móviles robustas diseñadas para interacciones entre empresas y entrega de SaaS.',
-        highlights: ['Arquitectura Multi-inquilino', 'Desarrollo de API', 'Infraestructura en la Nube', 'Seguridad Primero']
+        title: 'Yüksek Ölçekli SaaS Altyapısı',
+        description: 'Global pazarda rekabet edebilecek, binlerce anlık isteği karşılayan sağlam backend yapıları.',
+        highlights: ['Cloud-Native', 'Serverless', 'Microservices', 'Global CDN']
       },
       {
-        title: 'Software Específico de Industria',
-        description: 'Software empresarial personalizado adaptado a los desafíos únicos y flujos de trabajo de su sector.',
-        highlights: ['Experiencia en Industria', 'Funciones Personalizadas', 'Listo para Cumplimiento', 'Soporte de Integración']
+        title: 'Endüstriyel Yazılım Çözümleri',
+        description: 'Sektör regülasyonlarına (KVKK, GDPR, ISO) tam uyumlu, güvenli kurumsal yazılımlar.',
+        highlights: ['Veri Şifreleme', 'Log Yönetimi', 'Yedeklilik', 'Siber Güvenlik']
       }
     ]
   },
   testimonials: {
-    tag: "Éxito del Cliente",
-    title: "Lo Que Dicen Nuestros Clientes",
-    descriptionDesign: "Marcas líderes confían en nosotros para ofrecer experiencias de diseño excepcionales.",
-    descriptionCode: "Empoderamos a las empresas con soluciones de software de nivel empresarial.",
+    tag: "Kanıtlanmış Başarı",
+    title: "İş Ortaklarımız Ne Diyor?",
+    descriptionDesign: "Start-up'lardan holdinglere, vizyoner markaların dijital dönüşüm hikayeleri.",
+    descriptionCode: "Teknolojimize güvenen işletmelerin büyüme rakamları ve başarıları.",
     designTestimonials: [
       {
-        name: 'Sarah Mitchell',
+        name: 'Seçil Seperci',
         role: 'CEO, RetailTech',
-        company: 'E-Commerce',
-        text: 'El mapeo del viaje del cliente transformó toda nuestra experiencia de usuario. Las tasas de conversión aumentaron un 45%.',
+        company: 'E-Ticaret',
+        text: 'Müşteri yolculuğunu yeniden kurguladıklarında sadece arayüz değişmedi, iş modelimiz hızlandı. Sepet terk oranlarımız %25 düştü.',
         rating: 5
       },
       {
-        name: 'David Chen',
-        role: 'Director de Producto',
-        company: 'FinanceApp',
-        text: 'La consultoría UX nos ayudó a identificar puntos ciegos que no conocíamos. El trabajo de diseño de producto fue excepcional.',
+        name: 'Mehmet Can T.',
+        role: 'Ürün Direktörü',
+        company: 'FinTech',
+        text: 'Kullanıcıların nerede takıldığını UX analizleriyle nokta atışı buldular. Ürün doktorluğu hizmeti, uygulamamızı kurtardı.',
         rating: 5
       },
       {
-        name: 'Emma Rodriguez',
-        role: 'Gerente de Marketing',
-        company: 'HealthCare Plus',
-        text: 'Gran trabajo en nuestra estrategia de marketing CRM. El equipo de diseño realmente entiende el comportamiento moderno.',
+        name: 'Elif Didem Y.',
+        role: 'Pazarlama Müdürü',
+        company: 'HealthTech',
+        text: 'Tasarım sistemini kurduklarında pazarlama ekibi olarak hızımız 2 katına çıktı. Artık her kampanya için yazılımcı beklemek zorunda değiliz.',
         rating: 5
       }
     ],
     codeTestimonials: [
       {
-        name: 'Michael Anderson',
-        role: 'CTO, Manufacturing Co',
-        company: 'Sector Industrial',
-        text: 'El sistema ERP que construyeron revolucionó nuestras operaciones. Integración perfecta entre todos los departamentos.',
+        name: 'Mehmet A.',
+        role: 'CTO',
+        company: 'Üretim Sanayi',
+        text: 'ERP sistemimiz artık Excel dosyalarından kurtuldu. Fabrikadaki her veriyi anlık görebiliyoruz, stok maliyetimiz %30 azaldı.',
         rating: 5
       },
       {
-        name: 'Lisa Thompson',
-        role: 'VP de Tecnología',
-        company: 'Soluciones B2B',
-        text: 'Desarrollo de plataforma B2B excepcional. El equipo entregó una solución escalable que cumplió perfectamente nuestras demandas.',
+        name: 'Furkan T.',
+        role: 'VP Engineering',
+        company: 'B2B Lojistik',
+        text: 'Geliştirdikleri API altyapısı o kadar sağlam ki, Black Friday döneminde bile milisaniyelik gecikme yaşamadık.',
         rating: 5
       },
       {
-        name: 'James Wilson',
-        role: 'Fundador',
-        company: 'Startup SaaS',
-        text: 'Construyeron toda nuestra plataforma SaaS desde el concepto hasta el despliegue. La calidad del código es de primer nivel.',
+        name: 'Çetin S. D.',
+        role: 'Kurucu',
+        company: 'SaaS Start-up',
+        text: 'MVP sürecinden scale-up aşamasına kadar teknik borç yaratmadan ilerlediler. Yatırımcı sunumunda teknoloji altyapımızla öne geçtik.',
         rating: 5
       }
     ]
   },
   cta: {
-    titleDesign: "¿Listo para Trabajar con Nosotros?",
-    titleCode: "¿Listo para Trabajar con Nosotros?",
-    descDesign: "Comencemos hoy a crear diseños que transformen su presencia digital y brinden resultados reales.",
-    descCode: "Comencemos hoy a construir software de nivel empresarial para su negocio.",
-    btnPrimary: "Empecemos",
-    btnSecondary: "Llamada de Descubrimiento",
-    statProjects: "Proyectos Completados",
-    statSystems: "Sistemas Instalados",
-    statSuccess: "Tasa de Éxito",
-    statSupportDesign: "Soporte Continuo",
-    statSupportCode: "Soporte de Desarrollo"
+    titleDesign: "Fikrinizi Bir Sonraki Seviyeye Taşıyalım",
+    titleCode: "İşletmenizi Dijital Olarak Ölçekleyelim",
+    descDesign: "Sadece pikselleri değil, işinizin geleceğini tasarlıyoruz. Hedeflerinizi konuşmak için tanışalım.",
+    descCode: "Manuel süreçleri geride bırakın. Verimliliği artıran teknolojilerle tanışmak için ilk adımı atın.",
+    btnPrimary: "İletişim Formu",
+    btnSecondary: "Whatsapp",
+    statProjects: "Tamamlanan Proje",
+    statSystems: "Aktif Sistem",
+    statSuccess: "Müşteri Memnuniyeti",
+    statSupportDesign: "Tasarım Desteği",
+    statSupportCode: "Teknik Destek"
   },
   footer: {
-    brandDescDesign: "Creando experiencias de usuario excepcionales a través de un diseño innovador.",
-    brandDescCode: "Construyendo soluciones de software empresarial para empresas modernas.",
-    colServices: "Servicios",
-    colCompany: "Empresa",
-    colContact: "Contacto",
-    designServices: ['Consultor UX', 'Diseño de Producto', 'Desarrollo de Negocio', 'Mapeo de Viaje', 'Marketing CRM'],
-    codeServices: ['Sistemas ERP', 'Plataformas B2B', 'Desarrollo SaaS', 'Software Personalizado', 'Integración API'],
-    companyLinks: ['Nosotros', 'Nuestros Procesos', 'Casos de Estudio', 'Carreras', 'Blog'],
-    copyright: "Todos los derechos reservados.",
-    privacy: "Política de Privacidad",
-    terms: "Términos de Servicio",
-    cookie: "Política de Cookies"
-  }
+    brandDescDesign: "Kullanıcı deneyimini merkeze alan, veri odaklı ve yenilikçi dijital ürün tasarımı.",
+    brandDescCode: "Modern işletmelerin karmaşık problemlerini çözen, güvenli ve ölçeklenebilir yazılım mühendisliği.",
+    colServices: "Hizmetler",
+    colCompany: "Kurumsal",
+    colContact: "İletişim",
+    designServices: ['UX Denetimi (Audit)', 'UI/UX Tasarımı', 'Ürün Stratejisi', 'Design System', 'Growth Tasarımı'],
+    codeServices: ['Özel ERP Yazılımı', 'B2B Portal', 'SaaS Geliştirme', 'Mobil Uygulama', 'Sistem Entegrasyonu'],
+    companyLinks: ['Hakkımızda', 'Çalışma Metodumuz', 'Başarı Hikayeleri', 'Kariyer', 'Blog'],
+    copyright: "Tüm hakları saklıdır.",
+    privacy: "Gizlilik ve Güvenlik",
+    terms: "Kullanım Koşulları",
+    cookie: "Çerez Yönetimi"
+  },
+  notFound: {
+    title: "Ooops! Sayfa Bulunamadı",
+    description: "Aradığınız sayfayı bulamıyoruz. Taşınmış veya silinmiş olabilir.",
+    homeBtn: "Ana Sayfa",
+    hubBtn: "Blog'a Göz At"
+  },
 };
