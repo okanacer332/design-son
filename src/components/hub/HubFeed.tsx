@@ -1,68 +1,30 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react'; // useEffect'i kaldırdık
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { ArrowUpRight, Layers, Box, PenTool, Code2, SearchX } from 'lucide-react';
-import { useLanguage } from '@/src/lib/i18n/LanguageContext';
 import { TransitionWrapper } from '@/src/components/TransitionWrapper';
 import { Badge } from '@/src/components/ui/badge';
-import { fetchHubContent } from '@/src/lib/actions';
 import type { ContentItem } from '@/src/lib/mdx';
 import { cn } from '@/src/components/ui/utils';
 
 interface HubFeedProps {
   initialCategory: 'all' | 'projects' | 'articles' | 'demos';
+  initialItems: ContentItem[]; // ARTIK VERİYİ PROP OLARAK ALIYORUZ
+  lang: string; // Linkler için dil kodu lazım
 }
 
-export function HubFeed({ initialCategory }: HubFeedProps) {
-  const { language } = useLanguage();
+export function HubFeed({ initialCategory, initialItems, lang }: HubFeedProps) {
   const searchParams = useSearchParams();
   
-  const [items, setItems] = useState<ContentItem[]>([]);
-  const [loading, setLoading] = useState(true);
-
+  // Veriyi state'e atıyoruz ama başlangıç değerimiz zaten dolu! (SSR)
+  const [items] = useState<ContentItem[]>(initialItems);
+  
   // URL'den gelen arama terimi
   const searchTerm = searchParams.get('search')?.toLowerCase() || '';
 
-  // Veri Çekme
-  useEffect(() => {
-    let isMounted = true;
-
-    async function loadData() {
-      setLoading(true);
-      try {
-        let data: ContentItem[] = [];
-
-        if (initialCategory === 'all') {
-          const [projects, articles, demos] = await Promise.all([
-            fetchHubContent('projects', language),
-            fetchHubContent('articles', language),
-            fetchHubContent('demos', language)
-          ]);
-          data = [...projects, ...articles, ...demos];
-        } else {
-          data = await fetchHubContent(initialCategory, language);
-        }
-
-        if (isMounted) {
-          data.sort((a, b) => 
-            new Date(b.frontMatter.date).getTime() - new Date(a.frontMatter.date).getTime()
-          );
-          setItems(data);
-        }
-      } catch (error) {
-        console.error("Veri hatası:", error);
-      } finally {
-        if (isMounted) setLoading(false);
-      }
-    }
-    loadData();
-
-    return () => { isMounted = false; };
-  }, [language, initialCategory]);
-
-  // FİLTRELEME MANTIĞI
+  // FİLTRELEME MANTIĞI (Client-Side devam edebilir)
   const filteredItems = items.filter((item) => {
     if (searchTerm.length < 3) return true;
 
@@ -73,11 +35,13 @@ export function HubFeed({ initialCategory }: HubFeedProps) {
     return title.includes(searchTerm) || desc.includes(searchTerm) || category.includes(searchTerm);
   });
 
+  const langPrefix = `/${lang}`;
+
   const tabs = [
-    { id: 'all', label: 'Tümü', icon: Layers, href: '/hub' },
-    { id: 'projects', label: 'Projeler', icon: Box, href: '/hub/projects' },
-    { id: 'articles', label: 'Makaleler', icon: PenTool, href: '/hub/articles' },
-    { id: 'demos', label: 'Demolar', icon: Code2, href: '/hub/demos' },
+    { id: 'all', label: 'Tümü', icon: Layers, href: `${langPrefix}/hub` },
+    { id: 'projects', label: 'Projeler', icon: Box, href: `${langPrefix}/hub/projects` },
+    { id: 'articles', label: 'Makaleler', icon: PenTool, href: `${langPrefix}/hub/articles` },
+    { id: 'demos', label: 'Demolar', icon: Code2, href: `${langPrefix}/hub/demos` },
   ];
 
   return (
@@ -112,9 +76,7 @@ export function HubFeed({ initialCategory }: HubFeedProps) {
 
       {/* İÇERİK ALANI */}
       <TransitionWrapper modeKey={initialCategory + searchTerm}> 
-        {loading ? (
-           <div className="grid place-items-center h-40 text-gray-500">İçerikler yükleniyor...</div>
-        ) : filteredItems.length === 0 ? (
+        {filteredItems.length === 0 ? (
            <div className="flex flex-col items-center justify-center py-20 text-center bg-white/[0.02] rounded-2xl border border-white/5 border-dashed">
              <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mb-4">
                 <SearchX className="w-8 h-8 text-gray-500" />
@@ -127,7 +89,7 @@ export function HubFeed({ initialCategory }: HubFeedProps) {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {filteredItems.map((item) => (
-              <Link key={item.slug} href={`/hub/${item.type}/${item.slug}`} className="group block h-full">
+              <Link key={item.slug} href={`${langPrefix}/hub/${item.type}/${item.slug}`} className="group block h-full">
                 <article className="h-full bg-slate-900/50 hover:bg-slate-800/50 border border-white/5 hover:border-blue-500/30 rounded-2xl p-5 transition-all duration-300 flex flex-col hover:shadow-xl hover:shadow-blue-900/10 group-hover:-translate-y-1">
                   
                   <div className="flex justify-between items-center mb-4">

@@ -1,34 +1,61 @@
 "use client";
 
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { dictionaries, LanguageCode } from './locales';
+import { LanguageCode, dictionaries } from './locales'; // 'dictionaries' import edildi
 import { Dictionary } from './types';
 
 interface LanguageContextType {
   language: LanguageCode;
   setLanguage: (lang: LanguageCode) => void;
   t: Dictionary;
-  availableLanguages: LanguageCode[];
-  isRTL: boolean; // UI'da RTL'e göre stil vermek gerekirse diye
+  isRTL: boolean;
+  availableLanguages: LanguageCode[]; // EKLENDİ: Arayüz tanımına eklendi
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<LanguageCode>('TR');
+interface LanguageProviderProps {
+  children: ReactNode;
+  initialLanguage: LanguageCode;
+  initialDictionary: Dictionary;
+}
 
-  const t = dictionaries[language];
-  const availableLanguages = Object.keys(dictionaries) as LanguageCode[];
+export function LanguageProvider({ 
+  children, 
+  initialLanguage, 
+  initialDictionary 
+}: LanguageProviderProps) {
+  const [language, setLanguageState] = useState<LanguageCode>(initialLanguage);
+  
+  const t = initialDictionary;
   const isRTL = language === 'AR';
 
-  // Dil değiştiğinde HTML tag'ine dir attribute'unu bas
+  // EKLENDİ: Mevcut dilleri 'locales.ts' dosyasındaki objeden anahtarları alarak oluşturuyoruz
+  const availableLanguages = Object.keys(dictionaries) as LanguageCode[];
+
+  const setLanguage = (newLang: LanguageCode) => {
+    const currentPath = window.location.pathname;
+    const segments = currentPath.split('/');
+    // segments[0] boş, segments[1] mevcut dil (tr, en vs.)
+    // Eğer root'ta değilsek (örn: /tr/hakkimizda)
+    if (segments.length > 1) {
+        segments[1] = newLang.toLowerCase();
+        const newPath = segments.join('/');
+        window.location.href = newPath;
+    } else {
+        // Root'ta ise direkt dile git
+        window.location.href = `/${newLang.toLowerCase()}`;
+    }
+  };
+
   useEffect(() => {
     document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
     document.documentElement.lang = language.toLowerCase();
   }, [language, isRTL]);
 
+  // 'availableLanguages' değeri Provider'a eklendi
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, availableLanguages, isRTL }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, isRTL, availableLanguages }}>
       {children}
     </LanguageContext.Provider>
   );

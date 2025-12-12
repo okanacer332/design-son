@@ -2,24 +2,27 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLanguage } from "@/src/lib/i18n/LanguageContext";
 import { 
   LayoutGrid, 
   Code2, 
   PenTool, 
   Box, 
   Hash, 
-  Flame,
-  Bookmark
+  Flame
 } from "lucide-react";
 
 export function HubSidebar() {
   const pathname = usePathname();
+  // Dil kodunu alıyoruz (tr, en vs.)
+  const { language } = useLanguage();
+  const langPrefix = `/${language.toLowerCase()}`;
 
   const menuItems = [
-    { label: "Genel Bakış", icon: LayoutGrid, href: "/hub", exact: true },
-    { label: "Projeler", icon: Box, href: "/hub/projects" },
-    { label: "Makaleler", icon: PenTool, href: "/hub/articles" },
-    { label: "Demolar", icon: Code2, href: "/hub/demos" },
+    { label: "Genel Bakış", icon: LayoutGrid, href: `${langPrefix}/hub`, exact: true },
+    { label: "Projeler", icon: Box, href: `${langPrefix}/hub/projects` },
+    { label: "Makaleler", icon: PenTool, href: `${langPrefix}/hub/articles` },
+    { label: "Demolar", icon: Code2, href: `${langPrefix}/hub/demos` },
   ];
 
   const tags = ["#React", "#NextJS", "#Tailwind", "#UI/UX", "#ThreeJS"];

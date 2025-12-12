@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { useMode } from '@/src/lib/context/ModeContext'; // Context eklendi
+import { useMode } from '@/src/lib/context/ModeContext';
 import { Header } from '@/src/components/Header';
 import { Hero } from '@/src/components/Hero';
 import { Portfolio } from '@/src/components/Portfolio';
@@ -11,8 +11,8 @@ import { FocusAreas } from '@/src/components/FocusAreas';
 import { CTA } from '@/src/components/CTA';
 import { Footer } from '@/src/components/Footer';
 
-export default function Home() {
-  // Local state yerine global context kullanıyoruz
+// DİKKAT: 'export default' yerine 'export' kullandık ve ismini değiştirdik.
+export function ClientHomeWrapper() {
   const { mode, toggleMode } = useMode();
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -29,7 +29,6 @@ export default function Home() {
     <div className={`min-h-screen transition-colors duration-1000 ease-in-out ${
       mode === 'design' ? 'bg-slate-950' : 'bg-slate-950'
     }`}>
-      {/* Header artık global toggleMode fonksiyonunu kullanıyor */}
       <Header mode={mode} onToggle={toggleMode} isScrolled={isScrolled} />
       
       <main>
