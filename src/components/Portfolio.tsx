@@ -1,8 +1,7 @@
-// src/components/Portfolio.tsx
-
 "use client";
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useLanguage } from "@/src/lib/i18n/LanguageContext";
 import { TransitionWrapper } from "@/src/components/TransitionWrapper";
 
@@ -30,12 +29,12 @@ export function Portfolio({ mode }: PortfolioProps) {
             {t.portfolio.tag}
           </div>
           <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 px-4 py-2 leading-tight ${
-  mode === 'design'
-    ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
-    : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
-}`}>
-  {t.portfolio.title}
-</h2>
+            mode === 'design'
+              ? 'bg-gradient-to-r from-purple-200 to-fuchsia-300 bg-clip-text text-transparent'
+              : 'bg-gradient-to-r from-blue-200 to-cyan-300 bg-clip-text text-transparent'
+          }`}>
+            {t.portfolio.title}
+          </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto px-4">
             {mode === 'design' ? t.portfolio.description : t.portfolio.descriptionCode}
           </p>
@@ -90,15 +89,18 @@ export function Portfolio({ mode }: PortfolioProps) {
           </div>
         </TransitionWrapper>
 
-        {/* CTA */}
+        {/* CTA - GÜNCELLENEN KISIM */}
         <div className="text-center mt-8 sm:mt-12">
-          <button className={`px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto ${
+          <Link 
+            href="/hub/projects"
+            target="_blank"
+            className={`inline-block text-center px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white transition-all shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto cursor-pointer ${
             mode === 'design'
               ? 'bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600'
               : 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600'
           }`}>
             {t.portfolio.viewAll}
-          </button>
+          </Link>
         </div>
       </div>
     </section>
