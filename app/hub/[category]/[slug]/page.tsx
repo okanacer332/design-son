@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, Suspense } from 'react';
+import { use, useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { ArrowUpRight, Search } from 'lucide-react';
 import { useMode } from '@/src/lib/context/ModeContext';
 import { useLanguage } from '@/src/lib/i18n/LanguageContext';
@@ -15,60 +15,39 @@ import { Input } from '@/src/components/ui/input';
 import { fetchHubContent } from '@/src/lib/actions';
 import type { ContentItem } from '@/src/lib/mdx';
 
-function HubContent() {
+export default function HubCategoryPage({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = use(params);
   const { mode, toggleMode } = useMode();
   const { language } = useLanguage();
-  const searchParams = useSearchParams();
+
+  // URL güvenliği: Sadece bu kategorilere izin ver
+  const validCategories = ['projects', 'articles', 'demos'];
   
-  // Varsayılan filtre 'all'. Diğerleri: 'projects', 'articles', 'demos'
-  const [filter, setFilter] = useState('all');
-  
+  if (!validCategories.includes(category)) {
+    return notFound();
+  }
+
   const [items, setItems] = useState<ContentItem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Verileri Çek
   useEffect(() => {
     async function loadData() {
       setLoading(true);
       try {
-        // Klasör isimleri (çoğul) ile çekiyoruz
-        const [projects, articles, demos] = await Promise.all([
-          fetchHubContent('projects', language),
-          fetchHubContent('articles', language),
-          fetchHubContent('demos', language)
-        ]);
-
-        // Gelen verilerin 'type' alanı zaten 'projects', 'articles' olarak geliyor.
-        // Ekstra bir işlem yapmadan birleştiriyoruz.
-        setItems([...projects, ...articles, ...demos]);
+        // Kategori adı (projects) ile Server Action'ı çağır.
+        // Tip uyuşmazlığını aşmak için 'as any' kullanıyoruz, çünkü string'in 'projects' olup olmadığını TS o an bilemez.
+        const data = await fetchHubContent(category as any, language);
+        setItems(data);
       } catch (error) {
-        console.error("Veri çekme hatası:", error);
+        console.error("Kategori verisi çekilemedi:", error);
       } finally {
         setLoading(false);
       }
     }
-
     loadData();
-  }, [language]);
+  }, [category, language]);
 
-  // URL'den filtreyi oku
-  useEffect(() => {
-    const filterParam = searchParams.get('filter');
-    // Eğer URL'den gelen 'project' (tekil) ise onu 'projects' (çoğul) yapalım ki uyuşsun
-    if (filterParam) {
-      const normalizedFilter = filterParam === 'project' ? 'projects' : 
-                               filterParam === 'article' ? 'articles' : 
-                               filterParam === 'demo' ? 'demos' : filterParam;
-      setFilter(normalizedFilter);
-    }
-  }, [searchParams]);
-
-  // Filtreleme Mantığı
-  const filteredItems = filter === 'all' 
-    ? items 
-    : items.filter(item => item.type === filter);
-
-  // Stil tanımları
+  // Renk ve Stil tanımları
   const colors = {
     bg: mode === 'design' 
       ? 'bg-gradient-to-br from-slate-900 via-purple-950/20 to-slate-900' 
@@ -87,12 +66,11 @@ function HubContent() {
     activeFilter: mode === 'design' ? 'bg-purple-500/20 text-white border-purple-500/30' : 'bg-blue-500/20 text-white border-blue-500/30'
   };
 
-  // Kategori Butonları (ID'ler artık ÇOĞUL - Klasör isimleriyle aynı)
   const categories = [
-    { id: 'all', label: 'Tümü' },
-    { id: 'projects', label: 'Projeler' },
-    { id: 'articles', label: 'Makaleler' },
-    { id: 'demos', label: 'Demolar' }
+    { id: 'all', label: 'Tümü', path: '/hub' },
+    { id: 'projects', label: 'Projeler', path: '/hub/projects' },
+    { id: 'articles', label: 'Makaleler', path: '/hub/articles' },
+    { id: 'demos', label: 'Demolar', path: '/hub/demos' }
   ];
 
   return (
@@ -107,52 +85,52 @@ function HubContent() {
               <div className={`inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full border text-xs font-medium backdrop-blur-sm transition-colors duration-500 ${colors.badge}`}>
                 ACR HUB
               </div>
-              <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent transition-all duration-500 ${colors.textGradient}`}>
-                Bilgi ve Üretim Merkezi
+              <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent transition-all duration-500 capitalize ${colors.textGradient}`}>
+                {category}
               </h1>
               <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                Şirketimizin geliştirdiği açık kaynak projeler, teknik makaleler ve demolar.
+                Bu kategorideki tüm içerikler listeleniyor.
               </p>
             </div>
           </TransitionWrapper>
 
-          {/* Filtre Butonları */}
+          {/* Menü */}
           <div className="flex flex-col md:flex-row gap-6 justify-between items-center mb-12">
             <div className="flex flex-wrap justify-center gap-2 p-1.5 bg-slate-900/50 backdrop-blur-md rounded-xl border border-white/10">
               {categories.map((cat) => (
-                <button
+                <Link
                   key={cat.id}
-                  onClick={() => setFilter(cat.id)}
+                  href={cat.path}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                    filter === cat.id 
+                    cat.id === category
                       ? `${colors.activeFilter} shadow-lg` 
                       : 'text-gray-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {cat.label}
-                </button>
+                </Link>
               ))}
             </div>
             
             <div className="relative w-full max-w-md">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
               <Input 
-                placeholder="Hub içinde ara..." 
+                placeholder={`${category} içinde ara...`}
                 className="pl-10 h-11 bg-slate-900/50 border-white/10 text-white placeholder:text-gray-600 focus:border-white/20 rounded-xl"
               />
             </div>
           </div>
 
-          <TransitionWrapper modeKey={filter + mode}>
+          <TransitionWrapper modeKey={category + mode}>
             {loading ? (
-               <div className="text-center text-gray-500 py-20">İçerik yükleniyor...</div>
+              <div className="text-center text-gray-500 py-20">Yükleniyor...</div>
+            ) : items.length === 0 ? (
+              <div className="text-center text-gray-500 py-20">Henüz bu kategoride içerik bulunamadı.</div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredItems.map((item) => (
-                  // Link Yapısı: /hub/projects/slug (Hepsi çoğul ve uyumlu)
-                  <Link key={item.slug} href={`/hub/${item.type}/${item.slug}`} className="group h-full block">
+                {items.map((item) => (
+                  <Link key={item.slug} href={`/hub/${category}/${item.slug}`} className="group h-full block">
                     <Card className={`h-full bg-slate-900/40 backdrop-blur-sm border transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col ${colors.border}`}>
-                      
                       <div className="h-52 w-full bg-slate-950/50 relative overflow-hidden rounded-t-xl border-b border-white/5">
                         <div className={`absolute inset-0 opacity-20 transition-colors duration-500 ${colors.overlay}`}></div>
                         {item.frontMatter.image && (
@@ -162,15 +140,13 @@ function HubContent() {
                              className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500"
                            />
                         )}
-                        <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full blur-3xl opacity-40 transition-colors duration-500 bg-fuchsia-600"></div>
+                        <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full blur-3xl opacity-40 transition-colors duration-500 bg-cyan-600"></div>
                         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                           <span className="text-white/80 bg-black/50 px-3 py-1 rounded-full font-medium text-xs tracking-widest uppercase backdrop-blur-md">
-                            {/* projects -> Project gibi görüntüleme */}
                             {item.type.slice(0, -1).toUpperCase()}
                           </span>
                         </div>
                       </div>
-
                       <div className="flex-1 flex flex-col p-6">
                         <div className="flex justify-between items-start mb-4">
                           <Badge variant="outline" className={`font-normal ${colors.badge}`}>
@@ -178,15 +154,12 @@ function HubContent() {
                           </Badge>
                           <span className="text-xs text-gray-500 font-mono">{item.frontMatter.date}</span>
                         </div>
-                        
                         <CardTitle className="text-white text-xl mb-3 group-hover:text-white/90 transition-colors">
                           {item.frontMatter.title}
                         </CardTitle>
-                        
                         <CardDescription className="text-gray-400 line-clamp-2 leading-relaxed mb-6">
                           {item.frontMatter.description}
                         </CardDescription>
-
                         <div className={`mt-auto flex items-center gap-2 text-sm font-medium transition-colors ${colors.icon}`}>
                           İncele <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                         </div>
@@ -202,13 +175,5 @@ function HubContent() {
       </main>
       <Footer mode={mode} />
     </div>
-  );
-}
-
-export default function HubPage() {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-slate-950 text-white flex items-center justify-center">Yükleniyor...</div>}>
-      <HubContent />
-    </Suspense>
   );
 }
