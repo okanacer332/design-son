@@ -2,7 +2,7 @@
 
 import { Dictionary } from '../types';
 
-export const tr: Dictionary = {
+export const de: Dictionary = {
   header: {
     menu: "Menü",
     portfolio: "Başarı Hikayeleri",
