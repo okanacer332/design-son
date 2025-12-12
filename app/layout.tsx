@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ModeProvider } from "@/src/lib/context/ModeContext";
 import { LanguageProvider } from '@/src/lib/i18n/LanguageContext';
+// 1. Toaster bileşenini import ediyoruz
+import { Toaster } from "@/src/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +24,9 @@ export default function RootLayout({
         <ModeProvider>
           <LanguageProvider>
             {children}
+            {/* 2. Toaster bileşenini buraya ekliyoruz. 
+                Artık toast bildirimleri (başarılı/hata) ekranda görünecek. */}
+            <Toaster position="top-center" richColors />
           </LanguageProvider>
         </ModeProvider>
       </body>
