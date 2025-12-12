@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../globals.css"; // Dosya konumu app/[lang]/layout.tsx olduğu için ../../
+import "../globals.css";
 import { ModeProvider } from "@/src/lib/context/ModeContext";
 import { LanguageProvider } from '@/src/lib/i18n/LanguageContext';
 import { Toaster } from "@/src/components/ui/sonner";
@@ -38,7 +38,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: './',
   },
-  // ✅ GÜNCELLENDİ: Google Search Console Doğrulama Kodu
   verification: {
     google: 'IxREBYtgPsVQmQv0Wb07COriBiWkXIaLWrLLo8LQHIs',
   },
@@ -53,28 +52,31 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang: Locale }>;
+  // 🛠️ DÜZELTME BURADA: 'Locale' yerine 'string' yaptık.
+  // Next.js build süreci bunu bekliyor.
+  params: Promise<{ lang: string }>; 
 }) {
   const { lang } = await params;
-  const dictionary = await getDictionary(lang);
+  
+  // İçeride kullanırken 'as Locale' diyerek kendi tipimize çeviriyoruz.
+  const dictionary = await getDictionary(lang as Locale);
 
   return (
     <html lang={lang} className="scroll-smooth" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       <body className={inter.className}>
-        {/* Schema Markup */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         
         <ModeProvider>
+          {/* LanguageProvider'a da cast ederek gönderiyoruz */}
           <LanguageProvider initialLanguage={lang.toUpperCase() as any} initialDictionary={dictionary}>
             {children}
             <Toaster position="top-center" richColors />
           </LanguageProvider>
         </ModeProvider>
 
-        {/* ✅ Google Analytics (GA4) */}
         <GoogleAnalytics gaId="G-FGVHFN9HHZ" />
       </body>
     </html>
