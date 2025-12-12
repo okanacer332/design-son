@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation'; // EKLENDİ
+import { useSearchParams } from 'next/navigation';
 import { ArrowUpRight, Layers, Box, PenTool, Code2, SearchX } from 'lucide-react';
 import { useLanguage } from '@/src/lib/i18n/LanguageContext';
 import { TransitionWrapper } from '@/src/components/TransitionWrapper';
@@ -17,16 +17,18 @@ interface HubFeedProps {
 
 export function HubFeed({ initialCategory }: HubFeedProps) {
   const { language } = useLanguage();
-  const searchParams = useSearchParams(); // URL'den parametreleri okumak için
+  const searchParams = useSearchParams();
   
   const [items, setItems] = useState<ContentItem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // URL'den gelen arama terimi (Varsa küçük harfe çevir)
+  // URL'den gelen arama terimi
   const searchTerm = searchParams.get('search')?.toLowerCase() || '';
 
   // Veri Çekme
   useEffect(() => {
+    let isMounted = true;
+
     async function loadData() {
       setLoading(true);
       try {
@@ -43,30 +45,31 @@ export function HubFeed({ initialCategory }: HubFeedProps) {
           data = await fetchHubContent(initialCategory, language);
         }
 
-        data.sort((a, b) => 
-          new Date(b.frontMatter.date).getTime() - new Date(a.frontMatter.date).getTime()
-        );
-        
-        setItems(data);
+        if (isMounted) {
+          data.sort((a, b) => 
+            new Date(b.frontMatter.date).getTime() - new Date(a.frontMatter.date).getTime()
+          );
+          setItems(data);
+        }
       } catch (error) {
         console.error("Veri hatası:", error);
       } finally {
-        setLoading(false);
+        if (isMounted) setLoading(false);
       }
     }
     loadData();
+
+    return () => { isMounted = false; };
   }, [language, initialCategory]);
 
-  // FİLTRELEME MANTIĞI (GÜNCELLENDİ)
+  // FİLTRELEME MANTIĞI
   const filteredItems = items.filter((item) => {
-    // Eğer arama terimi 3 harften kısaysa filtreleme yapma (hepsini göster)
     if (searchTerm.length < 3) return true;
 
     const title = item.frontMatter.title?.toLowerCase() || '';
     const desc = item.frontMatter.description?.toLowerCase() || '';
     const category = item.frontMatter.category?.toLowerCase() || '';
 
-    // Başlıkta, açıklamada VEYA kategoride arama yap
     return title.includes(searchTerm) || desc.includes(searchTerm) || category.includes(searchTerm);
   });
 
@@ -112,7 +115,6 @@ export function HubFeed({ initialCategory }: HubFeedProps) {
         {loading ? (
            <div className="grid place-items-center h-40 text-gray-500">İçerikler yükleniyor...</div>
         ) : filteredItems.length === 0 ? (
-           // ARAMA SONUCU BULUNAMADI EKRANI
            <div className="flex flex-col items-center justify-center py-20 text-center bg-white/[0.02] rounded-2xl border border-white/5 border-dashed">
              <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mb-4">
                 <SearchX className="w-8 h-8 text-gray-500" />
