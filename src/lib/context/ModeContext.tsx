@@ -22,45 +22,33 @@ export function ModeProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  // 2. YENİ ÖZELLİK: İlk ziyaret intro animasyonu
+  // 2. GÜNCELLENEN ÖZELLİK: Intro animasyonu (Her ziyarette çalışacak şekilde)
   useEffect(() => {
-    // Kullanıcı daha önce introyu izlemiş mi?
-    const hasSeenIntro = localStorage.getItem('has-seen-intro');
-    // Kullanıcının kayıtlı bir mod tercihi var mı?
-    const hasSavedMode = localStorage.getItem('acr-mode');
-
-    // Eğer introyu görmediyse VE özel bir tercih yapmadıysa (Tamamen yeni ziyaretçi)
-    if (!hasSeenIntro && !hasSavedMode) {
+    // "Daha önce gördü mü?" kontrolünü kaldırdık. Artık her girişte çalışacak.
       
-      // Adım 1: Site açıldıktan 1.5 saniye sonra CODE moduna geç
-      const timer1 = setTimeout(() => {
-        setMode('code');
-      }, 1000);
+    // Adım 1: Site açıldıktan 1 saniye sonra CODE moduna geçiş
+    const timer1 = setTimeout(() => {
+      setMode('code');
+    }, 1000);
 
-      // Adım 2: Code modunda 2.5 saniye durduktan sonra DESIGN moduna geri dön
-      const timer2 = setTimeout(() => {
-        setMode('design');
-        
-        // İşaretle: Artık introyu gördü, bir daha tekrarlama
-        localStorage.setItem('has-seen-intro', 'true');
-        
-        // Varsayılan tercihi design olarak kaydet
-        localStorage.setItem('acr-mode', 'design');
-      }, 3000); // 1500ms (başlangıç) + 2500ms (bekleme) = 4000ms
+    // Adım 2: Code modunda 2 saniye durduktan sonra DESIGN moduna dönüş
+    const timer2 = setTimeout(() => {
+      setMode('design');
+      
+      // Son durumu 'design' olarak kaydedelim ki tutarlılık sağlansın
+      localStorage.setItem('acr-mode', 'design');
+    }, 3000); // 1000ms (başlangıç) + 2000ms (bekleme) = 3000ms
 
-      // Temizlik (Component unmount olursa timerları iptal et)
-      return () => {
-        clearTimeout(timer1);
-        clearTimeout(timer2);
-      };
-    }
+    // Temizlik (Component unmount olursa timerları iptal et)
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
   }, []);
 
   const toggleMode = (selectedMode: Mode) => {
     setMode(selectedMode);
     localStorage.setItem('acr-mode', selectedMode);
-    // Kullanıcı manuel değişim yaparsa da introyu görmüş sayalım
-    localStorage.setItem('has-seen-intro', 'true');
   };
 
   return (

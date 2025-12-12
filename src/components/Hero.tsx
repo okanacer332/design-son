@@ -63,13 +63,13 @@ export function Hero({ mode }: HeroProps) {
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
                   <button 
                     onClick={handleOpenModal}
-                    className="px-8 py-4 bg-white text-purple-950 rounded-full hover:bg-purple-50 transition-all font-medium shadow-lg hover:shadow-purple-500/20 shadow-purple-500/10 w-full sm:w-auto"
+                    className="cursor-pointer px-8 py-4 bg-white text-purple-950 rounded-full hover:bg-purple-50 transition-all font-medium shadow-lg hover:shadow-purple-500/20 shadow-purple-500/10 w-full sm:w-auto"
                   >
                     {t.hero.designBtnPrimary}
                   </button>
                   <button 
                     onClick={scrollToPortfolio}
-                    className="px-8 py-4 bg-transparent text-white rounded-full hover:bg-white/5 transition-colors border border-white/10 w-full sm:w-auto"
+                    className="cursor-pointer px-8 py-4 bg-transparent text-white rounded-full hover:bg-white/5 transition-colors border border-white/10 w-full sm:w-auto"
                   >
                     {t.hero.designBtnSecondary}
                   </button>
@@ -96,13 +96,13 @@ export function Hero({ mode }: HeroProps) {
                 <div className="flex gap-4 flex-wrap pt-4">
                   <button 
                     onClick={handleOpenModal}
-                    className="px-8 py-4 bg-white text-blue-950 rounded-full hover:bg-blue-50 transition-all font-medium shadow-lg hover:shadow-blue-500/20 shadow-blue-500/10"
+                    className="cursor-pointer px-8 py-4 bg-white text-blue-950 rounded-full hover:bg-blue-50 transition-all font-medium shadow-lg hover:shadow-blue-500/20 shadow-blue-500/10"
                   >
                     {t.hero.codeBtnPrimary}
                   </button>
                   <button 
                     onClick={scrollToPortfolio}
-                    className="px-8 py-4 bg-transparent text-white rounded-full hover:bg-white/5 transition-colors border border-white/10"
+                    className="cursor-pointer px-8 py-4 bg-transparent text-white rounded-full hover:bg-white/5 transition-colors border border-white/10"
                   >
                     {t.hero.codeBtnSecondary}
                   </button>
