@@ -1,5 +1,3 @@
-// src/components/Hero.tsx
-
 "use client";
 
 import { useState } from 'react';
@@ -20,12 +18,25 @@ export function Hero({ mode }: HeroProps) {
     setIsModalOpen(true);
   };
 
-  // Portfolyo Bölümüne Kaydırma (Secondary Buton İçin)
+  // Portfolyo Bölümüne Kaydırma
   const scrollToPortfolio = () => {
     const element = document.getElementById('portfolio');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  // ORTAK STİL SINIFLARI (Tutarlılık için)
+  const commonClasses = {
+    containerSpacing: "space-y-6 sm:space-y-8",
+    headerSpacing: "space-y-3 sm:space-y-4",
+    tagBase: "inline-block px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm backdrop-blur-md border",
+    // Başlık boyutları Design moduyla birebir aynı yapıldı:
+    headingBase: "text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl bg-clip-text text-transparent leading-tight font-medium tracking-tight",
+    descBase: "text-lg sm:text-xl md:text-2xl max-w-2xl leading-relaxed",
+    buttonContainer: "flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4",
+    btnPrimaryBase: "cursor-pointer px-8 py-4 rounded-full transition-all font-medium shadow-lg w-full sm:w-auto",
+    btnSecondaryBase: "cursor-pointer px-8 py-4 bg-transparent text-white rounded-full transition-colors border border-white/10 w-full sm:w-auto hover:bg-white/5"
   };
 
   return (
@@ -44,12 +55,12 @@ export function Hero({ mode }: HeroProps) {
           <TransitionWrapper modeKey={mode}>
             {mode === 'design' ? (
               // --- DESIGN MODE CONTENT ---
-              <div className="space-y-6 sm:space-y-8">
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="inline-block px-4 sm:px-6 py-2 bg-gradient-to-r from-purple-500/20 to-fuchsia-500/20 border border-purple-500/30 rounded-full text-purple-200 text-xs sm:text-sm backdrop-blur-md">
+              <div className={commonClasses.containerSpacing}>
+                <div className={commonClasses.headerSpacing}>
+                  <div className={`${commonClasses.tagBase} bg-gradient-to-r from-purple-500/20 to-fuchsia-500/20 border-purple-500/30 text-purple-200`}>
                     {t.hero.designTag}
                   </div>
-                  <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl bg-gradient-to-r from-purple-200 via-fuchsia-300 to-purple-400 bg-clip-text text-transparent leading-tight font-medium tracking-tight">
+                  <h1 className={`${commonClasses.headingBase} bg-gradient-to-r from-purple-200 via-fuchsia-300 to-purple-400`}>
                     {t.hero.designTitle[0]}
                     <br />
                     {t.hero.designTitle[1]}
@@ -57,32 +68,33 @@ export function Hero({ mode }: HeroProps) {
                     {t.hero.designTitle[2]}
                   </h1>
                 </div>
-                <p className="text-lg sm:text-xl md:text-2xl text-purple-200/80 max-w-2xl leading-relaxed">
+                <p className={`${commonClasses.descBase} text-purple-200/80`}>
                   {t.hero.designDesc}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
+                <div className={commonClasses.buttonContainer}>
                   <button 
                     onClick={handleOpenModal}
-                    className="cursor-pointer px-8 py-4 bg-white text-purple-950 rounded-full hover:bg-purple-50 transition-all font-medium shadow-lg hover:shadow-purple-500/20 shadow-purple-500/10 w-full sm:w-auto"
+                    className={`${commonClasses.btnPrimaryBase} bg-white text-purple-950 hover:bg-purple-50 hover:shadow-purple-500/20 shadow-purple-500/10`}
                   >
                     {t.hero.designBtnPrimary}
                   </button>
                   <button 
                     onClick={scrollToPortfolio}
-                    className="cursor-pointer px-8 py-4 bg-transparent text-white rounded-full hover:bg-white/5 transition-colors border border-white/10 w-full sm:w-auto"
+                    className={commonClasses.btnSecondaryBase}
                   >
                     {t.hero.designBtnSecondary}
                   </button>
                 </div>
               </div>
             ) : (
-              // --- CODE MODE CONTENT ---
-              <div className="space-y-8">
-                <div className="space-y-4">
-                  <div className="inline-block px-6 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-200 text-sm backdrop-blur-md">
+              // --- CODE MODE CONTENT (Boyutlar Eşitlendi) ---
+              <div className={commonClasses.containerSpacing}>
+                <div className={commonClasses.headerSpacing}>
+                  <div className={`${commonClasses.tagBase} bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-500/30 text-blue-200`}>
                     {t.hero.codeTag}
                   </div>
-                  <h1 className="text-7xl md:text-8xl lg:text-9xl bg-gradient-to-r from-blue-200 via-cyan-300 to-blue-400 bg-clip-text text-transparent font-medium tracking-tight">
+                  {/* Başlık boyutları Design ile eşitlendi */}
+                  <h1 className={`${commonClasses.headingBase} bg-gradient-to-r from-blue-200 via-cyan-300 to-blue-400`}>
                     {t.hero.codeTitle[0]}
                     <br />
                     {t.hero.codeTitle[1]}
@@ -90,19 +102,21 @@ export function Hero({ mode }: HeroProps) {
                     {t.hero.codeTitle[2]}
                   </h1>
                 </div>
-                <p className="text-xl md:text-2xl text-blue-200/80 max-w-2xl leading-relaxed">
+                {/* Açıklama boyutu Design ile eşitlendi */}
+                <p className={`${commonClasses.descBase} text-blue-200/80`}>
                   {t.hero.codeDesc}
                 </p>
-                <div className="flex gap-4 flex-wrap pt-4">
+                {/* Buton yapısı Design ile eşitlendi */}
+                <div className={commonClasses.buttonContainer}>
                   <button 
                     onClick={handleOpenModal}
-                    className="cursor-pointer px-8 py-4 bg-white text-blue-950 rounded-full hover:bg-blue-50 transition-all font-medium shadow-lg hover:shadow-blue-500/20 shadow-blue-500/10"
+                    className={`${commonClasses.btnPrimaryBase} bg-white text-blue-950 hover:bg-blue-50 hover:shadow-blue-500/20 shadow-blue-500/10`}
                   >
                     {t.hero.codeBtnPrimary}
                   </button>
                   <button 
                     onClick={scrollToPortfolio}
-                    className="cursor-pointer px-8 py-4 bg-transparent text-white rounded-full hover:bg-white/5 transition-colors border border-white/10"
+                    className={commonClasses.btnSecondaryBase}
                   >
                     {t.hero.codeBtnSecondary}
                   </button>
@@ -128,7 +142,7 @@ export function Hero({ mode }: HeroProps) {
       <ContactModal 
         isOpen={isModalOpen} 
         onOpenChange={setIsModalOpen}
-        initialPlan="Genel Başvuru" // Hero'dan gelindiğinde varsayılan (Başlangıç) seçilecek
+        initialPlan="Genel Başvuru (Hero)"
         mode={mode}
       />
     </section>
