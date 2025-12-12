@@ -19,9 +19,9 @@ export const tr: Dictionary = {
     designBtnPrimary: "İletişim Formu",
     designBtnSecondary: "İşlerimiz",
     
-    codeTag: "💻 Ölçeklenebilir Kurumsal Mimariler",
+    codeTag: "💻 Ölçeklenebilir Bireysel/Kurumsal Mimariler",
     codeTitle: ["Geleceğe Hazır", "Yüksek Performanslı", "Yazılımlar"],
-    codeDesc: "İşletmenizin büyüme hızına ayak uyduran, güvenli ve modüler ERP & SaaS altyapıları inşa ediyoruz. Karmaşık süreçleri, yalın kodlara dönüştürüyoruz.",
+    codeDesc: "İşletmenizin büyüme hızına ayak uyduran, güvenli ve modüler ERP & SaaS altyapıları inşa ediyoruz. Basit, işlevsel ve aynı zamanda bütçenize de uygun!",
     codeBtnPrimary: "İletişim Formu",
     codeBtnSecondary: "İşlerimiz"
   },

@@ -32,18 +32,22 @@ type ContactFormData = {
   mode: string;
 };
 
-// Resend istemcisi, API Key Vercel ortam değişkenlerinden otomatik alınır
-const resend = new Resend(process.env.RESEND_API_KEY);
+// HATA ÇÖZÜMÜ: Global tanımı kaldırdık.
+// const resend = new Resend(process.env.RESEND_API_KEY); <-- BURADAN SİLDİK
 
 export async function sendEmail(data: ContactFormData) {
   try {
+    // ÇÖZÜM: Resend'i sadece bu fonksiyon çalıştığında, ihtiyaç anında başlatıyoruz.
+    // Bu sayede /hub sayfasına girerken API Key kontrolü yapıp patlamıyor.
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const { error } = await resend.emails.send({
       // Domain doğrulaması yapana kadar 'onboarding@resend.dev' kullanmak zorundasın.
       // Kendi domainini doğruladığında buraya 'info@acrtech.com' yazabilirsin.
       from: 'ACR Tech Form <onboarding@resend.dev>',
       
       // ALICILAR:
-      to: ['acer.okanumut@gmail.com'],
+      to: ['acer.okanumut@gmail.com', 'meltemgoren94@gmail.com'],
       
       subject: `🚀 Yeni Proje Başvurusu: ${data.name}`,
       html: `
